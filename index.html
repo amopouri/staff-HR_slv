@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سالواتورس | پورتال قوانین و استف</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6fb;--sf:#fff;--tx:#0f1a2b;--mu:#51607a;--ac:#0b6fd6;--em:#c2410c;--ln:#d5deec;--hero:linear-gradient(160deg,#dbeafe,#fff1e6);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070b14;--sf:#0f1626;--tx:#e8eefb;--mu:#9aa8c4;--ac:#4cc2ff;--em:#ff7a3d;--ln:#1f2c47;--hero:linear-gradient(160deg,#0b1d3d,#2a1208);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#070b14;--sf:#0f1626;--tx:#e8eefb;--mu:#9aa8c4;--ac:#4cc2ff;--em:#ff7a3d;--ln:#1f2c47;--hero:linear-gradient(160deg,#0b1d3d,#2a1208);color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.9 Vazirmatn,Tahoma,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sf);z-index:10}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--sf);border-bottom:1px solid var(--ln)}
+nav{display:flex;gap:4px;overflow-x:auto;padding:8px 12px;max-width:1000px;margin:auto}
+nav a{flex:none;padding:6px 14px;border-radius:8px;color:var(--mu);text-decoration:none;font-weight:600;font-size:15px}
+nav a:hover{color:var(--tx)}nav a.on{background:var(--ac);color:var(--bg)}
+nav a:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--em);outline-offset:2px}
+.hero{background:var(--hero);border-bottom:1px solid var(--ln);padding:44px 16px 36px}
+.hero div{max-width:1000px;margin:auto}
+h1{font-size:clamp(34px,7vw,60px);font-weight:800;line-height:1.3;margin:0 0 8px}
+h1 span{color:var(--em)}
+.hero p{margin:0 0 20px;color:var(--mu);max-width:60ch}
+#q{width:100%;max-width:480px;padding:12px 16px;border-radius:10px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);font:inherit}
+main{max-width:1000px;margin:auto;padding:24px 16px 60px}
+section{display:none}section.on{display:block}
+h2{font-size:24px;margin:0 0 4px}.sub{color:var(--mu);margin:0 0 18px}
+details{background:var(--sf);border:1px solid var(--ln);border-radius:10px;margin-bottom:8px}
+summary{cursor:pointer;padding:12px 16px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+";color:var(--ac);font-weight:800}details[open] summary::after{content:"−"}
+details ul{margin:0;padding:0 36px 14px 16px;color:var(--tx)}li{margin-bottom:4px}
+.warn{border-inline-start:4px solid var(--em);background:var(--sf);padding:10px 14px;border-radius:8px;margin:0 0 18px}
+.tw{overflow-x:auto;border:1px solid var(--ln);border-radius:10px;background:var(--sf)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+th,td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--ln)}th{color:var(--mu);font-weight:600}
+td.l{direction:ltr;text-align:left;font-family:ui-monospace,Menlo,monospace;color:var(--ac)}
+.empty{display:none;color:var(--mu);padding:16px}
+</style>
+</head>
+<body>
+<header class="top"><nav id="nav">
+<a href="#home">خانه</a><a href="#rules">قوانین سرور</a><a href="#robbery">رابری</a><a href="#staffrules">قوانین استف</a><a href="#cmds">کامندها</a><a href="#ranks">رنک‌ها</a>
+</nav></header>
+<div class="hero"><div>
+<h1>پورتال <span>سالواتورس</span></h1>
+<p>قوانین سرور، قوانین رابری و راهنمای استف در یک جا. «جهل به قانون رافع مسئولیت نیست.» در تمام موارد نظر ادمین در اولویت است.</p>
+<input id="q" type="search" placeholder="جستجو در قوانین (مثلاً PG، S.O.K، گروگان‌گیری)" aria-label="جستجو در قوانین">
+</div></div>
+<main>
+<section id="home"><h2>خوش آمدید</h2><p class="sub">یکی از بخش‌ها را از منوی بالا انتخاب کنید.</p>
+<div class="warn">قوانین هر سرور با سرور دیگر فرق دارد. در سالواتورس باید طبق قوانین همین سرور عمل کنید. با کسانی که قوانین را نخوانند یا رعایت نکنند، شدید برخورد می‌شود.</div>
+<div id="cards"></div></section>
+<section id="rules"><h2>قوانین سرور</h2><p class="sub">خلاصه‌ی قوانین عمومی و رول‌پلی. متن کامل در PDF اصلی است.</p><div id="rl"></div><div class="empty" id="em">موردی پیدا نشد. عبارت دیگری را امتحان کنید.</div></section>
+<section id="robbery"><h2>قوانین رابری</h2><p class="sub">سقف نفرات و گان مجاز هر رابری.</p>
+<div class="warn">اولویت رابری با گروهی است که زودتر و با تعداد کامل رسیده باشد. تیراندازی تا قبل از حکم تیر ممنوع است. پنچر کردن خودروی نیروهای نظامی ممنوع است. فقط رابری بیمه جوینر دارد.</div>
+<div class="tw"><table><thead><tr><th>رابری</th><th>گان مجاز</th><th>پلیس (سوات)</th><th>رابر</th></tr></thead><tbody id="rb"></tbody></table></div>
+<br><div id="rr"></div></section>
+<section id="staffrules"><h2>قوانین استف</h2><p class="sub">وظایف و محدودیت‌های ادمین‌ها.</p><div id="sr"></div></section>
+<section id="cmds"><h2>کامندهای ادمینی</h2><p class="sub">موارد علامت‌دار فقط با اجازه‌ی های‌رنک مجاز است.</p>
+<div class="tw"><table><thead><tr><th>کامند</th><th>کاربرد</th></tr></thead><tbody id="cm"></tbody></table></div></section>
+<section id="ranks"><h2>رنک‌ها و ارتقا</h2><p class="sub">ارتقا توسط های‌رنک‌ها و بر اساس تعداد ریپورت و اکتیو بودن انجام می‌شود. پرسیدن تعداد ریپورت از های‌رنک‌ها ممنوع است.</p>
+<div class="tw"><table><thead><tr><th>رنک</th><th>انتظار تا رنک بعد</th><th>ریپورت</th><th>پلیر جدید</th></tr></thead><tbody id="rk"></tbody></table></div>
+<p class="sub">رنک‌های ۷ تا ۱۱ علاوه بر ریپورت، ساعت HR هم می‌خواهند: ادمین ۲۵، سینیور ادمین ۳۵، هد ادمین ۴۰، سرور دایرکتور ۵۰، اگزکیوتیو ۶۰ ساعت. رنک‌های ۱۲ به بالا با تصمیم مدیریت است.</p></section>
+</main>
+<script>
+var R=[
+["حساب و تراکنش",["اکانت و دارایی‌ها غیرقابل انتقال است و مسئولیتش با صاحب اکانت است.","اکانت اشتراکی ممنوع است؛ پانیشمنت یک نفر شامل همه می‌شود.","فروش اکانت یا دارایی‌ها به پول واقعی ممنوع است و هر دو طرف جریمه سنگین می‌شوند.","بازگشت وجه خرید از وب‌سایت فقط تا ۲۴ ساعت ممکن است."]],
+["چیت، ماد و باگ",["هرگونه چیت، هک، ماد یا برنامه مخرب ممنوع است. ۳۰٪ تا ۱۰۰٪ دارایی حذف می‌شود و ممکن است بن دائم شود.","ویدیوی اثبات باید از Display باشد و رکوردها تا یک هفته نگهداری شوند.","باگ را باید به ادمین گزارش داد. سوءاستفاده از باگ یعنی ریست اکانت و بن دائم."]],
+["ریپورت",["برای ریپورت از /report استفاده کنید و مدرک (فیلم یا عکس) داشته باشید.","مهلت ثبت ریپورت ۳۰ دقیقه بعد از اتفاق است و ریپورت وسط آرپی بعد از پایان صحنه بررسی می‌شود.","ریپورت بی‌مورد (کمک، ماشین، ریوایو، «ادمین بیا») Trash Report است و جریمه ۲۰٬۰۰۰ دلار دارد.","اگر ادمین ریپورتی را بررسی کرد، ریپورت مجدد همان موضوع ممنوع است.","دروغ به ادمین یا نداشتن مدرک، پانیشمنت دارد."]],
+["رول‌پلی کلی",["زبان رسمی سرور فارسی است و میکروفون با کیفیت لازم است.","Non RP: هر کاری که روند رول‌پلی را خراب کند.","Block RP: دستور سریع‌تر کار کردن به ارگان‌ها یا بی‌محلی به آن‌ها در زمان آن‌دیوتی.","Mix IC/OOC: استفاده از اطلاعات OOC در صحنه‌ی IC و برعکس، مثل «بیا تیم‌اسپیک».","Troll RP: رجزخوانی بالای جنازه، سوءاستفاده از انیمیشن و اسپم میکروفون."]],
+["PG و Meta Gaming",["PG: کار غیرممکن یا ندادن زمان کافی به طرف مقابل؛ مثلاً بعد از ریوایو تا ۳۰ دقیقه دویدن و فایت ممنوع است.","آفرود با خودروی غیرآفرود، بردن موتور و ماشین داخل مغازه یا بانک و شنای طولانی در تعقیب (حداکثر ۵ دقیقه) ممنوع است.","Meta: استفاده از اطلاعات خارج بازی مثل دیدن ID، لوکیشن از ادمین یا کمک خواستن در تیم‌اسپیک و دیسکورد.","در حالت مجروح یا دست‌بسته حق دادن اطلاعات در رادیو و چت گنگ را ندارید."]],
+["Fear RP",["وقتی اسلحه یا شوکر به سمتتان است و پیاده‌اید، حق فرار یا درآوردن اسلحه و گوشی را ندارید.","بعد از کشتن کسی بیش از ۵ دقیقه بالای سر جنازه نمانید (در فایت خیابانی حداکثر ۱۰ دقیقه).","هنگام خفت‌گیری از داخل ماشین تیراندازی نکنید."]],
+["S.O.K و قتل",["DM و RDM: کشتن بدون دلیل IC و بدون S.O.K ممنوع است و برای S.O.K باید رکورد داشته باشید.","S.O.K فقط ۲۴ ساعت اعتبار دارد و یک‌بار قابل استفاده است. در NCZ و محل رابری قابل اجرا نیست.","به ارگان‌های دولتی و نظامی در حال انجام وظیفه نمی‌توان S.O.K داد یا گرفت.","VDM: زیر گرفتن بدون دلیل. تصادف ماشین‌به‌ماشین S.O.K نمی‌دهد.","Mercy Killing: کشتن دوست زخمی برای ریسپاون سریع ممنوع است."]],
+["نیولایف و ریوایو",["بعد از نیولایف حافظه‌ی صحنه‌ی قبل را ندارید و تا ۳۰ دقیقه حق بازگشت یا آرپی با قاتل ندارید.","مدیک تا ۲ دقیقه بعد از آخرین تیر حق ریوایو ندارد و باید ۶۰ ثانیه صدای تیر نیاید.","ریوایو توسط ادمین فقط در مورد باگ سرور یا مجروح شدن ناگهانی و غیرعمد ممکن است."]],
+["Safe Zone و NCZ",["در Safe Zone درگیری بدون دلیل و مدرک ممنوع است، ولی درگیری‌ای که قبلاً شروع شده می‌تواند ادامه یابد.","NCZ (ارگان‌ها، پارکینگ مرکزی، دایره‌ی سبز، خانه‌ها، پینت‌بال، زندان) هیچ جرمی مجاز نیست و ۳۰ تا ۵۰ قدم اطرافش هم حساب می‌شود.","برای خروج از NCZ سه اخطار با فاصله ۵ تا ۷ ثانیه لازم است."]],
+["خفت‌گیری",["تعداد خفت‌گیر باید ۲ برابر غیرنظامیان و ۴ برابر نیروهای نظامی باشد.","فقط از ساعت ۲۰ تا ۶ صبح گیم، خارج از شهر و مناطق سبز. حداقل ۲ شریف و ۱ مدیک آنلاین باشد.","قبل از شلیک اخطار دهید. برای زدن چرخ ماشین ۳ اخطار با فاصله بیش از ۱۰ ثانیه لازم است.","خفت مدیک، تاکسی، مکانیک و شغل‌های آزاد در حال کار ممنوع است."]],
+["گروگان‌گیری",["هر گروه در هر ۲۴ ساعت یک‌بار. حداقل ۱۲ و حداکثر ۲۵ نفر؛ هر گروگان ۲۵۰ هزار دلار.","مکان‌های مجاز: فرودگاه پایین شهر، سد بالای کازینو، بندر و Human Labs.","Free Passage بین ۲ تا ۵ دقیقه است و ماشین‌های VIP و دولتی درخواست نمی‌شود.","حداکثر ۳۵ نیروی نظامی (۱۵ سوات و یک هلی)."]],
+["تعقیب و گریز",["هر اخطار پلیس ۲۰ ثانیه فاصله دارد و بعد از اخطارها حداکثر ۱ یا ۲ بار PIT مجاز است.","پنچر کردن با اسلحه فقط بعد از ۲ دقیقه و تیر مستقیم بعد از ۵ دقیقه و اعلام حکم تیر.","ورود به آب برای فرار ممنوع است."]],
+["چت‌ها",["/me و /do برای آرپی و /s برای فریاد. /ooc فقط برای محتوای خارج از آرپی است و فحاشی در همه‌ی چت‌ها ممنوع است.","/me را سوم‌شخص بنویسید، بدون ایموجی و بدون مخاطب قرار دادن فرد خاص."]],
+["جاب و گنگ",["ارگان نظامی کثیف نداریم: با لباس، ماشین و وسایل دولتی کار خلاف ممنوع است.","داشتن دو اکانت در دو ساید مختلف ممنوع است.","گنگ‌وارن: اول ۱۵۰۰ XP، دوم ۳۰۰۰، سوم ۵۰۰۰، چهارم کسر یک لول و ۷ روز آف، پنجم آف کامل.","اتک به بیس گنگ یا ایست بازرسی تحت هیچ شرایطی ممنوع است.","جزیره‌ی کایو پریکو تنها دنجر زون است و عواقب ورود با خودتان است."]]
+];
+var RB=[["Shop","سبک","۲ (بدون سوات)","۱ تا ۲"],["Digital Den","سبک","۳ (بدون سوات)","۲ تا ۳"],["Fleeca","سبک","۴ (۱ سوات)","۳ تا ۴"],["Paleto Bank","سنگین","۶ (۲ سوات) + هلی","۴ تا ۶"],["Central Bank","سنگین","۸ (۳ سوات) + هلی","۶ تا ۸"],["Maze Bank","سنگین","۸ (۳ سوات)","۵ تا ۷"],["جواهری شهر","سبک و سنگین","۴ (۱ سوات)","۳ تا ۴"],["جواهری شمس","سبک و سنگین","۶ (۲ سوات)","۳ تا ۵"],["جواهری فلت","سنگین","۸ (۲ سوات) + هلی","۵ تا ۷"],["بیمه","سنگین","۸ (۳ سوات) + هلی","۵ تا ۷ (+ جوینر)"],["میثیک","سنگین","۱۰ (۳ سوات) + هلی","۷ تا ۹"],["محموله دریایی","سنگین","۱۱ (۴ سوات) + هلی","۸ تا ۱۰"],["فرودگاه","سنگین","۸ (۳ سوات) + هلی","۶ تا ۸"],["روستا (کارگو)","سنگین","۱۱ (۵ سوات) + هلی","۷ تا ۹"],["بابکت","سنگین","۸ (۳ سوات) + هلی","۵ تا ۷"],["کامیون پول (پرسوت)","خارج شهر سنگین، داخل شهر سبک","۴ (۱ سوات) + هلی","۱ تا ۲"]];
+var RR=[["نکات مشترک",["در رابری استارت‌شده هیچ گروه دیگری حق ورود ندارد.","رابرها تا قبل از Successful شدن حق خروج از محوطه را ندارند.","بعد از رابری، پلیس باید ظرف ۱۵ دقیقه فایت را شروع کند.","استفاده از دارو و جلیقه فقط قبل از استارت رابری آزاد است (LSD مجاز).","استفاده از سلاح سرد، مسدود کردن راه و تیراندازی به هلی پلیس ممنوع است (به‌جز کارگو و میثیک).","در صورت شکست، رابرها باید بازجویی و زندان را تا آخر همراهی کنند."]],
+["سرچ در رابری",["رابر در رابری سبک: گان‌های سبک، اقلام خلاف و پول تمیز. در رابری سنگین: گان‌های سنگین، اقلام خلاف و پول تمیز.","پلیس: همه‌ی گان‌ها، اقلام خلاف و مجوز حمل اسلحه.","اقلام خلاف: بلوتورچ، الکپیک، پول کثیف، دراگ‌ها، ۶ تیر پیستول و ۴ تیر سنگین."]],
+["جوینر بیمه",["حداکثر ۶ نفر داخل شرکت و جوینر باید بیرون و مخفی بماند.","بعد از حکم تیر و رفتن همه‌ی پلیس‌ها به داخل می‌تواند جوین دهد."]]];
+var SR=[["ورود و حضور",["هنگام آن‌دیوتی در تیم‌اسپیک (ir.Slvts) و ویس On Duty باشید، Deafen نباشید و مایک بسته باشد.","در ویس Office 1 و 2 نباشید تا سلسله مراتب حفظ شود.","هر هفته ساعت ۸ شب جلسه‌ی چنل Meeting است. غیبت بدون اطلاع یعنی تنزل رنک یا فایر.","فرم مرخصی: IC Name، OOC Name، Rank، شروع و پایان، دلیل و Steam Hex را در چت استف روبیکا بفرستید."]],
+["رفتار با پلیرها",["ادب و احترام مهم‌ترین اصل است. در برابر توهین پلیر، توهین نکنید و به های‌رنک گزارش دهید.","در ریپورت‌ها مدرک شاکی را کامل و با صدا ببینید (۱۰ تا ۱۵ ثانیه جلو و عقب). قضاوت اشتباه یعنی تنزل رنک یا فایر.","وقتی پلیر وسط آرپی است با او صحبت نکنید؛ با /pm پیام بدهید که بعد از آرپی ریپورت بدهد.","برای دیدن رکورد از Google Meet استفاده کنید و در تعداد زیاد، افراد را در چنل Full Mute ببرید."]],
+["سلسله مراتب و محدودیت‌ها",["صدا کردن گیم‌مستر، منیجرها و های‌رنکان در چت استف ممنوع است.","اول به رنک بالاتر از خودتان مراجعه کنید، نه مستقیم به های‌رنک.","اسپکت رندوم پلیر ممنوع است و اسپکت استف‌ها نیاز به اجازه دارد.","اینویزیبل و نوکلیپ فقط در ادمین‌زون یا با اجازه‌ی های‌رنک. برای AFK طولانی در ادمین‌زون آف‌دیوتی کنید.","ادمین باید در گنگ استف ست باشد و جاج‌کردن به نفع دوست یا هم‌گنگی ممنوع است.","صحبت با های‌رنکان درباره‌ی رنک‌آپ، وارن دارد."]],
+["پانیشمنت و آموزش پلیر جدید",["برای پانیش از /cs ID یا Steam Hex استفاده کنید و در Note نام ادمین ناظر، استیم شاکی و توضیح خلاصه را بنویسید.","اگر پلیر در سرور است تیک «Notify» را نزنید و به تعداد پانیشمنتش جریمه‌ی نقدی بزنید: /fine ID مبلغ دلیل.","رنک ۱ و ۲ بدون نظارت های‌رنک جاج سنگین نمی‌کنند.","به پلیر جدید سایت، کانال روبیکا، آی‌پی تیم‌اسپیک و رول وریفای را بدهید و جاب‌های دولتی را پیشنهاد کنید."]]];
+var CM=[["/aduty","روشن و خاموش کردن پرم"],["/revive ID و /slay ID","ریوایو و اسلی (فقط با اجازه‌ی های‌رنک)"],["/spect ID","اسپکت (بی‌مورد ممنوع)"],["/goto ID","رفتن پیش پلیر (با اجازه)"],["/bring ID","آوردن پلیر پیش خودتان (با اجازه)"],["/tpw","تلپورت به نقطه‌ی مارک‌شده (برای تلپورت پلیر اجازه بگیرید)"],["/az","رفتن به ادمین‌زون"],["/invisible","نامرئی شدن (به‌جز ادمین‌زون)"],["/pm ID پیام","پیام خصوصی به پلیر"],["/rpp عدد و /rpu ID","انداختن و برداشتن RP Pause (با اجازه)"],["/car نام ID","دادن ماشین یا موتور (با اجازه)"],["/dv ID و /fix ID","پاک کردن و تعمیر ماشین (با اجازه)"],["/freeze ID","فریز کردن پلیر (با اجازه)"],["/checkcs ID","دیدن تعداد و دلیل پانیشمنت (با اجازه‌ی های‌رنک)"],["/alskin ID و /pskin و /pfix ID","ویرایش و رفع باگ کاراکتر"],["/setworld ID عدد","تغییر ورلد، فقط برای ایونت یا RP Pause"],["/reloadphone","رفع باگ گوشی"],["/cs ID","ثبت پانیشمنت"],["/fine ID مبلغ دلیل","جریمه‌ی نقدی"],["F4","منوی ادمین: اسپکت، تلپورت به پلیر، بیلیپ، اینویزیبل، نوکلیپ"]];
+var RK=[["۱ Helper","۱ هفته","۳۰۰","۳"],["۲ Senior Helper","۱ هفته","۴۰۰","۵"],["۳ Head Helper","۱ هفته","۵۰۰","۷"],["۴ Supporter","۲ هفته","۷۰۰","۱۰"],["۵ Senior Supporter","۲ هفته","۹۰۰","۱۲"],["۶ Head Supporter","۲ هفته","۱۰۰۰","۱۵"],["۷ Admin","۳ هفته","۱۰۰۰","-"],["۸ Senior Admin","۴ هفته","۸۰۰","-"],["۹ Head Admin","۱ ماه","۸۰۰","-"],["۱۰ Server Director","۲ ماه","۸۰۰","-"],["۱۱ Executive Admin","۲ ماه","۱۰۰۰","-"],["۱۲ Moderator","۳ ماه","-","-"],["۱۳ Supervisor","۴ ماه","-","-"],["۱۴ Administrator","۵ ماه","-","-"],["۱۵ Manager","تأیید Owner","-","-"],["۱۶ Content Manager","تأیید Owner","-","-"]];
+function acc(id,d){document.getElementById(id).innerHTML=d.map(function(x){return "<details><summary>"+x[0]+"</summary><ul>"+x[1].map(function(i){return "<li>"+i+"</li>"}).join("")+"</ul></details>"}).join("")}
+function rows(id,d,l){document.getElementById(id).innerHTML=d.map(function(r){return "<tr>"+r.map(function(c,i){return "<td"+(l&&i==0?" class=l":"")+">"+c+"</td>"}).join("")+"</tr>"}).join("")}
+acc("rl",R);acc("rr",RR);acc("sr",SR);rows("rb",RB);rows("cm",CM,1);rows("rk",RK);
+document.getElementById("cards").innerHTML=[["قوانین سرور","rules","رول‌پلی، S.O.K، خفت‌گیری، گروگان‌گیری و ..."],["قوانین رابری","robbery","جدول نفرات و گان مجاز ۱۶ رابری"],["قوانین استف","staffrules","وظایف و محدودیت‌های ادمین‌ها"],["کامندها","cmds","کامندهای ادمینی و منوی F4"],["رنک‌ها","ranks","شرایط ارتقا"]].map(function(c){return "<details><summary><a style='color:inherit;text-decoration:none' href='#"+c[1]+"'>"+c[0]+"</a></summary><ul><li>"+c[2]+"</li></ul></details>"}).join("");
+var S=["home","rules","robbery","staffrules","cmds","ranks"];
+function show(){var h=location.hash.slice(1);if(S.indexOf(h)<0)h="home";S.forEach(function(s){document.getElementById(s).classList.toggle("on",s==h)});document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+h)});window.scrollTo(0,0)}
+addEventListener("hashchange",show);show();
+document.getElementById("q").addEventListener("input",function(e){var v=e.target.value.trim().toLowerCase(),n=0;if(v&&location.hash!="#rules")location.hash="rules";document.querySelectorAll("#rl details").forEach(function(d){var m=!v||d.textContent.toLowerCase().indexOf(v)>=0;d.style.display=m?"":"none";if(m)n++;d.open=!!v&&m});document.getElementById("em").style.display=n?"none":"block"});
+</script>
+</body>
+</html>
