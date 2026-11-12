@@ -1,107 +1,1909 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>سالواتورس | پورتال قوانین و استف</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Salvatores — مرجع قوانین و آموزش Staff</title>
+<meta name="description" content="مرجع جامع قوانین شهر، رابری، ارگان‌های نظامی و تیم Staff سرور سالواتورس" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f3f6fb;--sf:#fff;--tx:#0f1a2b;--mu:#51607a;--ac:#0b6fd6;--em:#c2410c;--ln:#d5deec;--hero:linear-gradient(160deg,#dbeafe,#fff1e6);
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070b14;--sf:#0f1626;--tx:#e8eefb;--mu:#9aa8c4;--ac:#4cc2ff;--em:#ff7a3d;--ln:#1f2c47;--hero:linear-gradient(160deg,#0b1d3d,#2a1208);color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#070b14;--sf:#0f1626;--tx:#e8eefb;--mu:#9aa8c4;--ac:#4cc2ff;--em:#ff7a3d;--ln:#1f2c47;--hero:linear-gradient(160deg,#0b1d3d,#2a1208);color-scheme:dark}
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+:root{
+  --bg:#07090c;
+  --panel:#11161d;
+  --panel-2:#161d26;
+  --panel-3:#1c2531;
+  --line:rgba(255,255,255,.08);
+  --line-strong:rgba(212,175,55,.30);
+  --gold:#d4af37;
+  --gold-2:#f2d888;
+  --gold-dim:rgba(212,175,55,.12);
+  --text:#eef1f5;
+  --muted:#98a3b3;
+  --muted-2:#6b7688;
+  --danger:#ff6b6b;
+  --ok:#4ade80;
+  --radius:16px;
+  --radius-sm:12px;
+  --shadow:0 20px 50px rgba(0,0,0,.45);
+  --font:"Vazirmatn",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+html[data-theme="light"]{
+  --bg:#f3f5f8;
+  --panel:#ffffff;
+  --panel-2:#f7f8fa;
+  --panel-3:#edf0f4;
+  --line:rgba(20,30,45,.10);
+  --line-strong:rgba(155,117,20,.35);
+  --gold:#a77d16;
+  --gold-2:#8b6810;
+  --gold-dim:rgba(167,125,22,.10);
+  --text:#1d2633;
+  --muted:#566273;
+  --muted-2:#788393;
+  --danger:#c53c3c;
+  --shadow:0 18px 40px rgba(30,40,55,.10);
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font:400 16px/1.9 Vazirmatn,Tahoma,sans-serif}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sf);z-index:10}
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--sf);border-bottom:1px solid var(--ln)}
-nav{display:flex;gap:4px;overflow-x:auto;padding:8px 12px;max-width:1000px;margin:auto}
-nav a{flex:none;padding:6px 14px;border-radius:8px;color:var(--mu);text-decoration:none;font-weight:600;font-size:15px}
-nav a:hover{color:var(--tx)}nav a.on{background:var(--ac);color:var(--bg)}
-nav a:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--em);outline-offset:2px}
-.hero{background:var(--hero);border-bottom:1px solid var(--ln);padding:44px 16px 36px}
-.hero div{max-width:1000px;margin:auto}
-h1{font-size:clamp(34px,7vw,60px);font-weight:800;line-height:1.3;margin:0 0 8px}
-h1 span{color:var(--em)}
-.hero p{margin:0 0 20px;color:var(--mu);max-width:60ch}
-#q{width:100%;max-width:480px;padding:12px 16px;border-radius:10px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);font:inherit}
-main{max-width:1000px;margin:auto;padding:24px 16px 60px}
-section{display:none}section.on{display:block}
-h2{font-size:24px;margin:0 0 4px}.sub{color:var(--mu);margin:0 0 18px}
-details{background:var(--sf);border:1px solid var(--ln);border-radius:10px;margin-bottom:8px}
-summary{cursor:pointer;padding:12px 16px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:10px}
-summary::after{content:"+";color:var(--ac);font-weight:800}details[open] summary::after{content:"−"}
-details ul{margin:0;padding:0 36px 14px 16px;color:var(--tx)}li{margin-bottom:4px}
-.warn{border-inline-start:4px solid var(--em);background:var(--sf);padding:10px 14px;border-radius:8px;margin:0 0 18px}
-.tw{overflow-x:auto;border:1px solid var(--ln);border-radius:10px;background:var(--sf)}
-table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
-th,td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--ln)}th{color:var(--mu);font-weight:600}
-td.l{direction:ltr;text-align:left;font-family:ui-monospace,Menlo,monospace;color:var(--ac)}
-.empty{display:none;color:var(--mu);padding:16px}
+html{scroll-behavior:smooth}
+body{
+  margin:0;min-height:100vh;color:var(--text);font-family:var(--font);
+  font-size:15px;line-height:1.9;
+  background:
+    radial-gradient(circle at 88% -8%,rgba(212,175,55,.10),transparent 30rem),
+    radial-gradient(circle at 8% 22%,rgba(39,86,160,.10),transparent 26rem),
+    var(--bg);
+}
+body.no-scroll{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+button{cursor:pointer}
+svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+mark{background:rgba(212,175,55,.32);color:inherit;border-radius:4px;padding:0 3px}
+::selection{background:rgba(212,175,55,.35)}
+
+/* ============ Layout ============ */
+.shell{display:flex;min-height:100vh}
+
+.sidebar{
+  width:284px;flex:0 0 284px;position:sticky;top:0;height:100vh;
+  padding:20px 14px;display:flex;flex-direction:column;gap:16px;z-index:40;
+  background:linear-gradient(180deg,rgba(17,22,29,.98),rgba(7,9,12,.99));
+  border-inline-start:1px solid var(--line);
+}
+html[data-theme="light"] .sidebar{background:linear-gradient(180deg,#fff,#f4f6f9)}
+
+.brand{display:flex;align-items:center;gap:12px;padding:4px 6px 16px;border-bottom:1px solid var(--line)}
+.brand-mark{
+  width:46px;height:46px;border-radius:14px;display:grid;place-items:center;
+  color:#101216;font-weight:900;font-size:24px;line-height:1;
+  background:linear-gradient(145deg,var(--gold-2),var(--gold));
+  box-shadow:0 10px 26px rgba(212,175,55,.25);
+}
+.brand strong{display:block;font-size:16px;font-weight:800}
+.brand span{display:block;color:var(--muted);font-size:12px}
+
+.nav{display:flex;flex-direction:column;gap:5px;overflow-y:auto;padding-inline-end:4px;flex:1}
+.nav a{
+  display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-sm);
+  color:var(--muted);border:1px solid transparent;transition:.16s ease;font-size:14px;
+}
+.nav a svg{width:18px;height:18px}
+.nav a:hover{color:var(--text);background:rgba(255,255,255,.04)}
+.nav a.active{
+  color:var(--gold-2);
+  background:linear-gradient(90deg,var(--gold-dim),transparent);
+  border-color:rgba(212,175,55,.20);
+}
+html[data-theme="light"] .nav a:hover{background:rgba(20,30,45,.05)}
+
+.sidebar-foot{
+  margin-top:auto;padding:12px 10px;border-top:1px solid var(--line);
+  color:var(--muted-2);font-size:11.5px;display:flex;align-items:center;gap:8px;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
+
+.main{flex:1;min-width:0;display:flex;flex-direction:column}
+
+.topbar{
+  position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:10px;
+  padding:13px 26px;background:rgba(7,9,12,.82);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+html[data-theme="light"] .topbar{background:rgba(255,255,255,.86)}
+
+.search{
+  flex:1;max-width:720px;display:flex;align-items:center;gap:10px;
+  background:var(--panel);border:1px solid var(--line);
+  padding:8px 12px;border-radius:13px;transition:.16s ease;
+}
+.search:focus-within{border-color:var(--line-strong);box-shadow:0 0 0 4px rgba(212,175,55,.08)}
+.search svg{color:var(--muted)}
+.search input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--text);padding:3px 0;font-size:14px}
+.search input::placeholder{color:var(--muted-2)}
+.search kbd{
+  color:var(--muted-2);background:rgba(255,255,255,.05);border:1px solid var(--line);
+  border-radius:7px;padding:2px 7px;font-size:11px;font-family:inherit;white-space:nowrap;
+}
+
+.icon-btn{
+  width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:0 0 auto;
+  color:var(--text);background:var(--panel);border:1px solid var(--line);transition:.16s ease;
+}
+.icon-btn:hover{border-color:var(--line-strong);color:var(--gold-2)}
+.menu-btn{display:none}
+
+.view{width:100%;max-width:1120px;margin:0 auto;padding:30px 26px 70px;flex:1}
+
+/* ============ Common ============ */
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:7px;color:var(--muted-2);font-size:12.5px;margin-bottom:18px}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--gold-2)}
+.crumbs span.sep{opacity:.5}
+
+h1,h2,h3{margin:0;line-height:1.5}
+h1{font-size:clamp(24px,3vw,34px);font-weight:800}
+h2{font-size:20px;font-weight:700}
+h3{font-size:15.5px;font-weight:700}
+p{margin:0}
+.muted{color:var(--muted)}
+.small{font-size:12.5px}
+.eyebrow{color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.6px;margin-bottom:6px}
+
+.badge{
+  display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border-radius:999px;
+  background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--muted);font-size:11px;white-space:nowrap;
+}
+.badge.gold{color:var(--gold-2);background:var(--gold-dim);border-color:rgba(212,175,55,.20)}
+
+.card{
+  background:linear-gradient(180deg,var(--panel-2),var(--panel));
+  border:1px solid var(--line);border-radius:var(--radius);padding:20px;
+}
+html[data-theme="light"] .card{background:linear-gradient(180deg,#fff,#fbfcfd)}
+
+.grid{display:grid;gap:14px}
+.cards{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.stats{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+
+.stat .v{font-size:28px;font-weight:800;color:var(--gold-2);line-height:1.3}
+.stat .l{color:var(--muted);font-size:12px}
+
+.cat-card{
+  display:flex;flex-direction:column;gap:12px;padding:20px;
+  background:linear-gradient(180deg,var(--panel-2),var(--panel));
+  border:1px solid var(--line);border-radius:var(--radius);
+  transition:.18s ease;
+}
+.cat-card:hover{transform:translateY(-3px);border-color:var(--line-strong);box-shadow:var(--shadow)}
+.cat-icon{
+  width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  color:var(--gold-2);background:var(--gold-dim);border:1px solid rgba(212,175,55,.18);
+}
+.cat-card h3{font-size:16px}
+.cat-card p{color:var(--muted);font-size:12.5px;line-height:1.9}
+
+.section-list{display:flex;flex-direction:column;gap:9px}
+.sec-link{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:14px;
+  padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.025);
+  border:1px solid var(--line);transition:.16s ease;
+}
+.sec-link:hover{background:var(--gold-dim);border-color:var(--line-strong)}
+.sec-link .n{
+  width:26px;height:26px;flex:0 0 auto;border-radius:8px;display:grid;place-items:center;
+  font-size:11.5px;font-weight:700;color:var(--gold-2);background:var(--gold-dim);
+  border:1px solid rgba(212,175,55,.18);margin-top:2px;
+}
+.sec-link .t{display:block;font-size:14px;font-weight:700;margin-bottom:3px}
+.sec-link .d{display:block;color:var(--muted);font-size:12.5px;line-height:1.8}
+.arrow{color:var(--muted-2);margin-top:3px}
+
+/* ============ Reader ============ */
+.reader-head{
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;
+  margin-bottom:18px;
+}
+.reader-actions{display:flex;flex-wrap:wrap;gap:8px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  padding:9px 14px;border-radius:11px;border:1px solid var(--line);
+  background:var(--panel-2);color:var(--text);font-size:13px;font-weight:600;transition:.16s ease;
+}
+.btn:hover{border-color:var(--line-strong);background:var(--panel-3)}
+.btn.primary{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#111216;border-color:transparent}
+.btn.primary:hover{filter:brightness(1.05)}
+.btn.ghost{background:transparent}
+.btn.disabled{opacity:.4;pointer-events:none}
+
+.summary{
+  padding:16px 18px;border-radius:14px;margin-bottom:18px;
+  background:linear-gradient(90deg,var(--gold-dim),transparent);
+  border:1px solid rgba(212,175,55,.18);
+  color:var(--text);font-size:14.5px;line-height:2;
+}
+.summary strong{color:var(--gold-2)}
+
+.points{list-style:none;counter-reset:p;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
+.points li{
+  counter-increment:p;position:relative;padding-inline-start:34px;
+  font-size:14.5px;line-height:2;
+}
+.points li::before{
+  content:counter(p);
+  position:absolute;inset-inline-start:0;top:4px;
+  width:23px;height:23px;border-radius:7px;display:grid;place-items:center;
+  font-size:11px;font-weight:700;color:var(--gold-2);
+  background:var(--gold-dim);border:1px solid rgba(212,175,55,.20);
+}
+
+.note{
+  margin-top:18px;padding:14px 16px;border-radius:13px;
+  background:rgba(255,107,107,.07);border:1px solid rgba(255,107,107,.22);
+  color:var(--text);font-size:13.5px;line-height:1.95;
+}
+.note b{color:var(--danger)}
+
+/* ============ Table ============ */
+.table-wrap{margin-top:16px;overflow-x:auto;border:1px solid var(--line);border-radius:13px}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px}
+th,td{padding:11px 13px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{background:rgba(212,175,55,.07);color:var(--gold-2);font-weight:700;font-size:12px}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:rgba(255,255,255,.03)}
+html[data-theme="light"] th{background:rgba(167,125,22,.08)}
+
+/* ============ Search ============ */
+.result{
+  display:block;padding:15px 17px;border-radius:14px;
+  background:var(--panel);border:1px solid var(--line);transition:.16s ease;
+}
+.result:hover{border-color:var(--line-strong);background:var(--panel-2)}
+.result .top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.result .top strong{font-size:14px}
+.result .snip{color:var(--muted);font-size:12.5px;line-height:1.9}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{
+  padding:6px 12px;border-radius:999px;font-size:12px;
+  background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--muted);
+  transition:.16s ease;
+}
+.chip:hover{color:var(--gold-2);border-color:var(--line-strong);background:var(--gold-dim)}
+
+/* ============ Footer ============ */
+.foot{
+  border-top:1px solid var(--line);padding:18px 26px;color:var(--muted-2);
+  font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+
+/* ============ Overlay / Drawer ============ */
+.overlay{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);
+  z-index:35;opacity:0;transition:.2s ease;
+}
+.overlay.show{display:block;opacity:1}
+
+.close-btn{display:none}
+
+@media (max-width:980px){
+  .sidebar{
+    position:fixed;top:0;bottom:0;right:0;height:100%;
+    transform:translateX(100%);transition:transform .24s ease;
+    box-shadow:-20px 0 60px rgba(0,0,0,.5);
+  }
+  .sidebar.open{transform:none}
+  .menu-btn{display:grid}
+  .close-btn{display:grid}
+  .view{padding:22px 16px 60px}
+  .topbar{padding:11px 14px}
+  .search kbd{display:none}
+  .foot{padding:16px}
+}
+@media (max-width:560px){
+  .cards{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  h1{font-size:23px}
+  .points li{font-size:14px}
+  th,td{padding:9px 11px;font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+}
 </style>
 </head>
 <body>
-<header class="top"><nav id="nav">
-<a href="#home">خانه</a><a href="#rules">قوانین سرور</a><a href="#robbery">رابری</a><a href="#staffrules">قوانین استف</a><a href="#cmds">کامندها</a><a href="#ranks">رنک‌ها</a>
-</nav></header>
-<div class="hero"><div>
-<h1>پورتال <span>سالواتورس</span></h1>
-<p>قوانین سرور، قوانین رابری و راهنمای استف در یک جا. «جهل به قانون رافع مسئولیت نیست.» در تمام موارد نظر ادمین در اولویت است.</p>
-<input id="q" type="search" placeholder="جستجو در قوانین (مثلاً PG، S.O.K، گروگان‌گیری)" aria-label="جستجو در قوانین">
-</div></div>
-<main>
-<section id="home"><h2>خوش آمدید</h2><p class="sub">یکی از بخش‌ها را از منوی بالا انتخاب کنید.</p>
-<div class="warn">قوانین هر سرور با سرور دیگر فرق دارد. در سالواتورس باید طبق قوانین همین سرور عمل کنید. با کسانی که قوانین را نخوانند یا رعایت نکنند، شدید برخورد می‌شود.</div>
-<div id="cards"></div></section>
-<section id="rules"><h2>قوانین سرور</h2><p class="sub">خلاصه‌ی قوانین عمومی و رول‌پلی. متن کامل در PDF اصلی است.</p><div id="rl"></div><div class="empty" id="em">موردی پیدا نشد. عبارت دیگری را امتحان کنید.</div></section>
-<section id="robbery"><h2>قوانین رابری</h2><p class="sub">سقف نفرات و گان مجاز هر رابری.</p>
-<div class="warn">اولویت رابری با گروهی است که زودتر و با تعداد کامل رسیده باشد. تیراندازی تا قبل از حکم تیر ممنوع است. پنچر کردن خودروی نیروهای نظامی ممنوع است. فقط رابری بیمه جوینر دارد.</div>
-<div class="tw"><table><thead><tr><th>رابری</th><th>گان مجاز</th><th>پلیس (سوات)</th><th>رابر</th></tr></thead><tbody id="rb"></tbody></table></div>
-<br><div id="rr"></div></section>
-<section id="staffrules"><h2>قوانین استف</h2><p class="sub">وظایف و محدودیت‌های ادمین‌ها.</p><div id="sr"></div></section>
-<section id="cmds"><h2>کامندهای ادمینی</h2><p class="sub">موارد علامت‌دار فقط با اجازه‌ی های‌رنک مجاز است.</p>
-<div class="tw"><table><thead><tr><th>کامند</th><th>کاربرد</th></tr></thead><tbody id="cm"></tbody></table></div></section>
-<section id="ranks"><h2>رنک‌ها و ارتقا</h2><p class="sub">ارتقا توسط های‌رنک‌ها و بر اساس تعداد ریپورت و اکتیو بودن انجام می‌شود. پرسیدن تعداد ریپورت از های‌رنک‌ها ممنوع است.</p>
-<div class="tw"><table><thead><tr><th>رنک</th><th>انتظار تا رنک بعد</th><th>ریپورت</th><th>پلیر جدید</th></tr></thead><tbody id="rk"></tbody></table></div>
-<p class="sub">رنک‌های ۷ تا ۱۱ علاوه بر ریپورت، ساعت HR هم می‌خواهند: ادمین ۲۵، سینیور ادمین ۳۵، هد ادمین ۴۰، سرور دایرکتور ۵۰، اگزکیوتیو ۶۰ ساعت. رنک‌های ۱۲ به بالا با تصمیم مدیریت است.</p></section>
-</main>
+<div class="shell">
+  <aside class="sidebar" id="sidebar" aria-label="ناوبری اصلی">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div style="flex:1"><strong>Salvatores</strong><span>Rules &amp; Staff Platform</span></div>
+      <button class="icon-btn close-btn" id="closeBtn" aria-label="بستن منو">
+        <svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="sidebar-foot"><span class="dot"></span><span>نسخه ۲.۰ — همه قوانین در یک نگاه</span></div>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="باز کردن منو">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <form class="search" id="searchForm" role="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="searchInput" type="search" placeholder="جستجو در قوانین… (مثلاً Fear RP یا خفت‌گیری)" autocomplete="off" aria-label="جستجو" />
+        <kbd>Ctrl K</kbd>
+      </form>
+      <button class="icon-btn" id="themeBtn" aria-label="تغییر حالت روشن و تاریک">
+        <svg id="themeIcon" viewBox="0 0 24 24"></svg>
+      </button>
+    </header>
+
+    <main class="view" id="view" aria-live="polite"></main>
+
+    <footer class="foot">
+      <span>Salvatores Roleplay — مرجع قوانین و آموزش Staff</span>
+      <span>جهل به قانون رافع مسئولیت نیست.</span>
+    </footer>
+  </div>
+</div>
+
 <script>
-var R=[
-["حساب و تراکنش",["اکانت و دارایی‌ها غیرقابل انتقال است و مسئولیتش با صاحب اکانت است.","اکانت اشتراکی ممنوع است؛ پانیشمنت یک نفر شامل همه می‌شود.","فروش اکانت یا دارایی‌ها به پول واقعی ممنوع است و هر دو طرف جریمه سنگین می‌شوند.","بازگشت وجه خرید از وب‌سایت فقط تا ۲۴ ساعت ممکن است."]],
-["چیت، ماد و باگ",["هرگونه چیت، هک، ماد یا برنامه مخرب ممنوع است. ۳۰٪ تا ۱۰۰٪ دارایی حذف می‌شود و ممکن است بن دائم شود.","ویدیوی اثبات باید از Display باشد و رکوردها تا یک هفته نگهداری شوند.","باگ را باید به ادمین گزارش داد. سوءاستفاده از باگ یعنی ریست اکانت و بن دائم."]],
-["ریپورت",["برای ریپورت از /report استفاده کنید و مدرک (فیلم یا عکس) داشته باشید.","مهلت ثبت ریپورت ۳۰ دقیقه بعد از اتفاق است و ریپورت وسط آرپی بعد از پایان صحنه بررسی می‌شود.","ریپورت بی‌مورد (کمک، ماشین، ریوایو، «ادمین بیا») Trash Report است و جریمه ۲۰٬۰۰۰ دلار دارد.","اگر ادمین ریپورتی را بررسی کرد، ریپورت مجدد همان موضوع ممنوع است.","دروغ به ادمین یا نداشتن مدرک، پانیشمنت دارد."]],
-["رول‌پلی کلی",["زبان رسمی سرور فارسی است و میکروفون با کیفیت لازم است.","Non RP: هر کاری که روند رول‌پلی را خراب کند.","Block RP: دستور سریع‌تر کار کردن به ارگان‌ها یا بی‌محلی به آن‌ها در زمان آن‌دیوتی.","Mix IC/OOC: استفاده از اطلاعات OOC در صحنه‌ی IC و برعکس، مثل «بیا تیم‌اسپیک».","Troll RP: رجزخوانی بالای جنازه، سوءاستفاده از انیمیشن و اسپم میکروفون."]],
-["PG و Meta Gaming",["PG: کار غیرممکن یا ندادن زمان کافی به طرف مقابل؛ مثلاً بعد از ریوایو تا ۳۰ دقیقه دویدن و فایت ممنوع است.","آفرود با خودروی غیرآفرود، بردن موتور و ماشین داخل مغازه یا بانک و شنای طولانی در تعقیب (حداکثر ۵ دقیقه) ممنوع است.","Meta: استفاده از اطلاعات خارج بازی مثل دیدن ID، لوکیشن از ادمین یا کمک خواستن در تیم‌اسپیک و دیسکورد.","در حالت مجروح یا دست‌بسته حق دادن اطلاعات در رادیو و چت گنگ را ندارید."]],
-["Fear RP",["وقتی اسلحه یا شوکر به سمتتان است و پیاده‌اید، حق فرار یا درآوردن اسلحه و گوشی را ندارید.","بعد از کشتن کسی بیش از ۵ دقیقه بالای سر جنازه نمانید (در فایت خیابانی حداکثر ۱۰ دقیقه).","هنگام خفت‌گیری از داخل ماشین تیراندازی نکنید."]],
-["S.O.K و قتل",["DM و RDM: کشتن بدون دلیل IC و بدون S.O.K ممنوع است و برای S.O.K باید رکورد داشته باشید.","S.O.K فقط ۲۴ ساعت اعتبار دارد و یک‌بار قابل استفاده است. در NCZ و محل رابری قابل اجرا نیست.","به ارگان‌های دولتی و نظامی در حال انجام وظیفه نمی‌توان S.O.K داد یا گرفت.","VDM: زیر گرفتن بدون دلیل. تصادف ماشین‌به‌ماشین S.O.K نمی‌دهد.","Mercy Killing: کشتن دوست زخمی برای ریسپاون سریع ممنوع است."]],
-["نیولایف و ریوایو",["بعد از نیولایف حافظه‌ی صحنه‌ی قبل را ندارید و تا ۳۰ دقیقه حق بازگشت یا آرپی با قاتل ندارید.","مدیک تا ۲ دقیقه بعد از آخرین تیر حق ریوایو ندارد و باید ۶۰ ثانیه صدای تیر نیاید.","ریوایو توسط ادمین فقط در مورد باگ سرور یا مجروح شدن ناگهانی و غیرعمد ممکن است."]],
-["Safe Zone و NCZ",["در Safe Zone درگیری بدون دلیل و مدرک ممنوع است، ولی درگیری‌ای که قبلاً شروع شده می‌تواند ادامه یابد.","NCZ (ارگان‌ها، پارکینگ مرکزی، دایره‌ی سبز، خانه‌ها، پینت‌بال، زندان) هیچ جرمی مجاز نیست و ۳۰ تا ۵۰ قدم اطرافش هم حساب می‌شود.","برای خروج از NCZ سه اخطار با فاصله ۵ تا ۷ ثانیه لازم است."]],
-["خفت‌گیری",["تعداد خفت‌گیر باید ۲ برابر غیرنظامیان و ۴ برابر نیروهای نظامی باشد.","فقط از ساعت ۲۰ تا ۶ صبح گیم، خارج از شهر و مناطق سبز. حداقل ۲ شریف و ۱ مدیک آنلاین باشد.","قبل از شلیک اخطار دهید. برای زدن چرخ ماشین ۳ اخطار با فاصله بیش از ۱۰ ثانیه لازم است.","خفت مدیک، تاکسی، مکانیک و شغل‌های آزاد در حال کار ممنوع است."]],
-["گروگان‌گیری",["هر گروه در هر ۲۴ ساعت یک‌بار. حداقل ۱۲ و حداکثر ۲۵ نفر؛ هر گروگان ۲۵۰ هزار دلار.","مکان‌های مجاز: فرودگاه پایین شهر، سد بالای کازینو، بندر و Human Labs.","Free Passage بین ۲ تا ۵ دقیقه است و ماشین‌های VIP و دولتی درخواست نمی‌شود.","حداکثر ۳۵ نیروی نظامی (۱۵ سوات و یک هلی)."]],
-["تعقیب و گریز",["هر اخطار پلیس ۲۰ ثانیه فاصله دارد و بعد از اخطارها حداکثر ۱ یا ۲ بار PIT مجاز است.","پنچر کردن با اسلحه فقط بعد از ۲ دقیقه و تیر مستقیم بعد از ۵ دقیقه و اعلام حکم تیر.","ورود به آب برای فرار ممنوع است."]],
-["چت‌ها",["/me و /do برای آرپی و /s برای فریاد. /ooc فقط برای محتوای خارج از آرپی است و فحاشی در همه‌ی چت‌ها ممنوع است.","/me را سوم‌شخص بنویسید، بدون ایموجی و بدون مخاطب قرار دادن فرد خاص."]],
-["جاب و گنگ",["ارگان نظامی کثیف نداریم: با لباس، ماشین و وسایل دولتی کار خلاف ممنوع است.","داشتن دو اکانت در دو ساید مختلف ممنوع است.","گنگ‌وارن: اول ۱۵۰۰ XP، دوم ۳۰۰۰، سوم ۵۰۰۰، چهارم کسر یک لول و ۷ روز آف، پنجم آف کامل.","اتک به بیس گنگ یا ایست بازرسی تحت هیچ شرایطی ممنوع است.","جزیره‌ی کایو پریکو تنها دنجر زون است و عواقب ورود با خودتان است."]]
+/* =====================================================================
+   ICONS
+   ===================================================================== */
+const ICONS = {
+  home:'<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/>',
+  shield:'<path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/>',
+  book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5v-13A2.5 2.5 0 0 1 6.5 3Z"/>',
+  gavel:'<path d="m14 4 6 6"/><path d="m12 6 6 6"/><path d="m5 13 6 6"/><path d="m3 21 6-6"/><path d="m8 10 6 6"/>',
+  users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  file:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h6"/>',
+  warn:'<path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
+  search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+  arrow:'<path d="m9 18 6-6-6-6"/>',
+  chevron:'<path d="m15 18-6-6 6-6"/>',
+  sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/>',
+  moon:'<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>'
+};
+const icon = (n,cls='') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[n]||ICONS.file}</svg>`;
+
+/* =====================================================================
+   DATA — بازنویسی‌شده و مرتب‌شدهٔ تمام قوانین
+   ===================================================================== */
+const DATA = [
+/* ------------------------------------------------------------------ */
+{ id:'general', title:'قوانین عمومی شهر', icon:'shield',
+  desc:'مبانی ورود به سرور، امنیت اکانت، ممنوعیت چیت و باگ، زبان رسمی، تبلیغات و مسیر ارتباط با تیم مدیریت.',
+  sections:[
+  { id:'account', title:'مالکیت و مسئولیت اکانت',
+    summary:'مالکیت اکانت غیرقابل انتقال است و مسئولیت کامل آن — از جمله امنیت و رفتار — بر عهده صاحب اکانت است.',
+    points:[
+      'مالکیت اکانت و تمام دارایی‌های آن (پول، خودرو، ملک و آیتم‌ها) غیرقابل انتقال است و فقط به صاحب اکانت تعلق دارد.',
+      'هر بازیکن در قبال اکانت خود — شامل Steam و Social Club — کاملاً مسئول است.',
+      'استفاده از اکانت مشترک بین چند نفر ممنوع است؛ در صورت بن یا پانیشمنت، سایر استفاده‌کنندگان حق اعتراض ندارند.',
+      'فعال‌سازی تایید دو مرحله‌ای برای حفظ امنیت اکانت توصیه می‌شود.',
+      'در صورت لو رفتن اطلاعات اکانت، مسئولیت هرگونه خسارت بر عهده صاحب اکانت است.'
+    ]},
+  { id:'transactions', title:'خرید، فروش و تراکنش‌های غیرمجاز',
+    summary:'هرگونه مراوده مالی خارج از بازی ممنوع است و خریدهای داخل بازی شما را در برابر تخلف مصون نمی‌کند.',
+    points:[
+      'خرید آیتم، خودرو یا دارایی داخل بازی ارتباطی با نقض قوانین ندارد؛ در صورت بن، خریدها قابل استناد نیستند و باید تا پایان مدت بن صبر کنید.',
+      'بازگشت وجه خریدهای وب‌سایت تنها تا ۲۴ ساعت پس از خرید امکان‌پذیر است.',
+      'تعویض یا فروش اکانت و دارایی‌های داخل بازی (پول، خودرو، خانه، حیوان و ...) با پول واقعی یا هر مراوده مالی خارج از بازی ممنوع است.',
+      'خرید و فروش خودروهای VIP که با پول خارج از بازی تهیه شده‌اند غیرقانونی است و هر دو طرف معامله جریمه سنگین می‌شوند.',
+      'مسئولیت مشکلات ناشی از معاملات غیرمجاز (مسدودی حساب، از بین رفتن آیتم‌ها و ...) کاملاً بر عهده کاربر است.',
+      'در صورت گزارش مراوده مالی غیرمجاز، تیم مدیریت بدون اخطار قبلی حساب متخلفان را مسدود می‌کند.'
+    ]},
+  { id:'cheats', title:'چیت، ماد و نرم‌افزار مخرب',
+    summary:'استفاده و حتی نگهداری هرگونه چیت، ماد یا فایل مخرب ممنوع است و مشمول سنگین‌ترین پانیشمنت‌ها می‌شود.',
+    points:[
+      'استفاده از هرگونه چیت، هک، ماد یا نرم‌افزار مخرب ممنوع است.',
+      'در صورت تخلف، بین ۳۰ تا ۱۰۰ درصد دارایی اکانت حذف و ممکن است اکانت برای همیشه بن شود.',
+      'نگهداری فایل چیت یا ترینر روی سیستم — حتی بدون اجرا — ممنوع است؛ همه فایل‌ها باید پیش از ورود به سرور حذف شوند.',
+      'هر ماد گرافیکی یا برنامه‌ای که باعث برتری نسبت به سایر بازیکنان شود، مشمول پانیشمنت است.',
+      'اگر ادمین ویدیو برای اثبات نداشتن چیت بخواهد، رکورد باید از Display و نه فقط محیط بازی تهیه شود.',
+      'رکوردهای بازی باید حداقل یک هفته روی سیستم شما ذخیره بماند.',
+      'در صورت بن شدن توسط آنتی‌چیت یا فایت‌بن، حق اعتراض ندارید.'
+    ]},
+  { id:'bugs', title:'باگ و گلیچ',
+    summary:'باگ باید گزارش شود، نه استفاده. سوءاستفاده از باگ مساوی است با ریست کامل اکانت.',
+    points:[
+      'هر باگ یا گلیچی که مشاهده کردید، موظفید به ادمین گزارش دهید.',
+      'استفاده از باگ یا گلیچ برای کسب درآمد، XP یا هر مزیت غیرمنطقی ممنوع است.',
+      'استفاده از باگ یا گلیچ = ریست کامل اکانت به همراه بن دائم.',
+      'گزارش نکردن باگ و سوءاستفاده از آن، هر دو مشمول پانیشمنت است.'
+    ]},
+  { id:'language', title:'زبان رسمی',
+    summary:'تنها زبان رسمی سرور فارسی است و ورود به سرور نیازمند میکروفون سالم است.',
+    points:[
+      'تنها زبان رسمی سرور فارسی است.',
+      'استفاده از زبان‌های دیگر در ویس یا چت IC ممنوع است.',
+      'برای ورود به سرور باید میکروفون با کیفیت مناسب داشته باشید و بتوانید ارتباط کلامی برقرار کنید.'
+    ]},
+  { id:'ads', title:'تبلیغات و سرورهای دیگر',
+    summary:'تبلیغ هر سرور دیگر و حضور هم‌زمان در سرورهای دیگر، بن و ریست اکانت به همراه دارد.',
+    points:[
+      'تبلیغ هر سرور دیگر ممنوع است و بن دائم به همراه دارد.',
+      'حضور هم‌زمان بازیکنان سالواتورس در سرورهای دیگر — به‌ویژه سرورهای نوپا — باعث بن و ریست اکانت همه افراد می‌شود.',
+      'همه بازیکنان موظف‌اند موارد را از طریق تیکت گزارش دهند؛ عدم گزارش، همانند متخلف اصلی برخورد می‌شود.',
+      'تشخیص نهایی این موارد فقط بر عهده منیجر سرور است.'
+    ]},
+  { id:'reports', title:'ارتباط با ادمین و ثبت ریپورت',
+    summary:'ریپورت باید دقیق، مستند و در زمان درست ثبت شود؛ اسپم و ریپورت بی‌مورد پانیشمنت دارد.',
+    points:[
+      'برای ریپورت باگ یا تخلف از دستور /report استفاده کنید و دسته مرتبط را انتخاب کنید.',
+      'ریپورت نامربوط (درخواست خودرو، ریوایو و ...) باعث عدم رسیدگی و اعمال پانیشمنت می‌شود.',
+      'داشتن مدرک معتبر (ویدیو یا تصویر) الزامی است. در آرپی‌های جمعی بیش از ۶ نفر، حداقل یک نفر باید رکورد داشته باشد.',
+      'اگر ریپورت دهید و نتوانید ادعای خود را ثابت کنید، با شما برخورد می‌شود.',
+      'در جریان آرپی، ریپورت شما تا پایان صحنه بررسی نمی‌شود.',
+      'اسپم ریپورت — خصوصاً گروهی — ممنوع است؛ در هر جمع فقط یک نفر باید ریپورت دهد.',
+      'مهلت ثبت ریپورت ۳۰ دقیقه پس از وقوع است؛ پس از آن فقط از طریق تیکت سایت قابل پیگیری است.',
+      'ورود به ویس استف بدون درخواست ادمین ممنوع است.',
+      'هرگونه فحاشی یا بی‌احترامی در ویس تیم استف یا در مدارک ارسالی، مشمول برخورد با اکانت بازی و دیسکورد شما می‌شود.',
+      'ادمین‌ها بی‌طرف و بر اساس قوانین قضاوت می‌کنند؛ در صورت نارضایتی می‌توانید دلیل قضاوت را بخواهید و تیکت باز کنید.',
+      'اگر ریپورت شما توسط یک ادمین بررسی شد، اجازه ریپورت مجدد درباره همان موضوع را ندارید؛ در غیر این صورت Trash Report دریافت می‌کنید.'
+    ]},
+  { id:'rp-basics', title:'قوانین کلی رول‌پلی',
+    summary:'با ورود به سرور، مطالعه قوانین الزامی است. جهل به قانون رافع مسئولیت نیست.',
+    points:[
+      'با ورود به سرور، موظفید آخرین نسخه قوانین را مطالعه کرده و به آن عمل کنید.',
+      'جهل به قانون رافع مسئولیت نیست.',
+      'رول‌پلی یعنی نقش‌آفرینی مطابق دنیای واقعی؛ نام کاراکتر باید منطقی باشد و نمی‌تواند فحش، صفت یا کلمه نژادپرستانه باشد.',
+      'نوع پوشش کاراکتر نیز باید منطقی و متناسب با نقش باشد.',
+      'هر رفتاری که روند نقش‌آفرینی را نقض کند Non-RP محسوب می‌شود و ادمین می‌تواند حتی بدون ریپورت با متخلف برخورد کند.',
+      'در تمام موارد، نظر ادمین بر اساس تسلط کامل بر قوانین و عدالت اولویت دارد.'
+    ]}
+  ]},
+
+/* ------------------------------------------------------------------ */
+{ id:'rp', title:'اصطلاحات و قوانین رول‌پلی', icon:'book',
+  desc:'IC و OOC، PG، متا گیمینگ، Fear RP، KOS، سرچ، خفت‌گیری، گروگان‌گیری، منطقه امن و تمام قوانین مرتبط با نقش‌آفرینی.',
+  sections:[
+  { id:'ic-ooc', title:'IC و OOC',
+    summary:'IC درون نقشه و OOC بیرون از آن است؛ مرز این دو هرگز نباید شکسته شود.',
+    points:[
+      'IC (In Character): تمام صحبت‌ها و اعمالی که کاراکتر شما در روند رول‌پلی انجام می‌دهد.',
+      'OOC (Out Of Character): هر صحبت یا اقدام خارج از روند رول‌پلی.',
+      'در جریان سناریوهای رول‌پلی، تحت هیچ شرایطی مجاز به استفاده از کلمات یا جملات خارج از ماهیت نقش‌آفرینی نیستید.',
+      'استفاده از OOC در IC نقض قانون Mix IC & OOC است و پانیشمنت دارد.'
+    ]},
+  { id:'non-rp', title:'Non-RP',
+    summary:'هر رفتاری که روند نقش‌آفرینی را خراب کند، Non-RP است.',
+    points:[
+      'هر کاری که قوانین رول‌پلی را زیر سوال ببرد و سناریو را خراب کند، Non-RP است.',
+      'همه پانیشمنت‌های سرور ماهیت Non-RP دارند؛ اگر در روند آرپی قانونی نقض شود و پانیشمنت مشخصی وجود نداشته باشد، Non-RP لحاظ می‌شود.',
+      'نمونه: استفاده از گان سنگین در محدوده شهری، بدون مجوز و خارج از روند آرپی.'
+    ]},
+  { id:'block-rp', title:'Block RP',
+    summary:'آرپی باید منطقی و عقلانی باشد؛ ارگان‌های دولتی ابزار دستور گرفتن نیستند.',
+    points:[
+      'موظفید آرپی منطقی و عقلانی داشته باشید.',
+      'دستور دادن به ارگان‌های دولتی برای انجام سریع‌تر کارشان ممنوع است (مثلاً «سریع ماشینم را درست کن، کار دارم»).',
+      'بی‌اعتنایی به ارگان‌های دولتی در زمان آن دیوتی ممنوع است.',
+      'اگر از روند آرپی ناراضی هستید، باید در /ooc به بازیکن اطلاع دهید؛ دنبال کردن و خراب کردن آرپی دیگران ممنوع است.',
+      'در حین بازجویی یا پرونده‌سازی، ساختن آرپی‌های غیرمنطقی (مثل «اثر انگشت و صورتم سوخته») برای ممانعت از تکمیل پرونده، نقض Block RP است.'
+    ]},
+  { id:'power-gaming', title:'Power Gaming — PG',
+    summary:'انجام کارهای غیرممکن یا ندادن زمان به طرف مقابل، PG است.',
+    points:[
+      'انجام کارهای غیرممکن یا غیرطبیعی در رول‌پلی و ندادن زمان کافی به طرف مقابل، PG است.',
+      'داخل ماشین بودن و سرچ کردن دیگران ممنوع است.',
+      'سرچ کردن بازیکنی که ایستاده و اسلحه در دست دارد ممنوع است.',
+      'تا ۳۰ دقیقه پس از ریوایو شدن، دویدن، پریدن و فایت کردن ممنوع است.',
+      'اگر شیشه ماشین‌ها بالاست، صحبت‌های داخل ماشین را نمی‌شنوید و نمی‌توانید از آن‌ها استفاده کنید.',
+      'گوشی گرفتن در زمان مجروح بودن ممنوع است.',
+      'گشتن یک نفر بدون انجام آرپی /me و /do ممنوع است.',
+      'اگر پس از خفت کردن و حداقل سه اخطار، طرف مقابل تسلیم نشد و متوجه AFK بودن او شدید، می‌توانید پس از بستن دست‌هایش او را سرچ کنید.',
+      'آفرود کردن با خودرو یا موتوری که آفرود نیست (شیب بیش از ۳۰ درجه) ممنوع است.',
+      'پریدن از ارتفاع بسیار بلند با خودرو یا موتور ممنوع است.',
+      'بردن موتور، خودرو یا دوچرخه به داخل مغازه، لباس‌فروشی، بانک و جواهری ممنوع است.',
+      'وقتی با /me دهان شما بسته شده، حق صحبت ندارید؛ وقتی گوشی شما گرفته شده، حق استفاده از گوشی ندارید.',
+      'شنا کردن طولانی در جریان تعقیب و گریز (بیش از ۵ دقیقه) ممنوع است.',
+      'پس از مداوای سرپایی توسط مدیک، تا ۳۰ دقیقه حق دویدن، پریدن و فایت ندارید.',
+      'پس از اصابت شوکر، حق حرکت ندارید و باید تابع دستورات نیروی انتظامی باشید.',
+      'هنگام اسکورت یا حمل فرد دستبند‌زده، دویدن ممنوع است.',
+      'بیش از یک نفر را نمی‌توانید حمل کنید؛ برای گذاشتن فرد در ماشین ابتدا پیاده شوید و در را باز کنید.',
+      'هنگام حمل فرد، رانندگی پشت فرمان ممنوع است مگر با آرپی /me او را روی صندلی بگذارید.',
+      'حمل طولانی‌مدت فرد (بیش از ۵ دقیقه) ممنوع است.',
+      'اگر ۱ یا ۲ چرخ خودرو پنچر باشد، حداکثر ۵ دقیقه و با سرعت ۳۰ کیلومتر بر ساعت حرکت کنید.',
+      'اگر ۳ یا ۴ چرخ پنچر باشد، رانندگی با آن خودرو ممنوع است.'
+    ]},
+  { id:'meta-gaming', title:'Meta Gaming',
+    summary:'انتقال اطلاعات OOC به سناریوی IC، متا گیمینگ است.',
+    points:[
+      'به کار بردن اطلاعات OOC در سناریوی IC، متا گیمینگ است و خلاف قوانین.',
+      'حضور در تیم‌اسپیک با فردی که در بازی با او رابری هستید، بدون حضور در رادیوی مشترک، متا گیمینگ است.',
+      'درخواست کمک از پلیس یا دوستان از طریق تیم‌اسپیک یا دیسکورد در حین دستبند بودن، متا گیمینگ است؛ باید از وسایل ارتباطی داخل بازی استفاده کنید.',
+      'صدا زدن افراد باید با جملاتی مثل «جناب»، «آقا»، «خانم» یا اشاره ظاهری باشد، نه با استفاده از ID.',
+      'شناسایی افرادی که نامشان را در روند رول‌پلی ندیده‌اید یا کاملاً پوشیده‌اند و صحبتی نکرده‌اند، ممنوع است.',
+      'دیدن اتفاقی ID فردی که در بوته پنهان شده، مجوز شناسایی او نیست.',
+      'استریم اسنایپ — سوءاستفاده از استریم شخصی برای ورود به روند آرپی — ممنوع است.',
+      'پرسیدن لوکیشن بازیکنان از ادمین و نگاه کردن به ID اطرافیان در رابری و درگیری ممنوع است.',
+      'در فایت، اگر با هم‌گنگی‌های خود در رادیو مشترک نیستید، احضار آن‌ها متا گیمینگ است.',
+      'در زمان مجروح بودن حق دادن هیچ اطلاعاتی ندارید؛ پس از مجروح شدن باید در چت گنگ یا فکشن اعلام کنید.',
+      'در زمان دستبند بودن، حق دادن اطلاعات در چت یا رادیو ندارید؛ فقط اگر رادیو در جیب شما باشد و طرف مقابل آن را نگرفته باشد، هم‌گنگی‌ها می‌توانند با /gs موقعیت شما را پیدا کنند.',
+      'اگر شاهد KOS دادن به دوستتان باشید، حق کمک دارید؛ در غیر این صورت ورود به فایت ممنوع است.'
+    ]},
+  { id:'mix', title:'Mix IC / OOC',
+    summary:'ترکیب اطلاعات درون‌بازی و بیرون‌بازی، در هر جهتی ممنوع است.',
+    points:[
+      'به کار بردن اطلاعات IC و OOC — از خارج به داخل یا از داخل به خارج — ممنوع است.',
+      'گفتن «برو زیر مایک»، «آیدیت چنده»، «بیا تیم‌اسپیک» در سناریوی IC نمونه‌های Mix هستند.',
+      'استفاده از کلمات غیرمنطقی و غیرواقعی خارج از بازی در سناریوی IC ممنوع است.',
+      'میکس کردن فقط در مکان‌های خلوت و با رضایت همه افراد حاضر در صحنه مجاز است؛ در مکان‌های عمومی، شلوغ، ارگان‌های دولتی و نظامی و پارکینگ مرکزی ممنوع است.'
+    ]},
+  { id:'fear-rp', title:'Fear RP',
+    summary:'جان شما ارزشمند است؛ وقتی اسلحه به سمتتان گرفته شده، تسلیم شوید نه قهرمان.',
+    points:[
+      'جان شما ارزشمند است و نباید کاری کنید که جان خود را به خطر بیندازید.',
+      'اگر پیاده یا سوار موتور بدون حرکت هستید و اسلحه از نزدیک به سمت شما گرفته شده، حق فرار، درآوردن اسلحه، گوشی یا بی‌سیم برای کمک ندارید.',
+      'اگر دو نفر یا بیشتر به سمت خودروی خاموش شما اسلحه بگیرند، باید تابع دستورات آن‌ها باشید و نمی‌توانید فرار کنید.',
+      'اگر سوار خودروی روشن و سالم هستید، این قانون شامل شما نمی‌شود.',
+      'اگر شوکر به سمت شما نشانه گرفته شود، باید تابع دستورات باشید؛ شوکر با اسلحه تفاوتی ندارد.',
+      'اگر اسلحه شما پیش از حمله طرف مقابل در دستتان باشد، مشمول این قانون نمی‌شوید و می‌توانید دفاع کنید.',
+      'پس از کشتن یا زخمی کردن فرد، بیش از ۵ دقیقه در آن محل نمانید؛ در فایت خیابانی حداکثر ۱۰ دقیقه.',
+      'در زمان خفت شدن اگر تنها هستید باید تابع دستورات باشید؛ شلیک از داخل ماشین در حین پیاده شدن نقض Fear RP است.'
+    ]},
+  { id:'deathmatch', title:'DeathMatch',
+    summary:'کشتن یا آسیب زدن بدون دلیل قانع‌کننده IC، دث‌مچ است.',
+    points:[
+      'کشتن، آسیب زدن به فرد یا اموال او بدون دلیل کافی و قانع‌کننده IC، DeathMatch است.',
+      'طبق قوانین KOS باید از دلیل خود ویدیو یا تصویر داشته باشید تا در صورت ریپورت، قضاوت درست انجام شود.',
+      'رعایت نکردن این قانون با سخت‌ترین پانیشمنت ادمینی مواجه می‌شود.'
+    ]},
+  { id:'kos', title:'Kill on Sight — KOS',
+    summary:'KOS مجوز کشتن بدون آرپی است، اما فقط با دلیل محکم و مدرک.',
+    points:[
+      'KOS یعنی اجازه کشتن فرد بدون انجام آرپی، اما فقط با دلیل محکم.',
+      'اگر برای KOS خود مدرک ندارید، از آن صرف‌نظر کنید؛ در صورت ریپورت و نبود مدرک، قضاوت به ضرر شماست.',
+      'KOS در مناطق NCZ قابل اجرا نیست؛ اگر فرد به NCZ پناه ببرد و به سه اخطار شما توجه نکند، پانیشمنت Run to NCZ برای او لحاظ می‌شود.',
+      'چه زمانی KOS دارید: جان شما تهدید شده باشد؛ جان دوستانتان در خطر باشد و شاهد آن باشید؛ اموال شما یا دوستانتان در خطر مستقیم باشد؛ شخصی جرایم سنگین شما را گزارش دهد و خود شاهد گزارش باشید.',
+      'KOS گرفته‌شده تا ۲۴ ساعت اعتبار دارد و فقط یک بار قابل استفاده است؛ پس از اجرا تا یک ساعت با همان فرد حق آرپی ندارید.',
+      'برای گرفتن KOS نباید کسی را تحریک کنید یا موقعیتی بسازید که ناخواسته به دارایی شما آسیب برسد.',
+      'اگر کسی تصادف کرد، اجازه کشتن او را ندارید؛ اگر تکرار کرد، ابتدا در /s هشدار دهید و سپس می‌توانید صدمه بزنید یا با پلیس تماس بگیرید (حداقل سه بار باید به خودروی شما ضربه بزند).',
+      'اگر کسی یک بار مشت زد و در /ooc عذرخواهی کرد، KOS ندارید و باید این آرپی را نادیده بگیرید.',
+      'درگیری لفظی و رجزخوانی دلیل کشتن نیست، مگر فحاشی ناموسی که در آن صورت می‌توانید KOS بزنید.',
+      'از رابرها در محل رابری حق KOS گرفتن ندارید و باید آن محل را ترک کنید.',
+      'ماموران امنیتی و شغل‌های دولتی در حال انجام وظیفه نمی‌توانند از KOS استفاده کنند و از آن‌ها KOS گرفته نمی‌شود.',
+      'اگر به صحنه خفت‌گیری نزدیک شدید و برای دور کردن شما Aim گرفته شد، حق KOS ندارید.',
+      'اگر دو گروه درگیر باشند، حتی با داشتن KOS حق ورود به درگیری را ندارید؛ فقط اگر حضوری شاهد KOS به هم‌گنگی یا دوستتان باشید یا در رادیو مشترک گزارش شود.',
+      'در محل‌های رابری KOS اجرا نمی‌کنید؛ حتی پس از اتمام رابری باید اجازه دهید روند کامل شود.',
+      'به کسی که از دستورات شما پیروی کرده، آسیب نمی‌زنید؛ برای دستورات باید زمان کافی بدهید.',
+      'برای Stop Traffic نمی‌توانید پلیس را بکشید؛ باید تا شلیک پلیس صبر کنید.',
+      'نشانه گرفتن با شوکر KOS نمی‌دهد.',
+      'نشانه گرفتن پلیس روی شما فقط در همان لحظه KOS می‌دهد و حق تیر خلاص به پلیس و شهروند را ندارید.',
+      'اگر اخطار خفت‌گیری (تهدید به مرگ) دریافت کردید، در همان لحظه حق دفاع و فایت دارید.',
+      'از روند خفت‌گیری KOS نمی‌گیرید و نمی‌توانید در مکانی دیگر فرد را خلاص بزنید.',
+      'اگر از ماشین فردی در حال دزدی باشید و صاحب ماشین شما را ببیند، او اجازه آسیب رساندن به شما را دارد.',
+      'به بهانه جرایم راهنمایی و رانندگی یا حمل اسلحه غیرمجاز به نیروهای انتظامی شلیک نکنید.',
+      'فقط زمانی می‌توانید به پلیس شلیک کنید که در رابری باشید یا در تعقیب و گریز، پلیس شما یا دوستتان را زخمی کرده باشد.',
+      'اگر کسی را بکشید و پلیس صحنه را ببیند، برای فرار می‌توانید او را زخمی کنید ولی حق تیر خلاص ندارید.',
+      'اگر پلیس دوست شما را دستگیر کند، می‌توانید برای نجات او اقدام کنید؛ این قانون برای بعد از رابری‌ها صدق نمی‌کند.',
+      'تعداد پلیس‌های زنده در محل نباید بیشتر از ۴ نفر باشد.',
+      'برای جلوگیری از متا گیمینگ باید شاهد لحظه دستگیری باشید یا دوستتان از طریق بی‌سیم یا تلفن داخل بازی اطلاع داده باشد.'
+    ]},
+  { id:'search', title:'Search — قوانین سرچ',
+    summary:'سرچ بدون دلیل قانع‌کننده ممنوع است و سقف مشخصی دارد.',
+    points:[
+      'گشتن فرد یا گروه بدون دلیل قانع‌کننده ممنوع است.',
+      'اگر به روند درگیری ربطی ندارید، حق سرچ ندارید.',
+      'اگر KOS دارید، حق سرچ فرد را دارید.',
+      'در فایت‌های خیابانی، اگر طبق قوانین مجاز به سرچ هستید، می‌توانید در حین درگیری فرد را سرچ کنید.',
+      'اگر کاراکتر فرد در سرور لود نشده و AFK است، حق سرچ او را ندارید؛ پس از لود کامل و با آرپی او را سرچ کنید.',
+      'ارگان‌های نظامی فقط در این موارد حق سرچ شهروندان را دارند: مشاهده اسلحه ممنوعه در دست، ارتکاب جرم و تحت تعقیب بودن، یا بی‌توجهی به اخطار دوم.',
+      'اگر به کسی ایست داده شد، ایستاد و مرتکب جرمی نشده و تحت تعقیب نیست، نیروهای نظامی حق سرچ او را ندارند حتی اگر کیف همراه داشته باشد.',
+      'رابر در رابری سبک: تمام گان‌های سبک، اقلام خلاف و پول تمیز.',
+      'رابر در رابری سنگین: تمام گان‌های سنگین، اقلام خلاف و پول تمیز.',
+      'آیتم‌های غیرقابل سرچ: سیگار، دارو، آب، غذا، تیزر.',
+      'سقف آیتم‌های سرچ: ۶ عدد تیر پیستول و ۴ عدد تیر سنگین؛ اگر بیشتر بود، یک یا دو عدد را نادیده بگیرید و رابری را خراب نکنید.',
+      'ساید مثبت (پلیس): تمام آیتم‌های خلاف رابر قابل سرچ است؛ لوازم مجاز شامل مواد مخدر، تیرها و گان‌ها به‌صورت کامل، چاقو، رادیو، گوشی و تبلت (فقط در صورت بازداشت)، الکپیک، بلوتورچ و وست است.',
+      'در خفت‌گیری و فایت خیابانی، گنگ‌سایدها و ارگان‌ساید می‌توانند به‌صورت کامل سرچ کنند و محدودیتی وجود ندارد.'
+    ]},
+  { id:'vdm', title:'Vehicles Death Match — VDM',
+    summary:'استفاده از خودرو برای کشتن یا آسیب زدن بدون دلیل، VDM است.',
+    points:[
+      'کشتن یا زیر گرفتن افراد با وسیله نقلیه بدون دلیل ممنوع است.',
+      'اگر غیرعمد تصادف کردید، موظفید برای بررسی وضعیت مصدوم به محل بازگردید؛ در غیر این صورت VDM است.',
+      'حتی یک بار زیر گرفتن عمدی، VDM محسوب می‌شود؛ حتی اگر فرد را به بیمارستان برسانید.',
+      'یک تصادف ماشین به ماشین به شما KOS نمی‌دهد؛ می‌توانید از طریق پلیس پیگیری و درخواست خسارت کنید.',
+      'برای متوقف کردن موتورسوار نباید با او تصادف کنید.',
+      'حتی با داشتن KOS حق کشتن فرد با ماشین را ندارید.'
+    ]},
+  { id:'mercy', title:'Mercy Killing',
+    summary:'کشتن برای Respawn سریع‌تر، بی‌ارزش کردن جان در آرپی است.',
+    points:[
+      'کشتن فرد برای Respawn سریع‌تر، بی‌ارزش کردن جان در آرپی است.',
+      'کشتن دوستان و هم‌گنگی‌های زخمی برای Respawn ممنوع است.',
+      'کشتن دوستان برای پر شدن HP، آب یا غذا ممنوع است.',
+      'خودکشی برای پر کردن آب و غذا، فرار از رابری و گروگان‌گیری یا جلوگیری از خفت شدن ممنوع است.',
+      'در فایت و آرپی ممنوع است؛ تنها در خلوت و با رضایت فرد مجاز است.'
+    ]},
+  { id:'join-rp', title:'Join to RP',
+    summary:'ورود به فایتی که در آن نقش ندارید، ممنوع است.',
+    points:[
+      'ورود بی‌دلیل یا عمده به فایتی که دو نفر با هم دارند ممنوع است.',
+      'در رابری‌ها و گروگان‌گیری‌ها، حتی با اعلام حضور ارگان‌های نظامی، هیچ رابری حق ورود و خروج ندارد.',
+      'ارگان‌های نظامی در صورت اعلام حضور و کمبود نفر می‌توانند تا پیش از حکم تیر درخواست نیروی کمکی کنند.',
+      'یک فمیلی که در فایت نقشی ندارد نمی‌تواند وارد شود.',
+      'تنها با مشاهده حضوری KOS به دوست یا هم‌گنگی، یا اعلام در رادیوی مشترک، حق ورود دارید.',
+      'قانونی به نام «اتحاد» وجود ندارد؛ ملاک، حضور در رادیوی مشترک است.',
+      'گرفتن عمدی KOS برای ورود به فایت ممنوع است.',
+      'ارگان‌های نظامی می‌توانند در تمام درگیری‌ها جوین بدهند، حتی درگیری بین دو گنگ.',
+      'در فایت دو گنگ، گنگ‌های دیگر حق جوین و گرفتن KOS ندارند.'
+    ]},
+  { id:'rp-pause', title:'RP Pause',
+    summary:'فقط ادمین می‌تواند سناریو را متوقف کند؛ با ادمین تگ‌دار شوخی نکنید.',
+    points:[
+      'فقط ادمین‌ها با تشخیص خود می‌توانند سناریوی رول‌پلی را متوقف کنند.',
+      'اسپم دادن به ادمین برای RP Pause ممنوع است و Trash Report به همراه دارد.',
+      'بازیکنان باید IC بمانند و تا Pause نشدن آرپی حق صحبت OOC ندارند.',
+      'استفاده از کلمات OOC در روند آرپی (مثل «گزارش دادم، صبر کن») Mix IC/OOC است.',
+      'با دیدن ادمین نباید از روند رول‌پلی خارج شوید.',
+      'حضور ادمین با تگ روشن به معنای Pause RP است؛ اگر گزارش شما به آن مربوط نیست، حق صحبت با ادمین را ندارید.',
+      'وقتی ادمین منطقه‌ای را Pause کرد، کسی حق ورود به آن منطقه را ندارد.',
+      'ادمین با تگ روشن شخصیت IC محسوب نمی‌شود.'
+    ]},
+  { id:'combat-logging', title:'Combat Logging',
+    summary:'خروج عمدی از سرور برای فرار از صحنه، پانیشمنت سنگین دارد.',
+    points:[
+      'خروج عمدی از سرور برای فرار از صحنه رول‌پلی ممنوع است.',
+      'در صورت کرش یا دیسکانکت، به طرفین رول‌پلی از طریق چنل تیم‌اسپیک اطلاع دهید.',
+      'حداکثر تا ۱۰ دقیقه پس از بازگشت باید به لوکیشن و روند قبلی برگردید.',
+      'اگر اینترنت قطع شد و افراد صحنه نبودند یا در موقعیت دورافتاده بودید، ریپورت دهید تا ادمین شما را به سناریو برگرداند؛ رکورد صحنه کرش الزامی است.',
+      'اگر در حین درگیری یا تیراندازی تا ۳ دقیقه عمداً خارج شوید، پانیشمنت اعمال می‌شود.',
+      'اگر خروج شما عمدی تشخیص داده شود (مثل کشیدن کابل LAN)، جریمه می‌شوید و حق اعتراض ندارید.',
+      'اگر گروهی از صحنه خارج شوند، برای همه دیسکانکت‌شده‌ها پانیشمنت لحاظ می‌شود.',
+      'در تعقیب و گریز، اگر قصد خروج دارید باید حداقل ۲۰ دقیقه در سرور بمانید.',
+      'اگر رابرها در رابری شکست بخورند و به عمد دیسکانکت کنند، تمام سلاح‌هایشان حذف می‌شود.'
+    ]},
+  { id:'insult', title:'OOC Insult',
+    summary:'فحاشی در هر شکل و به هر کسی، پانیشمنت دارد.',
+    points:[
+      'فحاشی مستقیم یا غیرمستقیم در سرور ممنوع است و پانیشمنت دارد.',
+      'فحاشی به قومیت، مذهب، خانواده و افراد — مستقیم یا غیرمستقیم — ممنوع است.',
+      'فحاشی جنسی بدون سناریو و هماهنگی ممنوع است.',
+      'هرگونه فحاشی در چت ممنوع است و پانیشمنت Chat Rules دارد.',
+      'اگر دو طرف به هم فحاشی کنند، پانیشمنت برای هر دو لحاظ می‌شود.',
+      'فحاشی در تیم‌اسپیک ممنوع است.'
+    ]},
+  { id:'trash-talk', title:'Trash Talk',
+    summary:'تیکه‌انداختن در چارچوب آرپی مجاز است، فحاشی ناموسی نه.',
+    points:[
+      'ترش تاک یعنی حرف‌های تحقیرآمیز و تیکه‌های لفظی که در چارچوب قوانین رول‌پلی و در روند آرپی قابل اجراست.',
+      'توهین به کاراکتر و ظاهر او در روند آرپی مشکلی ندارد.',
+      'فحاشی ناموسی به خانواده، اقوام و قومیت بازیکن، پانیشمنت بن دارد.',
+      'ترش تاک برای خانم‌ها باید در قالب نقش‌آفرینی باشد؛ آزار و اذیت و اسپم پانیشمنت دارد.',
+      'تیکه‌های جنسی و آرپی جنسی باید از قبل در چت /ooc از طرف مقابل اجازه گرفته شود.',
+      'در مورد گنگ‌ساید: بی‌احترامی کلامی به گنگ، KOS نمی‌دهد؛ اما بی‌احترامی در /s با ذکر نام گنگ، KOS برای تمام اعضای فمیلی توهین‌شده ایجاد می‌کند.',
+      'در این روند حق زدن خلاص را ندارید.'
+    ]},
+  { id:'sexual-torture', title:'Sexual RP و Torture RP',
+    summary:'آرپی جنسی و شکنجه فقط با رضایت صریح همه افراد حاضر مجاز است.',
+    points:[
+      'آرپی جنسی و شکنجه شامل رفتار و گفتار جنسی در سناریو است.',
+      'استفاده رفتاری از ایموت‌های جنسی، بردن دست روی اندام خصوصی و هر رفتار سکشوال بدون اجازه و هماهنگی قبلی ممنوع است.',
+      'صحبت‌های جنسی، درخواست‌های بی‌شرمانه و اهانت بدون اجازه ممنوع است.',
+      'آرپی سکشوال فقط با رضایت همه افراد حاضر در صحنه در چت /ooc و با قابلیت ارائه مدرک مجاز است.',
+      'برای شکنجه باید از فرد اجازه OOC بگیرید؛ در غیر این صورت نقض قوانین است.'
+    ]},
+  { id:'harassment', title:'Harassment',
+    summary:'آزار و اذیت، افشای اطلاعات شخصی و تهدید، در هر شکلی ممنوع است.',
+    points:[
+      'آزار و اذیت، افشای اطلاعات شخصی دیگران یا تهدید به آن، در ویس و چت ممنوع است.',
+      'آزار مداوم بازیکنان و مزاحمت مکرر ممنوع است.',
+      'برای آرپی‌هایی که شامل Harassment است، باید از قبل در چت /ooc از فرد اجازه بگیرید.',
+      'فقط زمانی می‌توانید گزارش دهید که حداقل یک بار فرد خاطی را در /ooc مطلع کرده باشید و او ادامه دهد.',
+      'اگر خودتان در آن آرپی دخیل یا شروع‌کننده Harassment باشید، حق گزارش ندارید.',
+      'شوخی‌های جنسی مکرر در ویس یا چت بدون اخطار در /ooc نیز Harassment محسوب می‌شود.'
+    ]},
+  { id:'troll', title:'Troll RP',
+    summary:'هر رفتاری که جدیت نقش‌آفرینی را از بین ببرد، ترول است.',
+    points:[
+      'هر رفتار نابه‌جا که جدیت نقش‌آفرینی را از بین ببرد، Trolling است.',
+      'سوءاستفاده از انیمیشن‌ها و اسپم صدا در ویس و چت از مصادیق Trolling است.',
+      'رجزخوانی بر سر جنازه، تحقیر طرف مقابل و سبک شمردن آرپی او ممنوع است.',
+      'پوشیدن لباس، جلیقه ضدگلوله یا نشان مربوط به ارگان‌های نظامی و دولتی ممنوع است.',
+      'استفاده از انیمیشن در درگیری مسلحانه و رابری (Emote Abuse) — مثلاً انیمیشنی که بخشی از بدن را در دیوار مخفی کند — ممنوع است.',
+      'پس از کشتن یا مجروح کردن فرد، استفاده از کلمات رکیک، رجزخوانی و ایموت بر سر جنازه در چت، روزنامه، IC، OOC و ویس ممنوع است.',
+      'این قانون شامل فحاشی در روند IC نمی‌شود.'
+    ]},
+  { id:'abuse', title:'Bug / Emote / Car / Mic Abuse',
+    summary:'هر نوع سوءاستفاده از مکانیزم‌های بازی برای برتری، تخلف است.',
+    points:[
+      'Bug Abuse: سوءاستفاده از باگ‌های سرور برای برتری در روند IC؛ تکرار آن بن چند روزه دارد. مثال: حرکت کردن پس از مجروح شدن به دلیل باگ.',
+      'Emote Abuse: استفاده از ایموت‌ها برای مخفی شدن یا رفتن داخل دیوار در فایت و رابری.',
+      'Car Abuse: تیراندازی از داخل خودرویی که پشت آن کاملاً بسته است.',
+      'اگر خودرویی دارید که این ویژگی را دارد، حق آرپی و درگیری با آن را ندارید.',
+      'Mic Abuse: ایجاد صدای ناهنجار، اسپم کلمات و سوءاستفاده از میکروفون در IC و تیم‌اسپیک ممنوع است.',
+      'اسپم مایک برای انداختن RP Pause یا هنگام فایت بر سر جنازه ممنوع است.'
+    ]},
+  { id:'job-abuse', title:'Job Abuse',
+    summary:'در آن دیوتی، فقط کار شغل خود را انجام دهید و از تجهیزات دولتی سوءاستفاده نکنید.',
+    points:[
+      'ارگان نظامی «کثیف» نداریم؛ در آن دیوتی و آف دیوتی حق انجام کار خلاف را ندارید.',
+      'مدیک، تاکسی، ویزل‌نیوز و مکانیک در آن دیوتی حق کار خلاف ندارند.',
+      'در آن دیوتی نباید کاری خارج از شغل خود انجام دهید.',
+      'با لباس، خودرو و وسایل دولتی نمی‌توانید کار خلاف انجام دهید یا به خلافکارها کمک کنید.',
+      'حمل مواد فقط با خودروی شخصی یا گنگ مجاز است؛ استفاده از خودروهای شغلی مثل قصابی، پالایشگاه، خیاطی، ماهیگیری، کامیون و ماینری ممنوع است.',
+      'کارمندان شغل‌های دولتی در آن دیوتی باید لباس و خودروی مربوطه داشته باشند.',
+      'اگر فردی در Black List یک ارگان باشد، ارگان دیگر نمی‌تواند او را استخدام کند.',
+      'داشتن دو اکانت در دو ساید مختلف (پلیس و بیمارستان، پلیس و ارگان نظامی دیگر، گنگ و ارگان نظامی و ...) ممنوع است؛ در صورت مشاهده بن و ریست تمام اکانت‌ها.',
+      'در آن دیوتی نباید به جان و مال شهروندان صدمه بزنید.',
+      'برای کار شخصی باید آف دیوتی کنید و با لباس و خودروی شخصی کار کنید.',
+      'برای شکایت از Job Abuse فقط از یک جهت (IC یا OOC) می‌توانید شکایت کنید.'
+    ]},
+  { id:'chat-rules', title:'Chat Rules',
+    summary:'هر دستور جای خودش را دارد؛ /me، /do، /s و /ooc را درست استفاده کنید.',
+    points:[
+      'هر کامند باید در بخش خودش استفاده شود: /ooc، /s، /me، /do.',
+      '/ooc مخصوص محتوای خارج از روند IC است؛ استفاده از آن به عنوان چت‌روم ممنوع است.',
+      'فحاشی و بی‌احترامی در /ooc و /s ممنوع است و پانیشمنت دارد.',
+      'در /ooc نباید موارد IC را دخیل کنید.',
+      '/me برای آرپی‌هایی است که انیمیشن ندارند و باید به‌صورت سوم‌شخص نوشته شود (مثال: «دست فرد را می‌بندد»).',
+      'در /me نباید ایموجی، xD، lol یا «:)» استفاده شود.',
+      'در /me نباید شخص خاصی را مخاطب قرار دهید.',
+      'عمل نوشته‌شده در /me باید منطقی و قابل انجام باشد؛ مثلاً با دست بسته نمی‌توانید دستکش درآورید.',
+      'اگر از /me استفاده نکنید، قابل پیگیری نیست و نباید ریپورت دهید.',
+      'وقتی با /me دهان شما بسته شده، حق صحبت ندارید.',
+      '/do برای پرسیدن سوال یا تایید/تکذیب وقایع در روند رول‌پلی است.',
+      'در /do نباید مطالب خارج از IC نوشته شود و نباید برای چت استفاده شود.',
+      'اگر کسی با /do شما را مخاطب قرار دهد، موظفید با /do پاسخ دهید.',
+      'سوال در /do باید جواب بله/خیر داشته باشد و پاسخ باید عینی و مستند باشد.',
+      'دروغ گفتن در /do در صورت وجود مدرک موثق IC ممنوع است.',
+      'هنگام بررسی واکنش در /do باید منتظر پاسخ طرف مقابل بمانید.',
+      'در /do رعایت Power Gaming و Fear RP الزامی است.',
+      '/s برای فریاد زدن نوشتاری است، IC است و نباید برای چت استفاده شود؛ استفاده از ایموجی و فحاشی در آن ممنوع است.'
+    ]},
+  { id:'follow-rp', title:'Follow RP',
+    summary:'قانونی به نام «فالو آرپی» به معنای اجبار به پاسخ متقابل وجود ندارد.',
+    points:[
+      'قانونی به نام «فالو آرپی» به معنای اجبار به پاسخ متقابل وجود ندارد؛ همه موظف به پیروی از قوانین رول‌پلی هستند.',
+      'مثال درست: فردی بدون دلیل به شما شلیک می‌کند و KOS می‌دهد؛ شما می‌توانید KOS خود را اجرا کنید و در هر صورت (برد یا باخت) می‌توانید از او شکایت کنید.',
+      'مثال غلط: تصور اینکه حتماً باید به همان شکل پاسخ داده شود و نقض نکردن آن، تخلف است.'
+    ]},
+  { id:'baiting', title:'Cop / Law Baiting',
+    summary:'تحریک عامدانه ارگان‌های امنیتی برای دستگیری، ممنوع است.',
+    points:[
+      'تحریک نیروهای امنیتی که در لحظه باعث دستگیری شما شود، Cop Baiting است.',
+      'ورود به منطقه تحت کنترل پلیس و تحریک او یا تک‌چرخ زدن جلوی پلیس از مصادیق آن است.',
+      'زنگ زدن به تاکسی، مکانیکی، خبرنگار یا دکتر برای آوردن آن‌ها به منطقه و خفت کردنشان ممنوع است.',
+      'حق تحریک ارگان نظامی برای گرفتن KOS را ندارید؛ چیزی به نام گرفتن KOS از ارگان نظامی وجود ندارد.'
+    ]},
+  { id:'attack', title:'Attack Gang or Organ',
+    summary:'اتک دادن به ارگان و گنگ، پانیشمنت سنگین دارد.',
+    points:[
+      'تحت هیچ شرایطی حق اتک دادن به ارگان و گنگ‌ها را ندارید.',
+      'در صورت اتک به بیس فمیلی، تیمی که اولین تیر را زده باشد، گنگ خاطی وارن، کاهش XP گنگ و دیس‌بن می‌گیرد.',
+      'اگر فرد فراری به گنگ خود پناه ببرد: ارگان نظامی می‌تواند با مدرک از دادگستری حکم رید بگیرد؛ گنگ‌ساید می‌تواند پانیشمنت Non-RP و وارن گنگ بگیرد.',
+      'در محدوده NCZ استیشن ارگان‌ها درگیری ممنوع است.'
+    ]},
+  { id:'fail-ended', title:'Fail RP / Ended RP',
+    summary:'آرپی تا آخرین لحظه ادامه دارد؛ وسط آرپی ریپورت ندهید.',
+    points:[
+      'قانونی به نام «تمام شدن آرپی» یا «فیل آرپی» وجود ندارد؛ همه موظف به پیروی از روند هستند.',
+      'اگر فحاشی ناموسی یا استفاده از چیت در سناریو رخ دهد، با اجازه رنک‌تایم روند متوقف می‌شود.',
+      'همه موظف‌اند تا آخرین لحظه نقش‌آفرینی کنند.',
+      'در وسط آرپی ریپورت ندهید؛ پس از پایان نقش‌آفرینی و در زمان مناسب ریپورت کنید.',
+      'فقط در موارد OOC Insult یا آرپی‌های Sexual و Harassment که از قبل هماهنگ نشده‌اند، می‌توانید گزارش دهید.'
+    ]},
+  { id:'safe-zone', title:'Safe Zone',
+    summary:'مناطق امن؛ درگیری در آن‌ها ممنوع است، ولی KOS گرفتن آزاد.',
+    points:[
+      'مناطق Safe Zone امن هستند و درگیری بدون دلیل و مدرک در آن‌ها ممنوع است.',
+      'لیست: مناطق بارگیری، بسته‌بندی و فروش مواد و زمین‌های کاشت؛ اطراف خانه یا کنار ایستگاه پلیس؛ تمام محل‌های کرفت؛ تمام مناطق خرید (گان‌شاپ، پینت‌بال و ...)؛ پارکینگ‌های اطراف شهر به‌جز مرکزی و پارکینگ ۳؛ بیس فمیلی‌ها و گنگ‌ها و اطراف آن؛ تمام رابری‌ها؛ تمام مناطق شغل‌های آزاد.',
+      'گرفتن و دادن KOS در این مناطق آزاد است، اما اجرای آن ممنوع.',
+      'اگر روند درگیری یا خفت‌گیری از قبل آغاز شده باشد و به این مناطق کشیده شود، ادامه آرپی مجاز است.',
+      'ادامه روند به داخل بیس گنگ‌ها ممنوع است.'
+    ]},
+  { id:'ncz', title:'No Crime Zone — NCZ',
+    summary:'مناطق با شدیدترین تدابیر امنیتی؛ هیچ جرمی در آن‌ها نباید رخ دهد.',
+    points:[
+      'NCZ مناطقی با شدیدترین تدابیر امنیتی هستند که هیچ جرمی در آن‌ها نباید رخ دهد.',
+      'لیست: تمام ارگان‌های دولتی و نظامی؛ پارکینگ مرکزی و پارکینگ ۳؛ تمام مناطق دایره سبز؛ تمام خانه‌های سرور؛ پینت‌بال؛ زندان مرکزی.',
+      'در NCZ نه KOS می‌گیرید و نه اجرا می‌کنید.',
+      'ارگان‌های نظامی فقط با تیزر می‌توانند فرد را دستگیر و به استیشن ببرند.',
+      'معاملات غیرمجاز، دزدی، اسلحه و مواد در NCZ ممنوع است.',
+      'پناه گرفتن در NCZ در حین تعقیب و فایت، پانیشمنت Run to NCZ دارد.',
+      'خفت‌گیری، دزدی از فرد یا خودرو و صندوق عقب در این مناطق ممنوع است.',
+      'در صورت ورود باید سریعاً خارج شوید؛ با سه اخطار در /s یا لفظی و عدم خروج، پانیشمنت اعمال می‌شود.',
+      'فاصله هر اخطار ۵ تا ۷ ثانیه است.',
+      'شعاع ۳۰ تا ۵۰ قدمی اطراف این مناطق نیز NCZ محسوب می‌شود.'
+    ]},
+  { id:'nlr', title:'New Life Rule — NLR',
+    summary:'پس از مرگ، حافظه کاراکتر پاک می‌شود و بازگشت به همان آرپی ممنوع است.',
+    points:[
+      'New Life زمانی رخ می‌دهد که در جریان آرپی مجروح شوید و توسط مدیک نجات پیدا نکنید و از بیمارستان Respawn شوید.',
+      'پس از فایت، تا ۲ دقیقه پس از آخرین شلیک، مدیک حق ریوایو ندارد.',
+      'فرد فوت‌شده حافظه خود را از دست می‌دهد و اتفاقات و افراد پیش از مرگ را به یاد نمی‌آورد.',
+      'تا ۳۰ دقیقه پس از مرگ حق بازگشت به آن آرپی را ندارید، حتی اگر روند بیش از ۳۰ دقیقه طول بکشد.',
+      'پس از New Life تا ۳۰ دقیقه حق آرپی با افرادی که کشته‌اید را ندارید.',
+      'اگر کسی را New Life کردید، باید مثل یک شهروند جدید با او رفتار کنید و KOS قبلی از بین می‌رود.',
+      'اگر خودتان New Life شوید، تمام KOSهایی که دارید از بین می‌رود.'
+    ]},
+  { id:'trash-report', title:'Trash Report',
+    summary:'ریپورت بی‌دلیل، بی‌توضیح یا در وسط آرپی، جریمه نقدی دارد.',
+    points:[
+      'ریپورت باید دقیق و کامل توضیح داده شود؛ ریپورت بی‌مورد و بدون توضیح، Trash Report دارد.',
+      'ریپورت در وسط آرپی، پس از آرپی پانیشمنت Trash Report و جریمه نقدی ۲۰٬۰۰۰ دلار دارد.',
+      'نمونه‌های Trash Report: «کمک»، «ادمین بیا»، «تاکسی»، «مدیک»، «سلام»، «شکایت».',
+      'نمونه ریپورت صحیح: عنوان «سوال داشتم» — توضیحات «در مورد جاب آزاد سوال داشتم»؛ عنوان «PG» — توضیحات «با ماشین اسپرت از کوه بالا رفت».',
+      'اگر به دلیل باگ یا مشکل شهری خلاص خوردید و در وسط آرپی نبودید، می‌توانید از شهر خارج و دوباره وارد شوید؛ آیتم‌هایتان در جیب می‌ماند.',
+      'وقتی مدیک و تاکسی در شهر هستند، ریپورت برای ماشین و ریوایو ندهید.'
+    ]},
+  { id:'stream', title:'ADS و Stream Snipe',
+    summary:'تبلیغ سرورهای دیگر و مزاحمت برای استریمرها ممنوع است.',
+    points:[
+      'تبلیغاتی که به سرور مربوط نیست ممنوع است؛ تبلیغ سرورهای دیگر، فروش چیت و هر موضوع نامرتبط پانیشمنت بن دارد.',
+      'استریم اسنایپ یعنی هرگونه مزاحمت یا اختلال در روند آرپی استریمرها.',
+      'در صورت استریم اسنایپ، کشتن بدون دلیل یا فحاشی مکرر به استریمر، بن ۳ تا ۳۰ روز و کسر دارایی اکانت اعمال می‌شود.',
+      'اگر این اعمال گروهی انجام شود، جریمه سه برابر می‌شود.'
+    ]},
+  { id:'multi-account', title:'Multi Account',
+    summary:'هر بازیکن فقط یک اکانت؛ مولتی اکانت مساوی بن و ریست.',
+    points:[
+      'هر بازیکن فقط با یک اکانت مجاز به ورود و رول‌پلی است.',
+      'در صورت مشاهده، تمام اکانت‌ها ریست و بن چند روزه اعمال می‌شود.',
+      'وارد شدن با اکانت دیگر پس از دریافت پانیشمنت، مولتی اکانت است.',
+      'در صورت مشکل با اکانت، با تیم استف و های‌رنک هماهنگ کنید.'
+    ]},
+  { id:'lying', title:'Lying to Admin',
+    summary:'بدون مدرک شکایت نکنید؛ ادعای اثبات‌نشده پانیشمنت دارد.',
+    points:[
+      'اگر نتوانید ادعای خود را با مدرک ثابت کنید، طبق صلاحدید ادمین پانیشمنت دریافت می‌کنید.',
+      'پیش از هر شکایت، از صحت حرف و مدرک خود مطمئن شوید.'
+    ]},
+  { id:'kidnap', title:'قوانین خفت‌گیری',
+    summary:'نسبت تعداد، زمان مجاز، اخطارها و مراحل خفت‌گیری دقیقاً مشخص است.',
+    points:[
+      'برای خفت کردن افراد غیرنظامی، تعداد خفت‌گیرها باید دو برابر افراد مورد نظر باشد (مثال: دو نفر در ماشین = چهار خفت‌گیر).',
+      'برای خفت کردن ارگان‌های نظامی، تعداد خفت‌گیرها باید چهار برابر باشد (مثال: دو نظامی = هشت خفت‌گیر).',
+      'زمان مجاز خفت‌گیری: ۸ شب تا ۶ صبح در مناطق بیرون شهر و غیر از مناطق سبز.',
+      'اگر اخطار اول در ۵:۵۹ صبح داده شود، روند ادامه دارد؛ اخطار در ۶:۰۱ باطل است.',
+      'خفت‌گیری در طول روز فقط برای گروگان‌گیری مجاز است.',
+      'خفت‌گیری از ارگان نظامی بین ساعت ۷ صبح تا ۱۰ شب مشکلی ندارد ولی نباید به فایت کشیده شود و باید سریعاً به محل گروگان‌گیری برده شود.',
+      'برای خفت‌گیری حداقل ۲ نفر Sheriff و ۱ مدیک باید آنلاین باشند.',
+      'خفت‌گیری داخل شهر و مناطق سبز ممنوع است.',
+      'FBI، Government و دادگستری را نمی‌توانید خفت کنید، مگر اینکه به‌عنوان غیرنظامی خارج از شهر باشند و آیدی کارت نشان دهند.',
+      'کمین کردن اطراف مناطق بارگیری، بسته‌بندی و فروش مواد برای خفت‌گیری ممنوع است.',
+      'فردی که در حال کانکت شدن یا ریوایو شدن است، تا ۱۰ دقیقه نباید خفت شود.',
+      '۲۰ دقیقه پس از ریست سرور خفت‌گیری ممنوع است.',
+      'روند خفت‌گیری نباید به داخل شهر و مناطق سبز کشیده شود.',
+      'اگر پلیس‌های دیگر در محل زخمی یا مرده باشند، پلیس تنها را خفت نکنید.',
+      'مدیک، تاکسی، مکانیک و خبرنگار در آن دیوتی را نمی‌توانید خفت کنید.',
+      'افراد مشغول در شغل‌های قصابی، معدن، پالایشگاه، چوب‌بری، باربری، شکارچی و ماهیگیری را با لباس و خودروی کارشان نمی‌توانید خفت کنید.',
+      'در حین خفت شدن باید طبق Fear RP رفتار کنید.',
+      'اگر درب ماشین قفل است، با /me و /do فرد را مجبور به باز کردن کنید؛ او حق تیراندازی از داخل ماشین را ندارد.',
+      'در خفت‌گیری می‌توانید کل پول، سوییچ ماشین و تمام آیتم‌ها به‌جز موبایل را بگیرید.',
+      'می‌توانید مواد مخدر، اسلحه، مدکیت، اسلحه سرد و آیتم‌های ممنوعه را بگیرید.',
+      'ابتدا در /s اخطار بدهید؛ شلیک بدون اخطار پانیشمنت دارد.',
+      'برای متوقف کردن ماشین، قبل از تیراندازی سه اخطار با فاصله بیش از ۱۰ ثانیه بدهید.',
+      'اگر پس از شلیک به چرخ سرعت را کم کرد و توقف کرد، حق آسیب زدن ندارید.',
+      'اگر به سمت شما شلیک کردند، می‌توانید به خود شخص شلیک کنید.',
+      'برای موتورسوار، پس از اخطارها و زدن یک چرخ و عدم توقف، می‌توانید به خود شخص شلیک کنید.',
+      'پس از تسلیم کامل، حق آسیب رساندن ندارید.',
+      'برای گروگان‌گیری، فردی تنها که درگیر نیست را خفت و درجا دستبند بزنید، وسایل ارتباطی و اسلحه‌اش را بگیرید و به مکان گروگان‌گیری ببرید.',
+      'اگر روند به فایت تبدیل شد، حق بردن فرد به گروگان‌گیری را ندارید.',
+      'مذاکره با شهروند برای گروگان بودن باید در چت /do انجام شود و مدرک داشته باشید.',
+      'مذاکره گفتاری و نوشتاری باید در چت با رنگ مشخص انجام شود؛ در غیر این صورت مذاکره باطل است.'
+    ]},
+  { id:'pursuit', title:'Pursuit Rules',
+    summary:'تعقیب و گریز قواعد دقیقی دارد؛ شلیک مستقیم به فراری ممنوع است.',
+    points:[
+      'در تعقیب و گریز، نیروهای نظامی حق شلیک مستقیم به مجرم در حال فرار را ندارند و باید روند پرسوت انجام شود.',
+      'برای هر اخطار ۲۰ ثانیه صبر کنید (سه اخطار تا ۱ دقیقه).',
+      'پس از عدم تسلیم، پلیس می‌تواند یک یا دو بار رم (PIT) بدهد با فاصله ۲۰ ثانیه.',
+      'پس از ۲ دقیقه می‌توانند با اسلحه ماشین را پنچر کنند.',
+      'اگر مجرم به سمت نیروهای نظامی شلیک کند، حکم تیر صادر می‌شود.',
+      'اگر پس از پنچر شدن و توقف، در دست فرد اسلحه نباشد و به سمت پلیس Aim نگیرد، موظف‌اند دستبند بزنند و بدون آسیب به اداره پلیس منتقل کنند.',
+      'اگر پس از توقف Aim بگیرد یا اسلحه داشته باشد، پلیس برای دفاع از خود می‌تواند او را زخمی کند.',
+      'ورود به آب یا رفتن به سمت آب‌های آزاد برای فرار ممنوع است.',
+      'اگر پرسوت بیش از ۵ دقیقه طول بکشد، پس از پنچر کردن می‌توانند حکم تیر برای زخمی کردن صادر کنند و باید در بلندگو اعلام شود.'
+    ]},
+  { id:'hostage', title:'گروگان‌گیری — Taking Hostage',
+    summary:'تعداد، مکان، مبلغ و قواعد فایت در گروگان‌گیری کاملاً مشخص است.',
+    points:[
+      'هر گروه، فمیلی یا گنگ فقط یک بار در هر ۲۴ ساعت می‌تواند گروگان‌گیری کند.',
+      'می‌توانید از افراد گنگ خود استفاده کنید، اما نمی‌توانید هم‌گنگی را لحظاتی فایر و دوباره ست گنگ کنید.',
+      'می‌توانید از اتحادهای خود کمک بگیرید.',
+      'افراد در حال انجام وظیفه (مدیک، تاکسی، مکانیک) را نمی‌توانید گروگان بگیرید.',
+      'افراد شغل‌های آزاد با لباس و خودروی کارشان را نمی‌توانید گروگان بگیرید.',
+      'افراد ارگان‌های نظامی (فدرال، گاورمنت، دادگستری) در آن دیوتی را نمی‌توانید گروگان بگیرید؛ در آف دیوتی با لباس و خودروی شخصی مجاز است.',
+      'مکان‌های مجاز: فرودگاه پایین شهر، سد بالای کازینو، بندر ۱۰۴۰، Human Labs ۲۰۶۰؛ برای مناطق دیگر باید با ادمین هماهنگ کنید.',
+      'اطلاع دادن به نیروهای نظامی توسط شریف، پلیس و نشنال گارد انجام می‌شود.',
+      'حداقل تعداد گروگان‌گیران ۱۲ نفر است و به ازای هر ۴ نفر یک گروگان؛ برای استارت یک گروگان کافی است.',
+      'حداکثر گروگان‌گیران ۲۵ نفر است و ارگان‌های نظامی باید ۵ نفر بیشتر باشند.',
+      'پس از شروع گروگان‌گیری نمی‌توانید از داشتن گروگان منصرف شوید.',
+      'اگر گروگان را آزاد کنید و قصد فایت دارید، تعداد شما نباید بیش از ۲۵ نفر شود و حق جوینر ندارید.',
+      'درخواست پول زیاد از ارگان‌های نظامی ممنوع است.',
+      'مبلغ هر گروگان ۲۵۰ هزار دلار است؛ بسته به تعداد گروگان‌ها می‌توانید یک ماشین یا دو موتور درخواست کنید.',
+      'درخواست ماشین دولتی و نظامی ممنوع است و درخواست‌های بی‌مورد خلاف قوانین است.',
+      'استفاده از ماشین‌های VIP و اختصاصی ممنوع است.',
+      'تعداد نیروهای نظامی حداکثر ۳۵ نفر (شامل ۱۵ سوات و یک واحد هلی) است.',
+      'گروگان‌گیرها نمی‌توانند گروگان را با خود ببرند.',
+      'گروگان باید در اولین فرصت پس از مذاکره تایم Free Passage آزاد شود.',
+      'پس از مذاکره تایم فرار ساید منفی و اتمام Free Passage، ارگان‌ها می‌توانند تعقیب را ادامه دهند.',
+      'واحد هوایی می‌تواند تا اتمام Free Passage در حال تعقیب باشد.',
+      'تایم Free Passage بین ۲ تا ۵ دقیقه است.',
+      'ورود به NCZ ممنوع است.',
+      'برای گروگان‌گیری نمی‌توانید وارد شهر شوید و باید بیرون شهر اقدام کنید.',
+      'می‌توانید با مذاکره و دادن آیتم یا پول با فرد توافق کنید و در /do مدرک داشته باشید.',
+      'در تایم Free Passage تا پایان مذاکره، ارگان‌ها حق دستگیری گروگان‌گیران را ندارند، حتی سوار یا پیاده، تا زمانی که گروگان‌گیران تیراندازی نکرده باشند.',
+      'اگر یکی از گروگان‌گیران دستگیر شود، باید برای آزادی او امتیاز به ارگان‌ساید بدهید.',
+      'ارگان‌ها پس از Free Passage می‌توانند PIT انجام دهند (هر ۲۰ ثانیه یک بار).',
+      'ارگان‌ها در گروگان‌گیری حق تیراندازی ندارند مگر: مشاهده کامل کشته شدن فرد توسط گروگان‌گیران یا شلیک مستقیم به واحد نظامی با تایید کارمند عملیات؛ تیراندازی ناگهانی از سمت گروگان‌گیران با بیش از ۲ نفر و قصد فایت؛ پس از Free Passage و دو PIT و عدم توقف؛ شنیدن صدای تیر به‌تنهایی دلیل شروع فایت نیست و باید دستور کامندر عملیات باشد.',
+      'در صورت مرگ گروگان یا مذاکره‌کننده، ارگان‌ساید بدون محدودیت تعداد می‌تواند درگیری را آغاز کند.'
+    ]},
+  { id:'cayo', title:'Island Cayo Perico',
+    summary:'تنها Danger Zone سرور؛ ورود با مسئولیت خودتان.',
+    points:[
+      'جزیره کایو پریکو تنها منطقه Danger Zone و بدون محدودیت در سرور است و عواقب ورود کاملاً بر عهده خودتان است.',
+      'تمام قوانین برای ارگان‌های نظامی، دولتی و شهروندان یکسان است.',
+      'ارگان‌های نظامی و دولتی حق ورود ندارند و در صورت ورود حق ریپورت ندارند.',
+      'خلاص زدن و استفاده از هر گان بدون محدودیت مجاز است.',
+      'اگر پرسوت به این منطقه کشیده شود، تمام محدودیت‌ها از بین می‌رود.',
+      'در صورت خلاص خوردن باید روند را کامل دنبال کنید.',
+      'پل ورودی جزیره جزو Danger Zone نیست و قوانین در آن صدق می‌کند.'
+    ]},
+  { id:'revive', title:'Revive',
+    summary:'ریوایو ادمین فقط برای باگ و خروج غیرعمد؛ ریوایو در فایت ممنوع.',
+    points:[
+      'ریوایو توسط ادمین فقط در شرایطی مجاز است که باگ یا خروج غیرعمد از روند آرپی باعث مجروحیت شده باشد.',
+      'بدون رکورد و مدرک حق ریپورت در این مورد را ندارید.',
+      'اگر آب و غذای شما تمام شود و مجروح شوید، حق ریپورت ندارید؛ این بخشی از روند آرپی است.',
+      'مدیک در زمان فایت حق نزدیک شدن به منطقه درگیری را ندارد و باید دور بماند تا ۶۰ ثانیه از آخرین صدای تیر بگذرد.',
+      'اگر فرد مجروح در جای امن و دور از فایت باشد، مدیک موظف به ریوایو است.',
+      'اگر گنگ‌ساید سر شما اسلحه گرفته و هم‌گنگی شما درخواست ریوایو کند، طبق Fear RP موظف به ریوایو هستید.',
+      'مدیک در فایت حق ریوایو ندارد؛ درخواست ریوایو در وسط درگیری نقض قوانین است.'
+    ]}
+  ]},
+
+/* ------------------------------------------------------------------ */
+{ id:'robbery', title:'قوانین رابری', icon:'gavel',
+  desc:'قوانین مشترک رابری، سرچ، جدول کامل رابری‌های سبک و سنگین، جوینر بیمه و روند پرسوت.',
+  sections:[
+  { id:'common', title:'قوانین مشترک رابری‌ها',
+    summary:'اولویت با گروه آماده است؛ درگیری قبل از حکم تیر ممنوع.',
+    points:[
+      'اولویت رابری با گروهی است که زودتر و با تعداد کامل در محل حاضر شده باشد.',
+      'وقتی دو گروه در یک محل رابری باشند، رابری نباید استارت شود.',
+      'اگر رابری استارت شده باشد، هیچ گروهی حق ورود ندارد.',
+      'اگر پلیس برسد و حضور خود را اعلام کند، هیچ‌یک از افراد رابر اجازه ورود به محل را ندارند.',
+      'در این حالت اگر افراد رابر خارج شوند، پلیس می‌تواند آن‌ها را بازداشت کند و افراد رابر حق شروع فایت ندارند.',
+      'اگر افراد ارگان مثبت وارد محوطه رابری شوند، افراد رابر حق تیراندازی و کشتن مامور وارد شده را دارند و ارگان حق شروع فایت ندارد؛ رابری باید ادامه یابد.',
+      'در زمان استارت رابری یا تصمیم گروه به اجرای رابری، حتی با KOS اجازه درگیری ندارید.',
+      'کمپ کردن اطراف محل رابری برای گرفتن یا اجرای KOS ممنوع است.',
+      'استفاده از دارو، قرص و جلیقه ضدگلوله قبل از استارت برای هر دو طرف آزاد است.',
+      'پس از شروع درگیری، استفاده از دارو و جلیقه ممنوع است (LSD مجاز است).',
+      'پنچر کردن وسایل نقلیه نیروهای نظامی ممنوع است.',
+      'استفاده از ماشین یا آبجکت برای مسدود کردن راه ورود و خروج ممنوع است.',
+      'استفاده از سلاح سرد و سلاح‌های غیرمتعارف مثل چاقو در رابری ممنوع است.',
+      'تیراندازی قبل از حکم تیر پلیس برای هر دو سمت ممنوع است؛ در صورت تیراندازی رابرها، پلیس در هر زمان می‌تواند حکم تیر بدهد.',
+      'تیراندازی به هلیکوپتر پلیس به‌جز در رابری‌های کارگو و میثیک ممنوع است.',
+      'رابرها تا Successful شدن رابری حق خروج از محوطه را ندارند.',
+      'در صورت خروج و رسیدن پلیس و اعلام حضور، اجازه ورود مجدد ندارید.',
+      'پلیس تا قبل از Successful شدن رابری — به‌جز در شاپ، دیجیتال دن و بیمه — حق صدور حکم تیر ندارد.',
+      'پس از ریسپانس پلیس و اعلام حضور، پلیس باید ظرف ۱۵ دقیقه فایت را شروع کند؛ در غیر این صورت خروج رابرها بلامانع است.',
+      'اگر فردی از شهر خارج شود و پیش از حکم تیر برگردد، حق فایت دارد؛ پس از حکم تیر، بازگشت خارج از روند RP است و حق فایت ندارد.',
+      'رابرها در صورت ریوایو شدن باید سریع‌ترین زمان محل را ترک کنند.',
+      'در صورت شکست، رابرها باید تمام مراحل بازجویی و زندان را تا پایان همراهی کنند.',
+      'پس از شکست رابر، تا اعمال زندان هیچ‌کس حق فراری دادن رابرها را ندارد.',
+      'تمام رابری‌ها به‌جز بیمه جوینر ندارند.'
+    ]},
+  { id:'search', title:'قوانین سرچ در رابری',
+    summary:'رابر و پلیس هر کدام سقف مشخصی برای سرچ دارند.',
+    points:[
+      'رابر در رابری سبک (شاپ، دیجیتال دن، بانک‌های کوچک): تمام گان‌های سبک، اقلام خلاف، پول تمیز.',
+      'رابر در رابری سنگین (بانک مرکزی، جواهری‌ها و ...): تمام گان‌های سنگین، اقلام خلاف، پول تمیز.',
+      'پلیس در تمام رابری‌ها: تمام گان‌ها، تمام اقلام خلاف، مجوز حمل اسلحه.',
+      'اقلام خلاف: بلوتورچ، الکپیک، پول کثیف، انواع دراگ، ۶ عدد تیر پیستول، ۴ عدد تیر سنگین.'
+    ]},
+  { id:'list', title:'جدول کامل رابری‌ها',
+    summary:'نسبت نفرات، نوع گان و تعداد پلیس در هر رابری.',
+    table:{
+      head:['رابری','گان مجاز','حداکثر پلیس','حداقل / حداکثر رابر'],
+      rows:[
+        ['Shop Robbery','سبک','۲ (بدون سوات)','۱ / ۲'],
+        ['Digital Den Robbery','سبک','۳ (بدون سوات)','۲ / ۳'],
+        ['Fleeca Bank Robbery','سبک','۴ (۱ سوات)','۳ / ۴'],
+        ['Blaine County Bank','سنگین','۶ (۲ سوات + هلی)','۴ / ۶'],
+        ['Central Bank','سنگین','۸ (۳ سوات + هلی)','۶ / ۸'],
+        ['Maze Bank','سنگین','۸ (۳ سوات)','۵ / ۷'],
+        ['Jewelery City','سبک / سنگین','۴ (۱ سوات)','۳ / ۴'],
+        ['Jewelery Shams','سبک / سنگین','۶ (۲ سوات)','۳ / ۵'],
+        ['Jewelery Flat','سنگین','۸ (۲ سوات + هلی)','۵ / ۷'],
+        ['Bime Robbery','سنگین','۸ (۳ سوات + هلی)','۵ / ۷ (۱ جوینر خارج)'],
+        ['Mythic Robbery','سنگین','۱۰ (۳ سوات + هلی)','۷ / ۹'],
+        ['Shipment Robbery','سنگین','۱۱ (۴ سوات + هلی)','۸ / ۱۰'],
+        ['AirPort Robbery','سنگین','۸ (۳ سوات + هلی)','۶ / ۸'],
+        ['Cargo Robbery','سنگین','۱۱ (۵ سوات + هلی)','۷ / ۹'],
+        ['Bobcat Robbery','سنگین','۸ (۳ سوات + هلی)','۵ / ۷'],
+        ['Pursuit Robbery','خارج شهر سنگین / داخل شهر سبک','۴ (۱ سوات در خروج از شهر)','۱ / ۲']
+      ]
+    }},
+  { id:'extra', title:'قوانین تکمیلی و جوینر بیمه',
+    summary:'جزئیات رابری کارگو، بیمه، میثیک و روند پرسوت.',
+    points:[
+      'در رابری روستا (کارگو) تیراندازی از کوه‌های اطراف برای پلیس مجاز نیست.',
+      'در رابری بیمه، جوینر تا قبل از Successful حق درگیری ندارد و در صورت شکست باید منطقه را ترک کند.',
+      'اگر در هر مرحله شک کردید، به ادمین گزارش دهید.',
+      'اگر رابری لغو شود و پلیس در منطقه حاضر باشد، روند باید ادامه یابد.',
+      'در روند و پس از رابری از شوخی، ترول و رجزخوانی دوری کنید.',
+      'Successful یعنی اتمام تایم رابری و خروج دایره محل رابری از مینی‌مپ برای ارگان‌ها.',
+      'حداقل فاصله اخطارهای پلیس ۲۰ ثانیه است.',
+      'در همه مراحل، نظر ادمین اولویت دارد.',
+      'در رابری میثیک حداکثر ۲ نفر داخل زیرزمین.',
+      'پلیس نمی‌تواند از یونیت هوایی به‌عنوان یونیت فایتر استفاده کند.',
+      'در ترید، وین با پلیس است.',
+      'جوینر فقط در رابری بیمه: حداکثر ۶ نفر داخل شرکت و جوینر حتماً خارج از شرکت.',
+      'جوینر حق ورود به داخل رابری را ندارد و فقط با دعوت به داخل شرکت وارد فایت می‌شود.',
+      'جوینر باید از دید پلیس مخفی بماند و در صورت مشاهده و شک، پلیس می‌تواند او را دستگیر کند (under detain).',
+      'جوینر پس از حکم تیر و پس از ورود همه پلیس‌ها به داخل، حق جوین دادن دارد.',
+      'در رابری پرسوت، پس از تحویل کامیون در خارج شهر یک یا دو ماشین از ارگان‌های مثبت برای اسکورت حاضر می‌شوند؛ پس از رساندن کامیون به مقصد، رابر می‌تواند تسلیم شود یا پرسوت را شروع کند.',
+      'در پرسوت رابری، PD تا ۳۰ ثانیه حق PIT یا Shot Fire ندارد؛ سپس باید قبل از Shot Fire سه PIT با فاصله ۲۰ ثانیه بدهد و بعد مجاز به تیراندازی به چرخ است.',
+      'هلی در پرسوت رابری تحت هیچ شرایطی اجازه تیراندازی ندارد.',
+      'PD حق ورود به منطقه تحویل کامیون را ندارد و رابر موظف است حداکثر تا ۱ دقیقه منطقه را ترک کند.'
+    ]}
+  ]},
+
+/* ------------------------------------------------------------------ */
+{ id:'military', title:'ارگان‌های نظامی و OOC', icon:'users',
+  desc:'FTS، زنجیره فرماندهی، کدهای رادیویی، Rules of Engagement، دستگیری، پرسوت، دیویژن‌ها و گروگان‌گیری نظامی.',
+  sections:[
+  { id:'ooc-rules', title:'FTS-1 — قوانین OOC',
+    summary:'حضور در دیسکورد میلیتاری و رعایت GGT الزامی است.',
+    points:[
+      'پس از تایپ، باید در دیسکورد میلیتاری عضو و رول‌های مربوط به خود را داشته باشید.',
+      'مسئول رفتار خود در دیسکورد هستید و باید با دیگران محترمانه رفتار کنید.',
+      'GGT خود را رعایت کنید؛ مثلاً پلیس وظیفه حفاظت از مردم را دارد، نه ایجاد خطر برای آن‌ها.',
+      'هرگونه Troll RP و رفتارهایی که جدیت رول‌پلی را پایین بیاورد، با شدیدترین برخورد مواجه می‌شود.'
+    ]},
+  { id:'commands-basic', title:'کامندهای پایه نظامی',
+    summary:'کامندهای ضروری سرور و پلیس را بشناسید.',
+    table:{
+      head:['کامند / کلید','کارکرد'],
+      rows:[
+        ['F6','باز کردن منوی جاب'],
+        ['Shift + 6','هل دادن و انداختن پلیر روی زمین'],
+        ['F7','استفاده از بلندگو در ماشین'],
+        ['/f','چت فکشن (OOC درون سازمانی)'],
+        ['/r','تغییر فرکانس رادیو'],
+        ['/dep','ارسال پیام به ارگان‌ها'],
+        ['/mdt','باز کردن صفحه ثبت گزارش'],
+        ['/badge','نمایش رنک و بچ روی کاراکتر'],
+        ['/flist','نمایش اعضای فعال جاب'],
+        ['/lb','استفاده از بلندگو']
+      ]
+    }},
+  { id:'chain', title:'زنجیره فرماندهی',
+    summary:'احترام، سلسله مراتب و تبعیت از مافوق، ستون ارگان نظامی است.',
+    points:[
+      'به تمام همکاران احترام بگذارید و سلسله مراتب را رعایت کنید.',
+      'همواره تابع دستورات مافوق باشید و از رفتارهای غیراداری اجتناب کنید.',
+      'در بروز مشکل ابتدا به یک رنک بالاتر، سپس دو رنک بالاتر مراجعه کنید.',
+      'احترام شهروندان و مجرمان را حفظ کنید و تحت هیچ شرایطی فحاشی نکنید.',
+      'در صورت بی‌احترامی یا عدم همکاری، برخورد جدی اما در چارچوب احترام داشته باشید.',
+      'برای آفرود یا صحبت در OOC ابتدا از مقامات بالاتر اجازه بگیرید.',
+      'به وظایف محوله مسئولیت‌پذیر باشید و در صورت عدم توانایی، LOA ارجاع دهید.',
+      'در حین پاترول در فرکانس رادیویی خود حاضر باشید.',
+      'استیشن خود را بشناسید و نظم آن را رعایت کنید.',
+      'تحت هیچ شرایطی با مجرمان دوستی و همکاری نکنید.',
+      'جدیت خود را در برابر مجرمان حفظ کنید و از شوخی و خنده با آن‌ها خودداری کنید.',
+      'استفاده از یونیت سیستم، رادیو، ALS، MDT و کارت شناسایی و بازداشت را آموزش ببینید.',
+      'در Regroup به ترتیب Chain of Command از راست به چپ کنار هم قرار بگیرید.'
+    ]},
+  { id:'off-duty', title:'قوانین Off Duty',
+    summary:'در آف دیوتی، اسلحه و لباس فرم ممنوع است.',
+    points:[
+      'در آف دیوتی حمل اسلحه ممنوع است و لباس فرم نباید در تن شما باشد.',
+      'روشن بودن دوربین هنگام مراجعه، سفر به مکان مشخص یا بررسی وضعیت شخصی در مکان مشخص یا ماموریت ویژه مجاز است.',
+      'در صورت داشتن رنک پایین‌تر یا شخصی بودن مورد، در کنار پست یا پلیس شهر نباید به بهانه رنک پایین‌تر بمانید؛ از همیاران یا های‌رنک‌ها کمک بگیرید.'
+    ]},
+  { id:'talk', title:'قوانین نقش‌آفرینی و مکالمه',
+    summary:'هیچ جمله OOC در محیط IC نظامی جایز نیست.',
+    points:[
+      'صحبت درباره موضوعات OOC در رادیو ارگان و محیط سرور ممنوع است.',
+      'استفاده از جملات OOC در استیشن، جاب، رادیو، ماموریت‌ها و حضور دیگران ممنوع است.',
+      'نمونه‌های ممنوع: «مدیک ریوایو کن»، «فیکس می‌کنم»، «دارم با ادمین صحبت می‌کنم»، «پینگم رفته بالا».',
+      'اعمال مجازات‌ها بر عهده لیدر، سینیور، هدرنک و گادفادر است.',
+      'رعایت این قوانین برای همه افراد الزامی است.'
+    ]},
+  { id:'radio', title:'ارتباط رادیویی و کدها',
+    summary:'زبان رادیو، فشرده، محکم و بر پایه کدهای استاندارد است.',
+    points:[
+      'در رادیو احترام را رعایت کنید، فشرده و با صدای رسا و رعایت سلسله مراتب صحبت کنید.',
+      'Department Call یک چت OOC سازمان‌های دولتی است و باید با احترام و در قالب IC انجام شود (ابتدا معرفی ارگان، سپس ارگان مقابل).',
+      'اولویت پاسخ به دپارتمان کال عمدتاً بر عهده های‌رنک‌ها است.'
+    ],
+    table:{
+      head:['کد','معنی'],
+      rows:[
+        ['Code 1','تازه‌کار / آرپی ضعیف'],
+        ['Code 01','دیسی / لگ / کرش'],
+        ['Code 2','پاسخ فوری با چراغ گردان بدون آژیر'],
+        ['Code 3','پاسخ اضطراری با چراغ و آژیر'],
+        ['Code 4','نیاز به پشتیبانی بیشتر نیست'],
+        ['Code 07','کانال ارگان‌های دیگر'],
+        ['Code 37','فرد تحت تعقیب'],
+        ['10-1','Regroup / جمع شدن'],
+        ['10-3','سکوت رادیو'],
+        ['10-4','دریافت شد'],
+        ['10-5','آخرین پیام تکرار شود'],
+        ['10-6','آخرین رادیوکال بازبینی شود'],
+        ['10-7','مشغول موقعیت'],
+        ['10-8','آماده خدمت'],
+        ['10-9','مشغول'],
+        ['10-10','عملیات امن'],
+        ['10-11','عملیات موفق'],
+        ['10-12','درخواست پشتیبانی انتقال اسیر'],
+        ['10-13','درخواست پشتیبانی انتقال مجرم'],
+        ['10-14','گروگان‌گیری'],
+        ['10-15','مجرم بازداشت شد'],
+        ['10-19','درخواست مجوز بازگشت به استیشن'],
+        ['10-20','موقعیت مکانی'],
+        ['10-21','اعلام وضعیت'],
+        ['10-23','نگه داشتن در یک موقعیت'],
+        ['10-37','Call Sign'],
+        ['10-55','ایست ترافیک'],
+        ['10-80','تعقیب و گریز (Pursuit)'],
+        ['10-99','پایان موقعیت'],
+        ['11-1','دیده شدن یک فرد']
+      ]
+    }},
+  { id:'roe', title:'Rules of Engagement',
+    summary:'چهار فاز پاسخ به تهدید؛ اولویت همیشه دستگیری زنده است.',
+    points:[
+      'فاز ۱: فرد به‌صورت لفظی شما را تهدید می‌کند؛ او را وادار کنید تهدید را متوقف کند.',
+      'فاز ۲: اگر مؤثر نبود، با صحبت کردن او را از تهدید منصرف کنید.',
+      'فاز ۳: اگر همچنان تهدید یا حمله کرد، فرار کنید یا فقط دفاع کنید و هیچ آسیبی وارد نکنید.',
+      'فاز ۴: اگر فرد به کسی آسیب جدی وارد کرد و همچنان در تلاش برای آسیب بود، می‌توانید از سلاح استفاده کنید تا او را ناتوان کنید.',
+      'اولویت همیشه دستگیری سالم و زنده مجرم است.'
+    ]},
+  { id:'arrest', title:'Arrest Procedure و Miranda Rights',
+    summary:'بازداشت چهار مرحله دارد و حقوق میراندا باید خوانده شود.',
+    points:[
+      'مرحله ۱: توقف فرد با شوکر یا در اختیار گرفتن، یا درخواست تسلیم.',
+      'مرحله ۲: نزدیک شدن از پشت و بستن دستبند.',
+      'مرحله ۳: خلع سلاح کامل و ضبط اقلام غیرمجاز (به‌جز غذا).',
+      'مرحله ۴: انتقال به استیشن و تحویل به واحد مربوطه.',
+      'پس از تحویل به کرو، هیچ اختیار قانونی برای ضرب و شتم یا فحاشی وجود ندارد.',
+      'حقوق میراندا: معرفی ارگان، علت بازداشت، حق سکوت، حق داشتن وکیل (و وکیل رایگان در صورت نداشتن وکیل).',
+      'در صورت درخواست Badge Number یا Call Sign، موظفید آن را بدهید.'
+    ]},
+  { id:'search-arrest', title:'شرایط جستجو و دستگیری',
+    summary:'هر بازرسی باید دلیل قانونی داشته باشد.',
+    points:[
+      'اگر نظامی در شرایطی باشد که نداند باید فرد را دستگیر کند یا تسلیم شود، سریعاً به افسر بالارتبه اطلاع دهد.',
+      'همکاری با افراد مسلح یا دریافت پول برای دستگیری تخلف است و باید به مافوق گزارش شود.',
+      'درگیری شدید در حین بازداشت، تهدید و ضرب و جرح شهروندان کاملاً غیرمجاز است.',
+      'استفاده از سلاح گرم علیه متهم مسلح به سلاح سرد فقط در صورتی مجاز است که او در حال آسیب زدن به شما یا شهروندان باشد.',
+      'شلیک به لاستیک فقط زمانی مجاز است که مجرم با خودرو فرار کند و جان شهروندان یا افسران در خطر مستقیم باشد.',
+      'اگر ۳ ماشین سنگین پشت سر هم حرکت کنند، در حین تعقیب کشتن آن‌ها مجاز است.',
+      'در گزارش تیراندازی نمی‌توانید همه افراد منطقه را بگیرید، حتی اگر تنها یک نفر دیده شده باشد.',
+      'در گزارش تیراندازی ابتدا منطقه را بررسی کنید و از افراد جویای اتفاقات شوید.',
+      'گفتن جملاتی مثل «شما اسلحه دارید؟»، «تعداد فشنگ‌ها» یا «سرچت می‌کنیم» در حین جستجو میکس است.',
+      'اگر اسلحه روی دوش یا کمر شهروند است، اجازه دستگیری و بازرسی ندارید و فقط می‌توانید از او بخواهید اسلحه را بردارد.',
+      'همه نیروهای نظامی موظف‌اند افرادی را که دستگیر یا بازرسی می‌کنند، در صورت داشتن آیتم‌های غیرقانونی مثل اسلحه، کوین، ویل و کیف، بازرسی کنند.',
+      'عدم رعایت این قانون موجب BlackList، JobAbuse یا Fire می‌شود.',
+      'در صورت داشتن مواد مخدر بیش از حد مجاز، موارد را بگیرید و در همان مکان پرونده تشکیل دهید.'
+    ]},
+  { id:'pursuit-mil', title:'FTS-3 — پرسوت، ترافیک استاپ و PIT',
+    summary:'کد ۱، ترافیک استاپ و مراحل دقیق تعقیب و گریز نظامی.',
+    points:[
+      'کد ۱ فقط زمانی ارسال می‌شود که حداقل دو نیروی نظامی در سطح شهر درگیر شده باشند.',
+      'اگر شخصی روی زمین افتاده و شخص خاطی فرار کرده، اجازه ارسال کد ۱ نیست.',
+      'اگر افراد غیرنظامی سلاح گرم کشیده‌اند، اجازه ارسال کد ۱ نیست.',
+      'در مناطق شلوغ و پرجمعیت، کد ۱ ارسال نمی‌شود.',
+      'در خارج از شهر (کوه‌ها، بیابان‌ها، اطراف شهر) می‌توان کد ۱ ارسال کرد.',
+      'اگر گنگ‌ها در حال درگیری هستند و نظامی‌ها می‌رسند، افراد گنگ موظف‌اند سلاح را زمین بگذارند و تسلیم شوند.',
+      'اگر نظامی‌ها در اقلیت باشند و گنگ‌ها همچنان درگیر باشند، نظامی‌ها باید عقب‌نشینی کنند و گنگ‌ها موظف‌اند پس از اعلام، درگیری را متوقف کنند.',
+      'ترافیک استاپ: اجازه کشتن راننده برای نقض قوانین راهنمایی و رانندگی وجود ندارد، مگر شلیک از خودرو.',
+      'برای هر ماشین حداکثر دو ماشین نظامی می‌توانند پرسوت انجام دهند.',
+      'اگر مطمئن شدید فرد فراری از ماشین پیاده شده، می‌توانید حکم تیر صادر کنید.',
+      'اگر نظامی کشته شد، دو نفر می‌توانند کد ۱ ارسال کنند.',
+      'اگر فرد فراری وسیله نقلیه خود را تغییر دهد (ماشین، قایق، موتور)، پس از ۲۵ دقیقه تعقیب، حکم تیر صادر می‌شود.',
+      'ترافیک استاپ: ابتدا با MegaPhone اخطار دهید، سپس از چند ثانیه آژیر استفاده کنید.',
+      'مثال: «LSPD صحبت می‌کند، ماشین خود را به سمت راست خیابان هدایت و توقف کامل کنید.»',
+      'سپس: «ماشین خود را خاموش کرده و به هیچ عنوان پیاده نشوید.»',
+      'سپس رادیو کد م و بررسی مدارک راننده و مسافر.',
+      'می‌توانید با Plate Reader و DMV در MDT مالکیت خودرو را بررسی کنید.',
+      'در صورت عدم تطابق مدارک، فرد را به Penal Code ارجاع دهید.',
+      'پرسوت زمانی انجام می‌شود که فرد به اخطارها گوش ندهد و متوقف نشود.',
+      'در پرسوت، در مناطق پرجمعیت و پرترافیک به هیچ عنوان توقف نکنید.',
+      'فاصله هر اخطار ۵ ثانیه و حداکثر ۳ اخطار در ۱۵ ثانیه.',
+      'در ۱۰ دقیقه اول فقط دو ماشین نظامی می‌توانند اعلام کنند.',
+      'پس از ۱۵ دقیقه، یک واحد هلیکوپتر X-Ray می‌تواند اعلام شود.',
+      'پس از ۱۵ دقیقه می‌توان ماشین فرد را زد؛ سپس PIT از Dispatch درخواست شود.',
+      'در این مرحله سه اخطار (با فاصله ۵ ثانیه) داده شده و افراد نظامی می‌توانند ماشین فرد فراری را شلیک کنند.',
+      'فقط به سمت چرخ‌ها شلیک کنید و از شلیک به خودروی غیرنظامی اجتناب کنید.',
+      'می‌توانید از «جک خاردار» به‌عنوان مانع استفاده کنید.',
+      'PIT فقط با ماشین‌های Guard انجام می‌شود و حداقل فاصله ۲ دقیقه بین PITها.',
+      'پس از ۱۰ دقیقه می‌توانید شیشه ماشین فرد تحت تعقیب را بشکنید و از BOX استفاده کنید.',
+      'اگر مجرم در هر زمان به سمت شما تیراندازی کرد، اجازه تیراندازی به خود فرد را دارید.',
+      'پس از ۲۵ دقیقه و اعلام حکم تیر، می‌توانید شخص را مستقیماً زخمی کنید.'
+    ]},
+  { id:'divisions', title:'FTS-4 — دیویژن‌ها و قوانین سوات',
+    summary:'HR، ASD، SWAT و Dispatch و محدودیت‌های تجهیزات.',
+    points:[
+      'Human Resources: آموزش و نظارت بر نیروها و عضو کردن آن‌ها.',
+      'Air Support Division: آموزش و تحلیل خلبان‌های هلیکوپتر.',
+      'Tactical Team (SWAT/SEB): ماموریت‌های ویژه و حساس مثل دفاع از بانک‌ها.',
+      'در SWAT، زن و مرد با هم در یک تیم نیستند؛ در صورت مشاهده، ۳ اخطار و سپس برخورد.',
+      'Dispatch: مدیریت جلسات و نظارت بر عملکرد نیروها.',
+      'افراد خارج از ارگان نظامی که عضو سوات نیستند، حق استفاده از وست شکیل و تجهیزات سوات را ندارند.',
+      'تجهیزات سوات: ۳ وست، ۶ وست، ۵، برتا، اتومات، زورو، اسپایر؛ شلوارک برای رانندگی ممنوع.',
+      'هیچ نظامی حق ندارد در شهر به دلخواه خود شلوارک بپوشد و ژست بزند.',
+      'افراد نظامی موظف‌اند همیشه وست، جلیقه و سلاح خود را داشته باشند.',
+      'ماشین‌های زره‌پوش فقط در رابری‌های سنگین 1v1 استفاده می‌شوند؛ در غیر این صورت Job Abuse است.',
+      'رابری‌های مجاز برای استفاده از تجهیزات سنگین: Mythic، Maze Bank، Central Bank، Bime، Paleto Bank.',
+      'در ماموریت‌هایی مثل دستگیری برای اسلحه، اجازه حمل وست را ندارید.',
+      'سوات فقط در رابری‌های سنگین، نپ و گروگان‌گیری مجاز است.',
+      'بدون داشتن ۳ سوات، نمی‌توانید از سوات استفاده کنید؛ استفاده از سوات برای شخص خاص ممنوع است.',
+      'اگر بدون ۳ سوات عمل کنید، برای شما Job Abuse لحاظ و به Military محکوم می‌شوید.'
+    ]},
+  { id:'judiciary', title:'FTS-5 — ارجاع به دادگستری',
+    summary:'جرایم سنگین باید در سریع‌ترین زمان به دادگستری ارجاع شوند.',
+    points:[
+      'در جرایم سنگین که طبق جدول جرایم مشمول صلاحیت دادگستری است، فرد باید در سریع‌ترین زمان ممکن به دادگستری ارجاع شود.',
+      'موارد ارجاع اجباری: خفت‌گیری، گروگان‌گیری، جعل هویت، آزار و اذیت و شکنجه، قتل دو نفر از یک باند، جواهری (Javahery، Mini Javaher، Almas)، Mini Bank (Fleeca)، Bime، Liberty، Maze، Central Bank، Mythic، Shipment.',
+      'پس از ارسال اخطار به دادگستری، در صورت عدم رعایت، فرمانده عملیات می‌تواند منطقه را ترک کند و پرونده را به دادگستری ارجاع دهد.'
+    ]},
+  { id:'hostage-mil', title:'قوانین گروگان‌گیری نظامی',
+    summary:'فرماندهی عملیات، محدودیت تعداد و شرایط شروع فایت.',
+    points:[
+      'نظامی‌ها مجازند شاهد گروگان‌گیری باشند، مگر اینکه گروگان‌گیران قوانین را نقض کنند.',
+      'در صورت مشاهده، فرمانده عملیات دستور حمله صادر می‌کند و تیراندازی انجام می‌شود.',
+      'پس از دستور حمله و بی‌توجهی، دو نفر می‌توانند درگیری را آغاز کنند.',
+      'در صورت شنیدن صدای شلیک، فقط فرمانده عملیات (مسئول شلیک) می‌تواند دستور حمله بدهد.',
+      'در صورت درخواست گروگان‌گیران برای تغییر مکان، مجاز است و تعداد نیروها طبق قوانین اعزام می‌شود.',
+      'کشته شدن گروگان توسط نظامی، نشانه ضعف فرماندهی است و اداره فدرال می‌تواند تذکر دهد.',
+      'اولویت، حفظ جان گروگان‌ها است.',
+      'گروگان‌گیران از ارسال آلارم گروگان‌گیری خودداری می‌کنند، اما پس از ۱۰ دقیقه، فورس انتخاب می‌شود.',
+      'در فورس ال، اداره اول و دوم داخل شهر و اداره سوم و چهارم خارج از شهر.',
+      'مذاکره‌کننده جزو ۶ رنک اول ارگان است.',
+      'انتخاب فرمانده: با دو نفر وارد منطقه شود و الا بودن یا نبودن فرمانده اول تعیین می‌شود؛ فرمانده اصلی توسط اداره فدرال انتخاب می‌شود.',
+      'فرمانده رنک ۴ اولیای ارگان است.',
+      'در صورت کشته شدن گروگان توسط هر یک از گروگان‌گیران، اداره دادگستری می‌تواند پرونده تشکیل دهد و در صورت نداشتن توضیح مناسب، تا ۱ هفته از حضور در عملیات منع شود.',
+      'تعداد افراد نظامی مجاز در گروگان‌گیری: ۱۲ نفر، به ازای هر ۴ گروگان‌گیر یک نفر اضافه می‌شود و حداکثر ۱۲ + ۱ سوات + ۱ هلی.',
+      'اداره فدرال در گروگان‌گیری فقط حضور دارد و حق تیراندازی ندارد.',
+      'روند گروگان‌گیری باید توسط فرمانده عملیات انجام شود تا به نتیجه برسد و حداکثر ۳۰ دقیقه.',
+      'اگر گروگان‌گیر دستگیر شد، توسط فدرال سابمیت می‌شود و پرونده به دادگستری ارجاع می‌شود.'
+    ]},
+  { id:'dispatch-robbery', title:'قوانین اعزام به رابری',
+    summary:'هر رابری به یکی از سه ارگان پلیس، شریف یا متروپولیتن تعلق دارد.',
+    points:[
+      'اعزام ارگان‌ها به رابری‌ها طبق لیست و شماره مشخص است.',
+      'پلیس: Shop 1-5، Fleeca 3، Digital Den 3-5، Javahery، Flat Javahery، Maze.',
+      'شریف: Shop 9-20، Fleeca 5-6، Jewelry Shams، Mythic.',
+      'متروپولیتن: Shop 6-8 و 13، Fleeca 2 و 4، Digital Den 4، Bime، Shipment، CBank.'
+    ]}
+  ]},
+
+/* ------------------------------------------------------------------ */
+{ id:'staff', title:'تیم Staff', icon:'file',
+  desc:'قوانین TeamSpeak، رسیدگی به شکایت، جلسه و رنک‌آپ، آموزش ادمین، New Player Train، کامندها و جدول رنک‌ها.',
+  sections:[
+  { id:'ts', title:'قوانین TeamSpeak Staff',
+    summary:'حضور در ویس on duty و سکوت، شرط فعالیت ادمین است.',
+    points:[
+      'پیش از ورود به سرور و آن دیوتی، در تیم‌اسپیک حاضر باشید (Slvts.ir).',
+      'در ویس on duty حضور داشته باشید و Deafon نباشید؛ میکروفون بسته باشد تا در دسترس باشید.',
+      'همه ادمین‌ها از هلپر تا دایرکتور موظف به حضور در ویس on duty هستند.',
+      'در ویس on duty پنیک نکنید و سکوت را رعایت کنید.',
+      'برای کار با فرد، به ویس Complaint خالی بروید و سپس به on duty برگردید.',
+      'در ویس‌های Office نباشید، مخصوصاً رنک ادمین به بالا.',
+      'رعایت سلسله مراتب الزامی است.'
+    ]},
+  { id:'complaints', title:'ارتباط با پلیر و رسیدگی به شکایت',
+    summary:'ادب، بی‌طرفی و بررسی دقیق مدارک، سه اصل رسیدگی است.',
+    points:[
+      'ادب و احترام مهم‌ترین نکته است؛ در صورت بی‌احترامی پلیر، حق توهین ندارید و باید به های‌رنک‌تایم گزارش دهید.',
+      'رسیدگی به Connect to staff در تیم‌اسپیک از وظایف ادمین است؛ پلیر را Move و پیگیری کنید.',
+      'اگر ریپورتی نقض قوانین از دو ساید را ثابت کرد، لازم نیست همه پلیرها را احضار کنید؛ از هر ساید یک نفر با رکورد کامل کافی است.',
+      'هنگام احضار پلیر شاکی، مدرک را کامل با صدا و ویدیو ۱۰ تا ۱۵ ثانیه عقب و جلو ببینید.',
+      'اگر رکورد بدون صدا باشد یا قضاوت اشتباه باشد، تنزل رنک یا فایر.',
+      'در صورت تعدد افراد، آن‌ها را به ویس Full mute ارجاع دهید.',
+      'برای دیدن رکورد از Google Meet استفاده کنید.'
+    ]},
+  { id:'meeting', title:'جلسه و رنک‌آپ',
+    summary:'جلسه هفتگی اجباری است و رنک‌آپ بر اساس عملکرد انجام می‌شود.',
+    points:[
+      'هر هفته ساعت ۸ شب در چنل Meeting جلسه آموزشی و رنک‌آپ برگزار می‌شود و حضور همه ادمین‌ها الزامی است.',
+      'در صورت غیبت و عدم اطلاع، تنزل رنک یا فایر.',
+      'در چنل روبیکا اعلام حضور کنید.',
+      'درخواست رنک‌آپ خارج از جلسه، تنزل رنک دارد.',
+      'رنک‌آپ بر اساس تعداد ریپورت و اکتیویتی هفتگی انجام می‌شود؛ سوال بی‌جا نکنید.'
+    ]},
+  { id:'loa', title:'فرم درخواست مرخصی (LOA)',
+    summary:'مرخصی فقط با فرم و اطلاع‌رسانی در چنل استف ثبت می‌شود.',
+    points:[
+      'ادمین‌ها می‌توانند در ماه چند روز مرخصی بگیرند.',
+      'اطلاع‌رسانی در چنل استف چت روبیکا انجام شود.'
+    ],
+    table:{
+      head:['فیلد','توضیح'],
+      rows:[
+        ['IC Name','نام کاراکتر'],
+        ['OOC Name','نام واقعی'],
+        ['Rank Staff','رنک فعلی'],
+        ['LOA Start','تاریخ شروع'],
+        ['LOA Finish','تاریخ پایان'],
+        ['LOA Reason','دلیل مرخصی'],
+        ['Steam Hex','شناسه استیم']
+      ]
+    }},
+  { id:'staff-rules', title:'قوانین Staff',
+    summary:'نظم چت استف، سلسله مراتب و ممنوعیت جانب‌گیری.',
+    points:[
+      'در چت استف نظم و ادب برقرار باشد؛ اسپم و صحبت بی‌مورد، فایر یا تنزل رنک دارد.',
+      'در چت استف حق صدا کردن گیم‌مستر، منیجر و های‌رنکان را ندارید.',
+      'سلسله مراتب را رعایت کنید؛ ابتدا با High Rank Time صحبت کنید.',
+      'برای آف دیوتی در هر زمان نیاز به تایید های‌رنک‌تایم دارید.',
+      'ادب و رفتار درست با همه پلیرها وظیفه همه ادمین‌ها است.',
+      'هرگونه صحبت بی‌مورد در چت ادمینی ممنوع است.',
+      'رندوم اسپکت پلیر از منو، وارن و در صورت تکرار فایر و بن دارد.',
+      'برای اسپکت GAS (ادمین‌های لو رنک، های‌رنک یا گیم‌مستر) نیاز به اجازه دارید.',
+      'همه ادمین‌ها در گنگ استف باشند و در زمان ادمینی حق ست خوردن در گنگ دیگر را ندارند؛ جانب‌گیری فایر و بن دارد.',
+      'صحبت با های‌رنکان درباره رنک‌آپ وارن دارد.',
+      'برای AFK طولانی در ادمین زون آف دیوتی کنید.',
+      'در تایم ریپورت اینویزیبل باشید؛ بدون اجازه اینویزیبل کردن و noclip در شهر، فایر و بن دارد.',
+      'هنگام قبول ریپورت در شهر شلوغ و روند آرپی، با پلیر صحبت نکنید و در /pm اطلاع دهید.',
+      'داشتن دوست‌دختر یا رفیق دختر در سرور برای ادمین ممنوع است.'
+    ]},
+  { id:'admin-training', title:'Admin Training',
+    summary:'رنک‌های پایین با نظارت های‌رنک عمل می‌کنند و پانیشمنت با فرم دقیق ثبت می‌شود.',
+    points:[
+      'هلپر و سینیور هلپر حق هیچ‌گونه پانیشمنت سنگین ندارند؛ با نظارت های‌رنک و صلاحدید آن‌ها عمل کنید.',
+      'های‌رنک ناظر از رنک Head Supporter می‌تواند بر رنک‌های ۱ تا ۵ نظارت کند.',
+      'برای پانیشمنت از کامند /cs id player یا steam hex استفاده کنید.',
+      'در پنل، پانیشمنت را انتخاب کنید و در صورت نبودن فرد در سرور، تیک نمایش برای همه را فعال کنید.',
+      'اگر فرد در سرور حاضر است، به تعداد پانیشمنت، جزای نقدی بزنید: /fine id price reason.',
+      'مثال: /fine 1234 90000 non rp.'
+    ],
+    table:{
+      head:['فیلد','توضیح'],
+      rows:[
+        ['admin nazer','نام ادمین جاجر'],
+        ['shaki','استیم هگز شاکی'],
+        ['Tozihat','توضیح دقیق و خلاصه نقض قوانین']
+      ]
+    }},
+  { id:'new-player', title:'New Player Train',
+    summary:'آموزش نیو پلیر باید کامل، دوستانه و مرحله‌به‌مرحله باشد.',
+    points:[
+      'از پلیر بپرسید سابقه رول‌پلی دارد یا نه و به قوانین مسلط است یا نه.',
+      'سایت سرور، قوانین و کانال روبیکای Salvatores_ruls را در چت /ooc ارسال کنید.',
+      'تمام شهر، جاب‌های دولتی، نظامی و آزاد و روش شروع کار و درآمد را توضیح دهید.',
+      'بهترین شغل برای نیو پلیر، جاب‌های دولتی است.',
+      'اگر قوانین را نمی‌داند، خلاصه و کلیدی توضیح دهید.',
+      'رعایت ادب و احترام و داشتن رکورد از صفحه را توضیح دهید.',
+      'سایت، کانال استف رولز، آی‌پی تیم‌اسپیک و نشاندن در Request role و دادن رول وریفای.',
+      'توضیح جاب‌ها و درآمد و شرایط ورود به ارگان‌ها.',
+      'توضیح کافه‌ها، اسموک‌شاپ، اسپشیال آیتم‌ها و راه‌های رفع استرس.',
+      'توضیح HUD و /settings.',
+      'توضیح فارم، کاشت مواد و میوه، کرفت و تفاوت زمین کارتل با زمین معمولی.',
+      'اطلاع از استارتر پک (تلفن، آب و غذا، یک ماشین در گاراژ پارکینگ مرکزی).'
+    ]},
+  { id:'commands', title:'کامندهای ادمینی',
+    summary:'هر کامند محدودیت خودش را دارد؛ استفاده بی‌جا پانیشمنت دارد.',
+    table:{
+      head:['کامند','کارکرد و محدودیت'],
+      rows:[
+        ['/aduty','روشن / خاموش کردن پرم'],
+        ['/revive [ID]','ریوایو — فقط با اجازه های‌رنک'],
+        ['/slay [ID]','اسلی — فقط با اجازه های‌رنک'],
+        ['/spect [ID]','اسپکت — رندوم ممنوع'],
+        ['/goto [ID]','رفتن به پلیر — فقط با اجازه های‌رنک'],
+        ['Shift + E','تلپورت به مارک نقشه'],
+        ['/tpw','تلپورت برای carry کردن پلیر'],
+        ['/bring [ID]','آوردن پلیر — فقط با اجازه های‌رنک'],
+        ['/az','رفتن به ادمین زون'],
+        ['/invisible','نامرئی شدن'],
+        ['/pm [ID] [message]','پیام خصوصی به پلیر'],
+        ['/rpp 3 and 50','انداختن RP Pause'],
+        ['/rpu [ID]','برداشتن RP Pause'],
+        ['/car name car [ID]','دادن ماشین — با اجازه چت استف'],
+        ['/dv [ID]','پاک کردن ماشین'],
+        ['/fix [ID]','تعمیر ماشین'],
+        ['/freeze [ID]','فریز کردن پلیر'],
+        ['/checkcs [ID]','چک پانیشمنت — با اجازه High Rank Time'],
+        ['/alskin [ID]','ویرایش کاراکتر'],
+        ['/pskin','اعمال پرمیشن اسکین'],
+        ['/pfix [ID]','فیکس باگ کاراکتر'],
+        ['/setworld [ID] [World]','تنظیم ورلد — فقط ایونت یا RP Pause'],
+        ['/reloadphone','فیکس باگ گوشی']
+      ]
+    }},
+  { id:'ranks', title:'جدول رنک‌ها و تسک‌ها',
+    summary:'کول‌داون، تعداد ریپورت و وظایف هر رنک.',
+    table:{
+      head:['رنک','کول‌داون','ریپورت','تسک‌ها'],
+      rows:[
+        ['Helper','۱ هفته','۳۰۰','۳ نیو پلیر'],
+        ['Senior Helper','۱ هفته','۴۰۰','۵ نیو پلیر'],
+        ['Head Helper','۱ هفته','۵۰۰','۷ نیو پلیر + جوین پانیشمنت زیر Supporter'],
+        ['Supporter','۲ هفته','۷۰۰','۱۰ نیو پلیر + مدیریت جوین Head Helper'],
+        ['Senior Supporter','۲ هفته','۹۰۰','۱۲ نیو پلیر'],
+        ['Head Supporter','۲ هفته','۱۰۰۰','۱۵ نیو پلیر + مدیریت جوین میدرنک + HR Time 20'],
+        ['Admin','۳ هفته','۱۰۰۰','مدیریت استف و جوین میدرنک + HR Time 25'],
+        ['Senior Admin','۴ هفته','۸۰۰','مدیریت استف + HR Time 35 + Event Supporter + جوین تیم‌ها'],
+        ['Head Admin','۱ ماه','۸۰۰','مدیریت استف + HR Time 40 + Event Supporter'],
+        ['Server Director','۲ ماه','۸۰۰','مدیریت استف + HR Time 50 + Event Supporter + Advisor تیم‌ها'],
+        ['Executive Admin','۲ ماه','۱۰۰۰','مدیریت استف + HR Time 60 + Event Manager + Dispatch Time'],
+        ['Moderator','۳ ماه','—','مدیریت استف های‌رنک + Event Manager + Dispatch Time'],
+        ['Supervisor','۴ ماه','—','مدیریت های‌رنک + Event Creator + STAFF Manager + Roster Manager + Meeting Manager'],
+        ['Administrator','۵ ماه','—','STAFF Manager + Event Creator + Content Creator + Roster Manager + Meeting Manager'],
+        ['Manager','تایید Owner','—','مدیریت کل'],
+        ['Content Manager','تایید Owner','—','مدیریت محتوا']
+      ]
+    }}
+  ]},
+
+/* ------------------------------------------------------------------ */
+{ id:'gang', title:'گنگ‌ها و وارن‌ها', icon:'warn',
+  desc:'قوانین گنگ، فایر از گنگ، مزایای لول، مجازات‌ها و موارد دارای پانیشمنت سنگین.',
+  sections:[
+  { id:'gang-rules', title:'Gang Rules',
+    summary:'مسئولیت همه اعضا بر عهده کینگ‌پین است.',
+    points:[
+      'ورود هلیکوپتر گنگ‌ها به حریم شهری ممنوع است.',
+      'اعضای گنگ نمی‌توانند در ارگان‌های نظامی باشند.',
+      'اعضای علاقه‌مند به آرپی نظامی باید از گنگ خارج شوند و پس از یک هفته درخواست عضویت دهند.',
+      'رنک بالای گنگ باید ۲ ماه کامل در ساید خاکستری (شغل‌های غیرنظامی و آزاد) آرپی کند.',
+      'مسئولیت همه اعضای گنگ بر عهده کینگ‌پین است؛ تخلف هر عضو، وارن گنگ به همراه دارد.',
+      'هزینه اجاره گنگ یا مافیا فقط برای ابزار است و مجوز نقض قوانین نیست.',
+      'اگر حداقل ۴ نفر از اعضای گنگ پانیشمنت بگیرند، گنگ با تصمیم Manager اخطار می‌گیرد.',
+      'درگیری‌های غیرمنطقی و بزرگ باید با تایید منیجر باشد.',
+      'در Safe Zone و NCZ معامله مواد، اسلحه و ... ممنوع است.',
+      'اگر افراد گنگ به بیس خود فرار کنند و همکاری نکنند، مدارک و محل فرار به FBI گزارش می‌شود و در تکرار سوم گنگ با حکم دادگستری Raid می‌شود.',
+      'اگر ۳ پرونده FBI از تخلفات گنگ ثبت شود، گنگ Raid می‌شود.'
+    ]},
+  { id:'heavy', title:'موارد دارای پانیشمنت سنگین',
+    summary:'اتک، نام گنگ و القاب رکیک، خط قرمزهای گنگ هستند.',
+    points:[
+      'حق اتک به بیس گنگ تحت هیچ شرایطی ندارید.',
+      'حق اتک به ایست بازرسی ندارید.',
+      'نام گنگ خود را نباید در چت یا به‌صورت کلامی بگویید.',
+      'نسبت دادن یا چسباندن القاب رکیک و فحش، وارن دارد.',
+      'حق بستن ایست بازرسی تحت هیچ شرایطی ندارید.'
+    ]},
+  { id:'fire', title:'فایر از گنگ',
+    summary:'فایر باید با آرپی خلاص همراه باشد.',
+    points:[
+      'اگر فردی تمایل به فایر از گنگ دارد، موظفید او را فایر کنید و در صورت تمایل آرپی خلاص را اجرا کنید.',
+      'برای آرپی خلاص ابتدا گونی بر سر فرد بکشید، او را به بیرون شهر منتقل کنید و سپس خلاص بزنید.',
+      'با لباس و ماشین دولتی حق انجام کار خلاف ندارید و حمل مواد و اسلحه مجاز نیست.'
+    ]},
+  { id:'levels', title:'مزایای لول گنگ',
+    summary:'لول بالاتر، دسترسی بیشتر به تجهیزات و بیس.',
+    points:[
+      'لول ۶: تغییر بیس به بالای شهر و خانه گنگ.',
+      'لول ۱۰: ۵۰٪ وست.',
+      'لول ۲۰: ۱۰۰٪ وست.',
+      'مهم‌ترین مزیت لول گنگ، دسترسی به کرفت گان‌های بیشتر است.'
+    ]},
+  { id:'punishments', title:'مجازات‌های گنگ',
+    summary:'باگ و چیت در گنگ، هزینه سنگینی برای کل گنگ دارد.',
+    points:[
+      'استفاده از باگ، داپلیکیت و گلیچ: ۷ روز بن و ریست اکانت برای افراد خاطی و کسر XP از گنگ.',
+      'استفاده از چیت، فایل مخرب یا ماد (Aim Bot، Silent Aim و ...): بن پرمنت و غیرفعال شدن گنگ.',
+      'اگر حداقل ۴ نفر از اعضای گنگ در یک موقعیت خلاف قوانین باشند، گنگ وارن می‌گیرد.'
+    ]}
+  ]}
 ];
-var RB=[["Shop","سبک","۲ (بدون سوات)","۱ تا ۲"],["Digital Den","سبک","۳ (بدون سوات)","۲ تا ۳"],["Fleeca","سبک","۴ (۱ سوات)","۳ تا ۴"],["Paleto Bank","سنگین","۶ (۲ سوات) + هلی","۴ تا ۶"],["Central Bank","سنگین","۸ (۳ سوات) + هلی","۶ تا ۸"],["Maze Bank","سنگین","۸ (۳ سوات)","۵ تا ۷"],["جواهری شهر","سبک و سنگین","۴ (۱ سوات)","۳ تا ۴"],["جواهری شمس","سبک و سنگین","۶ (۲ سوات)","۳ تا ۵"],["جواهری فلت","سنگین","۸ (۲ سوات) + هلی","۵ تا ۷"],["بیمه","سنگین","۸ (۳ سوات) + هلی","۵ تا ۷ (+ جوینر)"],["میثیک","سنگین","۱۰ (۳ سوات) + هلی","۷ تا ۹"],["محموله دریایی","سنگین","۱۱ (۴ سوات) + هلی","۸ تا ۱۰"],["فرودگاه","سنگین","۸ (۳ سوات) + هلی","۶ تا ۸"],["روستا (کارگو)","سنگین","۱۱ (۵ سوات) + هلی","۷ تا ۹"],["بابکت","سنگین","۸ (۳ سوات) + هلی","۵ تا ۷"],["کامیون پول (پرسوت)","خارج شهر سنگین، داخل شهر سبک","۴ (۱ سوات) + هلی","۱ تا ۲"]];
-var RR=[["نکات مشترک",["در رابری استارت‌شده هیچ گروه دیگری حق ورود ندارد.","رابرها تا قبل از Successful شدن حق خروج از محوطه را ندارند.","بعد از رابری، پلیس باید ظرف ۱۵ دقیقه فایت را شروع کند.","استفاده از دارو و جلیقه فقط قبل از استارت رابری آزاد است (LSD مجاز).","استفاده از سلاح سرد، مسدود کردن راه و تیراندازی به هلی پلیس ممنوع است (به‌جز کارگو و میثیک).","در صورت شکست، رابرها باید بازجویی و زندان را تا آخر همراهی کنند."]],
-["سرچ در رابری",["رابر در رابری سبک: گان‌های سبک، اقلام خلاف و پول تمیز. در رابری سنگین: گان‌های سنگین، اقلام خلاف و پول تمیز.","پلیس: همه‌ی گان‌ها، اقلام خلاف و مجوز حمل اسلحه.","اقلام خلاف: بلوتورچ، الکپیک، پول کثیف، دراگ‌ها، ۶ تیر پیستول و ۴ تیر سنگین."]],
-["جوینر بیمه",["حداکثر ۶ نفر داخل شرکت و جوینر باید بیرون و مخفی بماند.","بعد از حکم تیر و رفتن همه‌ی پلیس‌ها به داخل می‌تواند جوین دهد."]]];
-var SR=[["ورود و حضور",["هنگام آن‌دیوتی در تیم‌اسپیک (ir.Slvts) و ویس On Duty باشید، Deafen نباشید و مایک بسته باشد.","در ویس Office 1 و 2 نباشید تا سلسله مراتب حفظ شود.","هر هفته ساعت ۸ شب جلسه‌ی چنل Meeting است. غیبت بدون اطلاع یعنی تنزل رنک یا فایر.","فرم مرخصی: IC Name، OOC Name، Rank، شروع و پایان، دلیل و Steam Hex را در چت استف روبیکا بفرستید."]],
-["رفتار با پلیرها",["ادب و احترام مهم‌ترین اصل است. در برابر توهین پلیر، توهین نکنید و به های‌رنک گزارش دهید.","در ریپورت‌ها مدرک شاکی را کامل و با صدا ببینید (۱۰ تا ۱۵ ثانیه جلو و عقب). قضاوت اشتباه یعنی تنزل رنک یا فایر.","وقتی پلیر وسط آرپی است با او صحبت نکنید؛ با /pm پیام بدهید که بعد از آرپی ریپورت بدهد.","برای دیدن رکورد از Google Meet استفاده کنید و در تعداد زیاد، افراد را در چنل Full Mute ببرید."]],
-["سلسله مراتب و محدودیت‌ها",["صدا کردن گیم‌مستر، منیجرها و های‌رنکان در چت استف ممنوع است.","اول به رنک بالاتر از خودتان مراجعه کنید، نه مستقیم به های‌رنک.","اسپکت رندوم پلیر ممنوع است و اسپکت استف‌ها نیاز به اجازه دارد.","اینویزیبل و نوکلیپ فقط در ادمین‌زون یا با اجازه‌ی های‌رنک. برای AFK طولانی در ادمین‌زون آف‌دیوتی کنید.","ادمین باید در گنگ استف ست باشد و جاج‌کردن به نفع دوست یا هم‌گنگی ممنوع است.","صحبت با های‌رنکان درباره‌ی رنک‌آپ، وارن دارد."]],
-["پانیشمنت و آموزش پلیر جدید",["برای پانیش از /cs ID یا Steam Hex استفاده کنید و در Note نام ادمین ناظر، استیم شاکی و توضیح خلاصه را بنویسید.","اگر پلیر در سرور است تیک «Notify» را نزنید و به تعداد پانیشمنتش جریمه‌ی نقدی بزنید: /fine ID مبلغ دلیل.","رنک ۱ و ۲ بدون نظارت های‌رنک جاج سنگین نمی‌کنند.","به پلیر جدید سایت، کانال روبیکا، آی‌پی تیم‌اسپیک و رول وریفای را بدهید و جاب‌های دولتی را پیشنهاد کنید."]]];
-var CM=[["/aduty","روشن و خاموش کردن پرم"],["/revive ID و /slay ID","ریوایو و اسلی (فقط با اجازه‌ی های‌رنک)"],["/spect ID","اسپکت (بی‌مورد ممنوع)"],["/goto ID","رفتن پیش پلیر (با اجازه)"],["/bring ID","آوردن پلیر پیش خودتان (با اجازه)"],["/tpw","تلپورت به نقطه‌ی مارک‌شده (برای تلپورت پلیر اجازه بگیرید)"],["/az","رفتن به ادمین‌زون"],["/invisible","نامرئی شدن (به‌جز ادمین‌زون)"],["/pm ID پیام","پیام خصوصی به پلیر"],["/rpp عدد و /rpu ID","انداختن و برداشتن RP Pause (با اجازه)"],["/car نام ID","دادن ماشین یا موتور (با اجازه)"],["/dv ID و /fix ID","پاک کردن و تعمیر ماشین (با اجازه)"],["/freeze ID","فریز کردن پلیر (با اجازه)"],["/checkcs ID","دیدن تعداد و دلیل پانیشمنت (با اجازه‌ی های‌رنک)"],["/alskin ID و /pskin و /pfix ID","ویرایش و رفع باگ کاراکتر"],["/setworld ID عدد","تغییر ورلد، فقط برای ایونت یا RP Pause"],["/reloadphone","رفع باگ گوشی"],["/cs ID","ثبت پانیشمنت"],["/fine ID مبلغ دلیل","جریمه‌ی نقدی"],["F4","منوی ادمین: اسپکت، تلپورت به پلیر، بیلیپ، اینویزیبل، نوکلیپ"]];
-var RK=[["۱ Helper","۱ هفته","۳۰۰","۳"],["۲ Senior Helper","۱ هفته","۴۰۰","۵"],["۳ Head Helper","۱ هفته","۵۰۰","۷"],["۴ Supporter","۲ هفته","۷۰۰","۱۰"],["۵ Senior Supporter","۲ هفته","۹۰۰","۱۲"],["۶ Head Supporter","۲ هفته","۱۰۰۰","۱۵"],["۷ Admin","۳ هفته","۱۰۰۰","-"],["۸ Senior Admin","۴ هفته","۸۰۰","-"],["۹ Head Admin","۱ ماه","۸۰۰","-"],["۱۰ Server Director","۲ ماه","۸۰۰","-"],["۱۱ Executive Admin","۲ ماه","۱۰۰۰","-"],["۱۲ Moderator","۳ ماه","-","-"],["۱۳ Supervisor","۴ ماه","-","-"],["۱۴ Administrator","۵ ماه","-","-"],["۱۵ Manager","تأیید Owner","-","-"],["۱۶ Content Manager","تأیید Owner","-","-"]];
-function acc(id,d){document.getElementById(id).innerHTML=d.map(function(x){return "<details><summary>"+x[0]+"</summary><ul>"+x[1].map(function(i){return "<li>"+i+"</li>"}).join("")+"</ul></details>"}).join("")}
-function rows(id,d,l){document.getElementById(id).innerHTML=d.map(function(r){return "<tr>"+r.map(function(c,i){return "<td"+(l&&i==0?" class=l":"")+">"+c+"</td>"}).join("")+"</tr>"}).join("")}
-acc("rl",R);acc("rr",RR);acc("sr",SR);rows("rb",RB);rows("cm",CM,1);rows("rk",RK);
-document.getElementById("cards").innerHTML=[["قوانین سرور","rules","رول‌پلی، S.O.K، خفت‌گیری، گروگان‌گیری و ..."],["قوانین رابری","robbery","جدول نفرات و گان مجاز ۱۶ رابری"],["قوانین استف","staffrules","وظایف و محدودیت‌های ادمین‌ها"],["کامندها","cmds","کامندهای ادمینی و منوی F4"],["رنک‌ها","ranks","شرایط ارتقا"]].map(function(c){return "<details><summary><a style='color:inherit;text-decoration:none' href='#"+c[1]+"'>"+c[0]+"</a></summary><ul><li>"+c[2]+"</li></ul></details>"}).join("");
-var S=["home","rules","robbery","staffrules","cmds","ranks"];
-function show(){var h=location.hash.slice(1);if(S.indexOf(h)<0)h="home";S.forEach(function(s){document.getElementById(s).classList.toggle("on",s==h)});document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")=="#"+h)});window.scrollTo(0,0)}
-addEventListener("hashchange",show);show();
-document.getElementById("q").addEventListener("input",function(e){var v=e.target.value.trim().toLowerCase(),n=0;if(v&&location.hash!="#rules")location.hash="rules";document.querySelectorAll("#rl details").forEach(function(d){var m=!v||d.textContent.toLowerCase().indexOf(v)>=0;d.style.display=m?"":"none";if(m)n++;d.open=!!v&&m});document.getElementById("em").style.display=n?"none":"block"});
+
+/* =====================================================================
+   UTILS
+   ===================================================================== */
+const $view = document.getElementById('view');
+const $nav = document.getElementById('nav');
+const $searchInput = document.getElementById('searchInput');
+const $sidebar = document.getElementById('sidebar');
+const $overlay = document.getElementById('overlay');
+const $themeIcon = document.getElementById('themeIcon');
+
+function esc(s){
+  return String(s ?? '')
+    .replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
+    .replaceAll('"','&quot;').replaceAll("'",'&#039;');
+}
+function escRe(s){ return String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
+function norm(s){
+  return String(s ?? '')
+    .replace(/[يى]/g,'ی').replace(/ك/g,'ک')
+    .replace(/[أإآ]/g,'ا').replace(/ۀ/g,'ه')
+    .replace(/[\u200c\u200d\u200e\u200f]/g,' ')
+    .replace(/[^\p{L}\p{N}\s]/gu,' ')
+    .replace(/\s+/g,' ').trim().toLowerCase();
+}
+function catById(id){ return DATA.find(c=>c.id===id); }
+function secById(catId,secId){
+  const c = catById(catId);
+  return c ? c.sections.find(s=>s.id===secId) : null;
+}
+
+/* =====================================================================
+   INDEX
+   ===================================================================== */
+let INDEX = [];
+function buildIndex(){
+  INDEX = [];
+  DATA.forEach(cat=>{
+    cat.sections.forEach(sec=>{
+      const text = [sec.title, sec.summary, ...(sec.points||[]),
+        ...(sec.table ? sec.table.rows.flat() : [])].join(' ');
+      INDEX.push({
+        catId:cat.id, catTitle:cat.title,
+        secId:sec.id, secTitle:sec.title,
+        text, n:norm(text), nt:norm(sec.title)
+      });
+    });
+  });
+}
+
+/* =====================================================================
+   HIGHLIGHT & SEARCH
+   ===================================================================== */
+function highlight(text, terms){
+  if(!terms.length) return esc(text);
+  const re = new RegExp('(' + terms.map(escRe).join('|') + ')','gi');
+  return String(text).split(re)
+    .map((part,i)=> i%2 ? `<mark>${esc(part)}</mark>` : esc(part))
+    .join('');
+}
+function snippet(text, terms){
+  if(!terms.length) return esc(text.slice(0,190)) + (text.length>190?'…':'');
+  const re = new RegExp(terms.map(escRe).join('|'),'i');
+  const m = text.match(re);
+  if(!m) return esc(text.slice(0,190)) + (text.length>190?'…':'');
+  const i = m.index;
+  const start = Math.max(0, i-60);
+  const end = Math.min(text.length, i+180);
+  return (start>0?'… ':'') + highlight(text.slice(start,end), terms) + (end<text.length?' …':'');
+}
+function countOcc(hay, needle){
+  let n = 0, i = 0;
+  while((i = hay.indexOf(needle, i)) !== -1){ n++; i += needle.length; }
+  return n;
+}
+function doSearch(q){
+  const terms = norm(q).split(' ').filter(t=>t.length>1);
+  if(!terms.length) return [];
+  const out = [];
+  for(const it of INDEX){
+    let ok = true, score = 0;
+    for(const t of terms){
+      if(!it.n.includes(t)){ ok = false; break; }
+      score += countOcc(it.n, t) + (it.nt.includes(t) ? 6 : 0);
+    }
+    if(ok) out.push({...it, score});
+  }
+  return out.sort((a,b)=> b.score - a.score).slice(0, 60);
+}
+
+/* =====================================================================
+   RENDER — NAV
+   ===================================================================== */
+function renderNav(){
+  const links = [
+    {href:'#/', title:'داشبورد', icon:'home'},
+    ...DATA.map(c=>({href:`#/c/${c.id}`, title:c.title, icon:c.icon}))
+  ];
+  $nav.innerHTML = links.map(l=>
+    `<a href="${l.href}" data-nav="${l.href}">${icon(l.icon)}<span>${esc(l.title)}</span></a>`
+  ).join('');
+}
+function setActiveNav(catId){
+  const target = catId ? `#/c/${catId}` : '#/';
+  $nav.querySelectorAll('a').forEach(a=>{
+    a.classList.toggle('active', a.getAttribute('data-nav') === target);
+  });
+}
+
+/* =====================================================================
+   RENDER — DASHBOARD
+   ===================================================================== */
+function renderDashboard(){
+  setActiveNav(null);
+  const secCount = DATA.reduce((s,c)=>s+c.sections.length,0);
+  const statCount = INDEX.length;
+  const chips = ['Fear RP','خفت‌گیری','گروگان‌گیری','رابری بیمه','KOS','مرخصی استف','سوات','NCZ'];
+
+  $view.innerHTML = `
+    <div class="eyebrow">Salvatores Roleplay</div>
+    <h1>مرجع جامع قوانین و آموزش سالواتورس</h1>
+    <p class="muted" style="margin-top:10px;max-width:760px">
+      تمام قوانین شهر، رابری، ارگان‌های نظامی و تیم Staff در یک ساختار مرتب و قابل جستجو گردآوری شده است.
+      موضوع مورد نظر را جستجو کنید یا از دسته‌بندی‌های زیر وارد شوید.
+    </p>
+
+    <div class="grid stats" style="margin:22px 0">
+      <div class="card stat"><div class="v">${DATA.length}</div><div class="l">دسته‌بندی اصلی</div></div>
+      <div class="card stat"><div class="v">${secCount}</div><div class="l">بخش قانونی</div></div>
+      <div class="card stat"><div class="v">${statCount}</div><div class="l">موضوع قابل جستجو</div></div>
+      <div class="card stat"><div class="v">آنی</div><div class="l">جستجوی متنی</div></div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px">
+      <h2>جستجوی سریع</h2>
+      <p class="muted small" style="margin-top:6px">هر اصطلاح یا موضوعی را وارد کنید؛ نتایج با هایلایت نمایش داده می‌شوند.</p>
+      <div class="chips">
+        ${chips.map(c=>`<a class="chip" href="#/search/${encodeURIComponent(c)}">${esc(c)}</a>`).join('')}
+      </div>
+    </div>
+
+    <h2 style="margin-bottom:14px">دسته‌بندی‌ها</h2>
+    <div class="grid cards">
+      ${DATA.map(c=>`
+        <a class="cat-card" href="#/c/${c.id}">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+            <div class="cat-icon">${icon(c.icon)}</div>
+            <span class="badge gold">${c.sections.length} بخش</span>
+          </div>
+          <h3>${esc(c.title)}</h3>
+          <p>${esc(c.desc)}</p>
+        </a>`).join('')}
+    </div>`;
+}
+
+/* =====================================================================
+   RENDER — CATEGORY
+   ===================================================================== */
+function renderCategory(catId){
+  const cat = catById(catId);
+  if(!cat){ renderNotFound(); return; }
+  setActiveNav(cat.id);
+
+  $view.innerHTML = `
+    ${crumbs([{label:'داشبورد', href:'#/'},{label:cat.title}])}
+    <div class="eyebrow">دسته‌بندی قوانین</div>
+    <h1>${esc(cat.title)}</h1>
+    <p class="muted" style="margin-top:10px;max-width:780px">${esc(cat.desc)}</p>
+
+    <div class="card" style="margin-top:24px">
+      <div class="section-list">
+        ${cat.sections.map((s,i)=>`
+          <a class="sec-link" href="#/s/${cat.id}/${s.id}">
+            <div style="display:flex;gap:12px;align-items:flex-start">
+              <span class="n">${i+1}</span>
+              <div>
+                <span class="t">${esc(s.title)}</span>
+                <span class="d">${esc(s.summary)}</span>
+              </div>
+            </div>
+            <span class="arrow">${icon('chevron')}</span>
+          </a>`).join('')}
+      </div>
+    </div>`;
+}
+
+/* =====================================================================
+   RENDER — SECTION (READER)
+   ===================================================================== */
+function renderSection(catId, secId){
+  const cat = catById(catId);
+  const sec = secById(catId, secId);
+  if(!cat || !sec){ renderNotFound(); return; }
+  setActiveNav(cat.id);
+
+  const i = cat.sections.findIndex(s=>s.id===secId);
+  const prev = cat.sections[i-1];
+  const next = cat.sections[i+1];
+
+  const prevBtn = prev
+    ? `<a class="btn" href="#/s/${cat.id}/${prev.id}">${icon('chevron')} ${esc(prev.title)}</a>`
+    : `<span class="btn disabled">${icon('chevron')} بخش قبلی</span>`;
+  const nextBtn = next
+    ? `<a class="btn primary" href="#/s/${cat.id}/${next.id}">${esc(next.title)} ${icon('arrow')}</a>`
+    : `<span class="btn disabled">بخش بعدی ${icon('arrow')}</span>`;
+
+  $view.innerHTML = `
+    ${crumbs([
+      {label:'داشبورد', href:'#/'},
+      {label:cat.title, href:`#/c/${cat.id}`},
+      {label:sec.title}
+    ])}
+
+    <div class="reader-head">
+      <div style="min-width:0">
+        <div class="eyebrow">${esc(cat.title)} · بخش ${i+1} از ${cat.sections.length}</div>
+        <h1>${esc(sec.title)}</h1>
+      </div>
+      <div class="reader-actions">
+        <a class="btn ghost" href="#/c/${cat.id}">فهرست دسته</a>
+      </div>
+    </div>
+
+    <div class="summary"><strong>خلاصه:</strong> ${esc(sec.summary)}</div>
+
+    <div class="card">
+      <ol class="points">
+        ${(sec.points||[]).map(p=>`<li>${esc(p)}</li>`).join('')}
+      </ol>
+      ${sec.table ? renderTable(sec.table) : ''}
+      ${sec.note ? `<div class="note"><b>توجه:</b> ${esc(sec.note)}</div>` : ''}
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;margin-top:22px">
+      ${prevBtn}
+      ${nextBtn}
+    </div>`;
+}
+
+function renderTable(t){
+  return `
+    <div class="table-wrap">
+      <table>
+        <thead><tr>${t.head.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead>
+        <tbody>
+          ${t.rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}
+        </tbody>
+      </table>
+    </div>`;
+}
+
+/* =====================================================================
+   RENDER — SEARCH
+   ===================================================================== */
+function renderSearch(q){
+  setActiveNav(null);
+  const query = (q || '').trim();
+  const terms = norm(query).split(' ').filter(t=>t.length>1);
+
+  if(!query){
+    $view.innerHTML = `
+      ${crumbs([{label:'داشبورد', href:'#/'},{label:'جستجو'}])}
+      <div class="eyebrow">جستجو</div>
+      <h1>جستجو در قوانین</h1>
+      <p class="muted" style="margin-top:8px">عبارت مورد نظر را در نوار بالا وارد کنید.</p>`;
+    return;
+  }
+
+  const results = doSearch(query);
+
+  $view.innerHTML = `
+    ${crumbs([{label:'داشبورد', href:'#/'},{label:'جستجو'},{label:query}])}
+    <div class="eyebrow">نتیجه جستجو</div>
+    <h1>«${esc(query)}»</h1>
+    <p class="muted" style="margin-top:8px">${results.length} نتیجه در قوانین پیدا شد.</p>
+
+    <div class="section-list" style="margin-top:22px">
+      ${results.length ? results.map(r=>`
+        <a class="result" href="#/s/${r.catId}/${r.secId}?q=${encodeURIComponent(query)}">
+          <div class="top">
+            <strong>${esc(r.secTitle)}</strong>
+            <span class="badge gold">${esc(r.catTitle)}</span>
+          </div>
+          <div class="snip">${snippet(r.text, terms)}</div>
+        </a>`).join('') : `
+        <div class="card"><p class="muted">نتیجه‌ای پیدا نشد. املای عبارت یا نیم‌فاصله را بررسی کنید.</p></div>`}
+    </div>`;
+}
+
+function renderNotFound(){
+  $view.innerHTML = `
+    ${crumbs([{label:'داشبورد', href:'#/'},{label:'یافت نشد'}])}
+    <div class="card"><p class="muted">صفحه مورد نظر پیدا نشد.</p></div>`;
+}
+
+function crumbs(items){
+  return `<div class="crumbs">${items.map((it,i)=>{
+    const sep = i ? '<span class="sep">/</span>' : '';
+    return it.href
+      ? `${sep}<a href="${it.href}">${esc(it.label)}</a>`
+      : `${sep}<span>${esc(it.label)}</span>`;
+  }).join('')}</div>`;
+}
+
+/* =====================================================================
+   ROUTER
+   ===================================================================== */
+function parseRoute(){
+  const raw = location.hash.replace(/^#\/?/, '');
+  const [pathPart, queryPart] = raw.split('?');
+  const params = new URLSearchParams(queryPart || '');
+  const parts = pathPart.split('/').filter(Boolean).map(p=>{
+    try{ return decodeURIComponent(p); }catch(e){ return p; }
+  });
+
+  if(!parts.length) return {view:'dashboard'};
+  if(parts[0] === 'c') return {view:'category', catId:parts[1] || ''};
+  if(parts[0] === 's') return {view:'section', catId:parts[1] || '', secId:parts[2] || ''};
+  if(parts[0] === 'search') return {view:'search', q:parts[1] || ''};
+  return {view:'dashboard'};
+}
+
+function renderRoute(){
+  const r = parseRoute();
+  if(r.view === 'category') return renderCategory(r.catId);
+  if(r.view === 'section') return renderSection(r.catId, r.secId);
+  if(r.view === 'search') return renderSearch(r.q);
+  return renderDashboard();
+}
+
+/* =====================================================================
+   THEME
+   ===================================================================== */
+function applyTheme(mode){
+  document.documentElement.dataset.theme = mode;
+  $themeIcon.innerHTML = mode === 'light' ? ICONS.moon : ICONS.sun;
+  try{ localStorage.setItem('salvatores-theme', mode); }catch(e){}
+}
+function initTheme(){
+  let saved = 'dark';
+  try{ saved = localStorage.getItem('salvatores-theme') || 'dark'; }catch(e){}
+  applyTheme(saved);
+}
+document.getElementById('themeBtn').addEventListener('click', ()=>{
+  applyTheme(document.documentElement.dataset.theme === 'light' ? 'dark' : 'light');
+});
+
+/* =====================================================================
+   DRAWER
+   ===================================================================== */
+function openDrawer(){
+  $sidebar.classList.add('open');
+  $overlay.classList.add('show');
+  document.body.classList.add('no-scroll');
+}
+function closeDrawer(){
+  $sidebar.classList.remove('open');
+  $overlay.classList.remove('show');
+  document.body.classList.remove('no-scroll');
+}
+document.getElementById('menuBtn').addEventListener('click', openDrawer);
+document.getElementById('closeBtn').addEventListener('click', closeDrawer);
+$overlay.addEventListener('click', closeDrawer);
+$sidebar.addEventListener('click', e=>{
+  if(e.target.closest('a')) closeDrawer();
+});
+
+/* =====================================================================
+   SEARCH EVENTS
+   ===================================================================== */
+document.getElementById('searchForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const q = $searchInput.value.trim();
+  if(!q) return;
+  location.hash = `#/search/${encodeURIComponent(q)}`;
+  $searchInput.blur();
+  closeDrawer();
+});
+
+document.addEventListener('keydown', e=>{
+  const isTyping = /input|textarea|select/i.test(document.activeElement.tagName);
+  if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){
+    e.preventDefault();
+    $searchInput.focus();
+    $searchInput.select();
+    return;
+  }
+  if(e.key === '/' && !isTyping){
+    e.preventDefault();
+    $searchInput.focus();
+  }
+  if(e.key === 'Escape' && document.activeElement === $searchInput){
+    $searchInput.blur();
+  }
+});
+
+/* =====================================================================
+   BOOT
+   ===================================================================== */
+buildIndex();
+initTheme();
+renderNav();
+renderRoute();
+
+window.addEventListener('hashchange', ()=>{
+  renderRoute();
+  window.scrollTo({top:0, behavior:'smooth'});
+});
 </script>
 </body>
 </html>
