@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>سالواتورس | قوانین و آموزش تیم استف و قوانین کامل رابری</title>
-<meta name="description" content="مرجع کامل قوانین و آموزش تیم استف و قوانین کامل رابری سرور سالواتورس رول‌پلی — تیم‌اسپیک، پانیشمنت، کامندها، آموزش نیو پلیر و تمامی قوانین رابری">
+<title>سالواتورس | مرجع کامل قوانین و آموزش تیم استف و رابری</title>
+<meta name="description" content="مرجع کامل قوانین شهر، رول‌پلی، رابری و آموزش تیم استف سرور سالواتورس — تمامی قوانین بدون کوتاهی">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -24,7 +24,6 @@
   --red:#f87171;
   --amber:#fbbf24;
   --purple:#a78bfa;
-  --green:#4ade80;
   --radius:18px;
   --shadow:0 22px 48px -26px rgba(56,189,248,.45);
 }
@@ -60,6 +59,7 @@ a{color:inherit;text-decoration:none}
 ul,ol{list-style:none}
 img{max-width:100%;display:block}
 
+/* scrollbar */
 ::-webkit-scrollbar{width:10px;height:10px}
 ::-webkit-scrollbar-track{background:#080d19}
 ::-webkit-scrollbar-thumb{background:#1d2c48;border-radius:20px;border:2px solid #080d19}
@@ -172,6 +172,7 @@ img{max-width:100%;display:block}
 }
 .chip b{color:#fff;font-weight:800}
 
+/* quick access */
 .qgrid{
   display:grid;gap:14px;margin-top:34px;
   grid-template-columns:repeat(auto-fit,minmax(215px,1fr));
@@ -192,7 +193,7 @@ img{max-width:100%;display:block}
 /* ===================== LAYOUT ===================== */
 .layout{
   max-width:1320px;margin:0 auto;padding:46px 20px 90px;
-  display:grid;grid-template-columns:266px minmax(0,1fr);gap:34px;align-items:start;
+  display:grid;grid-template-columns:280px minmax(0,1fr);gap:34px;align-items:start;
 }
 
 /* ===================== SIDEBAR ===================== */
@@ -218,7 +219,7 @@ img{max-width:100%;display:block}
 }
 .nav-link{
   display:block;position:relative;
-  font-size:.83rem;color:#a4b5cd;padding:8px 12px;border-radius:11px;
+  font-size:.83rem;color:#a4b5cd;padding:7px 12px;border-radius:11px;
   border-inline-start:3px solid transparent;transition:.2s;
 }
 .nav-link:hover{background:rgba(120,170,255,.09);color:#e8f1ff}
@@ -277,18 +278,16 @@ ul.rules > li::before{
 }
 ul.rules > li b,ul.rules > li strong{color:#fff;font-weight:700}
 
-/* sub-heading inside cards */
+/* rules sub-heading */
 .rules-sub{
-  display:block;font-size:.84rem;font-weight:800;color:#a5e4ff;
-  margin:22px 0 12px;padding:8px 14px;border-radius:10px;
-  background:rgba(56,189,248,.07);
-  border-inline-start:4px solid var(--cyan);line-height:1.7;
+  display:block;font-size:.82rem;font-weight:800;color:#a5e4ff;
+  margin:20px 0 10px;padding-inline-start:10px;
+  border-inline-start:3px solid var(--cyan);line-height:1.6;
 }
-.rules-sub:first-child{margin-top:4px}
-.rules-sub.orange{color:#ffc79a;border-inline-start-color:var(--orange);background:rgba(251,146,60,.07)}
-.rules-sub.purple{color:#c4b5fd;border-inline-start-color:var(--purple);background:rgba(167,139,250,.07)}
-.rules-sub.green{color:#86efac;border-inline-start-color:var(--green);background:rgba(74,222,128,.07)}
-.rules-sub.red{color:#fecaca;border-inline-start-color:var(--red);background:rgba(248,113,113,.07)}
+.rules-sub:first-of-type{margin-top:4px}
+.rules-sub.orange{color:#ffc79a;border-inline-start-color:var(--orange)}
+.rules-sub.purple{color:#c4b5fd;border-inline-start-color:var(--purple)}
+.rules-sub.red{color:#fca5a5;border-inline-start-color:var(--red)}
 
 /* numbered steps */
 ol.steps{margin-top:14px;display:grid;gap:12px;counter-reset:st}
@@ -314,7 +313,6 @@ ol.steps > li::before{
 .callout.warn{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.3);color:#fde68a}
 .callout.danger{background:rgba(248,113,113,.08);border-color:rgba(248,113,113,.32);color:#fecaca}
 .callout.purple{background:rgba(167,139,250,.08);border-color:rgba(167,139,250,.32);color:#ddd6fe}
-.callout.green{background:rgba(74,222,128,.08);border-color:rgba(74,222,128,.32);color:#bbf7d0}
 .callout b{color:#fff}
 
 /* commands */
@@ -331,6 +329,7 @@ ol.steps > li::before{
 .cmd:active{transform:scale(.97)}
 .cmd.orange{color:#ffd0a8;background:rgba(251,146,60,.1);border-color:rgba(251,146,60,.32)}
 .cmd.orange:hover{background:rgba(251,146,60,.22);border-color:rgba(251,146,60,.6)}
+.copy-hint{font-size:.7rem;color:#64748b;margin-inline-start:6px}
 
 .code-block{
   direction:ltr;text-align:left;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
@@ -344,7 +343,7 @@ ol.steps > li::before{
 /* ===================== ROBBERY GRID ===================== */
 .rob-grid{
   display:grid;gap:13px;margin-top:18px;
-  grid-template-columns:repeat(auto-fill,minmax(310px,1fr));
+  grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
 }
 .rob-card{padding:16px 18px;border-radius:16px}
 .rob-top{display:flex;align-items:center;gap:11px;margin-bottom:12px;padding-bottom:11px;border-bottom:1px dashed rgba(120,170,255,.14)}
@@ -355,16 +354,14 @@ ol.steps > li::before{
 }
 .rob-top h4{font-size:.92rem;font-weight:800;line-height:1.4}
 .rob-top .en{font-size:.66rem;color:#6d84a6;display:block;font-weight:500;direction:ltr;text-align:left;margin-top:2px;letter-spacing:.3px}
-.rob-row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;font-size:.8rem;color:#a8b8d0;padding:6px 0;border-bottom:1px dotted rgba(120,170,255,.07)}
-.rob-row:last-child{border-bottom:none}
-.rob-row .k{color:#7d93b3;font-size:.75rem;font-weight:600;flex-shrink:0;padding-top:2px}
+.rob-row{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.8rem;color:#a8b8d0;padding:5px 0}
+.rob-row .k{color:#7d93b3;font-size:.75rem;font-weight:600;flex-shrink:0}
 .rob-row .v{color:#e2ecfa;font-weight:700;font-size:.79rem;text-align:left}
 .tag{display:inline-block;font-size:.69rem;font-weight:800;padding:2px 9px;border-radius:6px;white-space:nowrap}
 .tag.light{background:rgba(56,189,248,.12);color:#8fe3ff;border:1px solid rgba(56,189,248,.28)}
 .tag.heavy{background:rgba(251,146,60,.12);color:#ffc79a;border:1px solid rgba(251,146,60,.3)}
 .tag.both{background:rgba(167,139,250,.12);color:#c4b5fd;border:1px solid rgba(167,139,250,.3)}
 .tag.join{background:rgba(251,191,36,.12);color:#fde68a;border:1px solid rgba(251,191,36,.3)}
-.tag.special{background:rgba(74,222,128,.12);color:#86efac;border:1px solid rgba(74,222,128,.3)}
 
 /* mockups */
 .mock{
@@ -407,21 +404,13 @@ ol.steps > li::before{
 .f4-row{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;font-size:.78rem;color:#c3d3e8;border-top:1px solid rgba(120,170,255,.07)}
 .f4-row .off{font-size:.68rem;font-weight:700;color:#7b8ea8;background:#0f1724;border:1px solid rgba(120,170,255,.14);padding:2px 9px;border-radius:6px}
 
-/* map illustration */
-.map-card{
-  margin-top:18px;padding:18px;border-radius:16px;
-  background:rgba(4,9,18,.6);border:1px dashed rgba(120,170,255,.25);
-  display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-}
-.map-zone{
-  display:flex;align-items:center;gap:10px;font-size:.82rem;color:#c3d3e8;
-  padding:10px 12px;border-radius:11px;background:rgba(13,20,36,.8);
-  border:1px solid rgba(120,170,255,.15);
-}
-.map-zone .dot{width:14px;height:14px;border-radius:4px;flex-shrink:0}
-.map-zone.red .dot{background:#ef4444;box-shadow:0 0 10px rgba(239,68,68,.6)}
-.map-zone.green .dot{background:#22c55e;box-shadow:0 0 10px rgba(34,197,94,.6)}
-.map-zone.yellow .dot{background:#eab308;box-shadow:0 0 10px rgba(234,179,8,.6)}
+/* table */
+.table-wrap{margin-top:16px;overflow-x:auto;border:1px solid var(--stroke);border-radius:13px}
+table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:500px}
+th,td{padding:12px 15px;text-align:right;border-bottom:1px solid rgba(120,170,255,.1)}
+th{background:rgba(56,189,248,.08);color:#8fe3ff;font-weight:800}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover{background:rgba(56,189,248,.04)}
 
 /* no result */
 .no-result{
@@ -539,7 +528,7 @@ ol.steps > li::before{
       <div class="brand-mark">SV</div>
       <div class="brand-txt">
         <b>سالواتورس</b>
-        <span>STAFF GUIDE</span>
+        <span>RULES & STAFF</span>
       </div>
     </a>
 
@@ -549,7 +538,7 @@ ol.steps > li::before{
           <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.2-3.2"/>
         </svg>
       </span>
-      <input type="search" id="search" placeholder="جستجو… مثلاً پانیشمنت، on duty، بابکت، بیمه، جوینر" autocomplete="off">
+      <input type="search" id="search" placeholder="جستجو در قوانین… مثلاً پانیشمنت، رابری، KOS، /goto" autocomplete="off">
       <button class="s-clear" id="clearSearch" aria-label="پاک کردن">✕</button>
     </div>
   </div>
@@ -558,15 +547,15 @@ ol.steps > li::before{
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-inner">
-    <span class="hero-badge"><span class="dot"></span> پنل آموزش تیم استف • Salvatores Roleplay</span>
-    <h1>قوانین و آموزش تیم استف سالواتورس</h1>
+    <span class="hero-badge"><span class="dot"></span> مرجع جامع قوانین • Salvatores Roleplay</span>
+    <h1>قوانین کامل شهر، رول‌پلی و تیم استف سالواتورس</h1>
     <p class="lead">
-      همه‌چیز دربارهٔ وظایف ادمین، رسیدگی به شکایت، پانیشمنت، کامندها، آموزش نیو پلیر و
-      <b>قوانین کامل رابری‌های شهری</b> — مرتب، دسته‌بندی‌شده و قابل جست‌وجو. قبل از آن دیوتی شدن، این صفحه را کامل مرور کنید.
+      این مرجع شامل <b>تمامی قوانین شهر</b>، <b>اصطلاحات رول‌پلی</b>، <b>قوانین کامل رابری‌ها</b> و <b>آموزش جامع تیم استف</b> است. 
+      تمامی متون بدون کوتاه‌سازی و دقیقاً مطابق آخرین نسخه‌های مصوب (PDFهای رسمی) در این صفحه گردآوری شده است.
     </p>
 
     <div class="hero-actions">
-      <a href="#ts-duty" class="btn btn-primary">
+      <a href="#general" class="btn btn-primary">
         شروع مطالعه
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
       </a>
@@ -574,31 +563,27 @@ ol.steps > li::before{
     </div>
 
     <div class="hero-stats">
-      <span class="chip"><b>۵</b> بخش اصلی</span>
-      <span class="chip"><b>۱۸</b> موضوع</span>
-      <span class="chip"><b>∞</b> قابل جست‌وجو</span>
+      <span class="chip"><b>۷</b> بخش اصلی</span>
+      <span class="chip"><b>+۵۰</b> موضوع</span>
+      <span class="chip"><b>∞</b> قابل جستجو</span>
     </div>
 
     <div class="qgrid">
-      <a href="#ts-duty" class="qcard">
-        <span class="qi">🎧</span>
-        <span><b>قوانین تیم‌اسپیک</b><span>دیوتی، شکایت، جلسه، مرخصی</span></span>
+      <a href="#general" class="qcard">
+        <span class="qi">🏙️</span>
+        <span><b>قوانین عمومی شهر</b><span>اکانت، چیت، تبلیغات</span></span>
       </a>
-      <a href="#st-chat" class="qcard">
-        <span class="qi">🛡️</span>
-        <span><b>قوانین استف در سرور</b><span>چت، سلسله‌مراتب، پانیشمنت</span></span>
-      </a>
-      <a href="#newplayer" class="qcard">
-        <span class="qi">🎓</span>
-        <span><b>آموزش نیو پلیر</b><span>۷ نکتهٔ کلیدی</span></span>
-      </a>
-      <a href="#commands" class="qcard">
-        <span class="qi">⌨️</span>
-        <span><b>کامندها</b><span>aduty، revive، goto و…</span></span>
+      <a href="#rp-terms" class="qcard">
+        <span class="qi">🎭</span>
+        <span><b>اصطلاحات رول‌پلی</b><span>KOS، PG، Fear RP</span></span>
       </a>
       <a href="#rob-common" class="qcard">
         <span class="qi">💰</span>
         <span><b>قوانین کامل رابری</b><span>سرقت، پلیس، جوینر</span></span>
+      </a>
+      <a href="#ts-duty" class="qcard">
+        <span class="qi">🎧</span>
+        <span><b>تیم استف</b><span>دیوتی، جلسه، پانیشمنت</span></span>
       </a>
     </div>
   </div>
@@ -614,43 +599,48 @@ ol.steps > li::before{
 
     <nav class="nav">
       <div class="nav-group">
-        <span class="nav-group-title">۱ • قوانین تیم‌اسپیک</span>
-        <a class="nav-link" href="#ts-duty">وظایف ادمین در تیم‌اسپیک</a>
-        <a class="nav-link" href="#ts-support">ارتباط با پلیر و شکایت</a>
-        <a class="nav-link" href="#ts-meeting">جلسه و رنک‌آپ‌ها</a>
-        <a class="nav-link" href="#ts-loa">فرم مرخصی (LOA)</a>
+        <span class="nav-group-title">۱ • قوانین عمومی و اکانت</span>
+        <a class="nav-link" href="#general">قوانین کلی شهر</a>
+        <a class="nav-link" href="#account">مالکیت و مسئولیت اکانت</a>
+        <a class="nav-link" href="#transactions">خرید و فروش غیرمجاز</a>
+        <a class="nav-link" href="#cheats">چیت و برنامه مخرب</a>
+        <a class="nav-link" href="#bugs">باگ و گلیچ</a>
+        <a class="nav-link" href="#ads">تبلیغات و سرورهای دیگر</a>
+        <a class="nav-link" href="#reports">ارتباط با ادمین</a>
       </div>
 
       <div class="nav-group">
-        <span class="nav-group-title">۲ • قوانین استف در سرور</span>
-        <a class="nav-link" href="#st-chat">چت استف</a>
-        <a class="nav-link" href="#st-hierarchy">سلسله‌مراتب</a>
-        <a class="nav-link" href="#st-duties">وظایف ادمین استف</a>
-        <a class="nav-link" href="#st-supervisor">های رنک ناظر</a>
-        <a class="nav-link" href="#st-punish">آموزش پانیشمنت زدن</a>
-        <a class="nav-link" href="#st-f4">منوی ادمینی F4</a>
-        <a class="nav-link" href="#st-adminmenu">لیست ادمین منو</a>
+        <span class="nav-group-title">۲ • اصطلاحات رول‌پلی</span>
+        <a class="nav-link" href="#rp-terms">IC و OOC</a>
+        <a class="nav-link" href="#non-rp">Non-RP و Block RP</a>
+        <a class="nav-link" href="#pg">Power Gaming (PG)</a>
+        <a class="nav-link" href="#meta">Meta Gaming</a>
+        <a class="nav-link" href="#fear-rp">Fear RP</a>
+        <a class="nav-link" href="#kos">KOS و DM</a>
+        <a class="nav-link" href="#search">Search</a>
+        <a class="nav-link" href="#vdm">VDM و Mercy Killing</a>
+        <a class="nav-link" href="#combat-log">Combat Logging</a>
+        <a class="nav-link" href="#chat-rules">قوانین چت</a>
+        <a class="nav-link" href="#ncz">NCZ و Safe Zone</a>
+        <a class="nav-link" href="#nlr">NLR</a>
+        <a class="nav-link" href="#hostage">خفت و گروگان‌گیری</a>
       </div>
 
       <div class="nav-group">
-        <span class="nav-group-title">۳ • آموزش</span>
-        <a class="nav-link" href="#newplayer">آموزش نیو پلیر</a>
-      </div>
-
-      <div class="nav-group">
-        <span class="nav-group-title">۴ • کامندها</span>
-        <a class="nav-link" href="#commands">کامندهای استف</a>
-      </div>
-
-      <div class="nav-group">
-        <span class="nav-group-title">۵ • قوانین شهر و رابری</span>
-        <a class="nav-link" href="#city">قوانین کلی شهر</a>
-        <a class="nav-link" href="#rob-intro">مقدمهٔ قوانین رابری</a>
-        <a class="nav-link" href="#rob-common">قوانین مشترک رابری</a>
+        <span class="nav-group-title">۳ • قوانین رابری</span>
+        <a class="nav-link" href="#rob-common">قوانین مشترک</a>
         <a class="nav-link" href="#rob-search">قوانین سرچ در رابری</a>
-        <a class="nav-link" href="#rob-specific">قوانین اختصاصی ۱۶ رابری</a>
-        <a class="nav-link" href="#rob-extra">قوانین تکمیلی رابری</a>
-        <a class="nav-link" href="#rob-joiner">جوینر در رابری بیمه</a>
+        <a class="nav-link" href="#rob-specific">جدول ۱۶ رابری</a>
+        <a class="nav-link" href="#rob-pursuit">رابری پرسوت</a>
+        <a class="nav-link" href="#rob-extra">قوانین تکمیلی و جوینر</a>
+      </div>
+
+      <div class="nav-group">
+        <span class="nav-group-title">۴ • قوانین تیم استف</span>
+        <a class="nav-link" href="#ts-duty">قوانین تیم‌اسپیک</a>
+        <a class="nav-link" href="#st-chat">قوانین استف در سرور</a>
+        <a class="nav-link" href="#st-punish">آموزش پانیشمنت</a>
+        <a class="nav-link" href="#commands">کامندهای استف</a>
       </div>
     </nav>
   </aside>
@@ -658,897 +648,772 @@ ol.steps > li::before{
   <!-- CONTENT -->
   <main class="content" id="content">
 
-    <!-- ========== PART 1 ========== -->
+    <!-- ========== PART 1: GENERAL & CITY RULES ========== -->
     <div class="part">
       <div class="part-head">
         <span class="part-num">بخش ۰۱</span>
-        <h2>قوانین تیم‌اسپیک</h2>
-        <p>وظایف ادمین در سرور تیم‌اسپیک، نحوهٔ رسیدگی به شکایت‌ها، جلسات هفتگی و فرم مرخصی.</p>
+        <h2>قوانین عمومی شهر</h2>
+        <p>مبانی ورود، امنیت اکانت، ممنوعیت‌ها و مسیر ارتباط با تیم مدیریت.</p>
       </div>
 
-      <!-- 01 -->
-      <section class="section" id="ts-duty">
+      <section class="section" id="general">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۰۱</span>
             <div>
-              <h3>وظایف ادمین در تیم‌اسپیک</h3>
-              <div class="sub">TeamSpeak Duty</div>
+              <h3>قوانین کلی سرور (Salvatores City Rules)</h3>
+              <div class="sub">City General Rules</div>
             </div>
           </div>
-
           <ul class="rules">
-            <li>قبل از آن دیوتی کردن، حتماً در سرور تیم‌اسپیک <b>Salvatores</b> حضور داشته باشید. آی‌پی: <span class="cmd" data-copy="Slvts.ir">Slvts.ir</span></li>
-            <li>در ویس <b>on duty</b> حاضر باشید و <b>Deafon نباشید</b>؛ میکروفون را بسته نگه دارید تا همیشه در دسترس سایر ادمین‌ها باشید.</li>
-            <li>از رنک <b>Helper</b> تا <b>Director</b>، همهٔ ادمین‌ها موظف به حضور در ویس on duty هستند.</li>
-            <li>در ویس on duty پنیک نکنید، سکوت را رعایت کنید و باعث اذیت ادمین‌های دیگر نشوید. اگر با فردی کار دارید، به یکی از ویس‌های خالی <b>Complaint</b> بروید و پس از اتمام کار به on duty برگردید.</li>
+            <li>همه کسانی که در سرور سالواتورس وارد می‌شوند موظفند آخرین نسخه قوانین را بخوانند و به آن عمل کنند.</li>
+            <li><b>عدم آگاهی شما از قوانین، دلیلی بر عدم وجود قانون و تبرئه شما نیست</b>؛ «جهل به قانون رافع مسئولیت نیست».</li>
+            <li>با کسانی که قوانین را نمی‌خوانند و یا به آن عمل نمی‌کنند، به شدت برخورد می‌شود.</li>
+            <li>قوانین هر سرور با سرور دیگر متفاوت است. اگر وارد سرور سالواتورس می‌شوید، باید طبق قوانین سالواتورس عمل کنید.</li>
+            <li>در تمام موارد و در هر RP، اولویت با نظر ادمین است؛ زیرا ادمین به تمام قوانین مسلط است، از روی عدالت تصمیم می‌گیرد و سناریوهای مشابه را بارها تجربه و در آن تصمیم‌گیری کرده است.</li>
           </ul>
-
-          <div class="callout danger">
-            <span class="ci">⛔</span>
-            <div><b>هرگز در ویس‌های office 1 / 2 نباشید</b> — به‌ویژه ادمین‌های بالارنک. چون رنک‌های پایین‌تر به شما دسترسی ندارند، سلسله‌مراتب رعایت نمی‌شود و مجبور می‌شوند در چت ادمین پیام بدهند و نظم استف به‌هم می‌ریزد.</div>
-          </div>
-
-          <div class="callout warn">
-            <span class="ci">⚠️</span>
-            <div>در صورت رعایت نکردن این قوانین، <b>تنزل رنک</b> و حتی <b>فایر شدن</b> در انتظار شماست.</div>
-          </div>
         </div>
       </section>
 
-      <!-- 02 -->
-      <section class="section" id="ts-support">
+      <section class="section" id="account">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۰۲</span>
             <div>
-              <h3>ارتباط با پلیر و رسیدگی به شکایت</h3>
-              <div class="sub">Support &amp; Complaints</div>
+              <h3>مالکیت و مسئولیت اکانت بازی</h3>
+              <div class="sub">Account Responsibility</div>
             </div>
           </div>
-
           <ul class="rules">
-            <li>ادب و احترام مهم‌ترین اصلی است که ادمین استف باید رعایت کند. حتی اگر پلیری (در سرور یا در ویس استف) به شما بی‌احترامی کرد، <b>حق هیچ‌گونه توهینی ندارید</b>؛ موضوع را به های رنک تایم و ادمین‌های بالارنک گزارش دهید تا پانیشمنت لازم برای فرد لحاظ شود.</li>
-            <li>رسیدگی به <b>Connect to staff</b> در تیم‌اسپیک از وظایف ادمین است: پلیری که در ویس ارتباط با ادمین نشسته را <b>move</b> کنید و کارش را پیگیری کنید.</li>
-            <li>اگر ریپورتی قبول کردید که نقض قانون از دو ساید رخ داده، لازم نیست همهٔ پلیرهای صحنه را به ویس Complaint بیاورید؛ از هر ساید <b>یک نفر</b> که رکورد کامل دارد کافی است.</li>
-            <li>در موارد خاص، اگر دو نفر از ساید مقابل رکورد دارند، می‌توانید نفر سوم را هم احضار کنید.</li>
+            <li>مالکیت اکانت و دارایی‌های آن غیرقابل انتقال است و فقط به صاحب اکانت تعلق دارد.</li>
+            <li>هر پلیر در قبال اکانت خود (استیم، سوشال کلاب VMP) کاملاً مسئول است.</li>
+            <li>استفاده از اکانت اشتراکی بین پلیرها ممنوع است؛ در صورت بن شدن یا اعمال پانیشمنت یکی از اکانت‌های مشترک، سایر استفاده‌کنندگان آن اکانت حق اعتراض ندارند.</li>
+            <li>حفظ امنیت اکانت وظیفه فردی است. توصیه می‌شود امکانات امنیتی حساب (مانند تایید دو مرحله‌ای) فعال شود.</li>
           </ul>
-
-          <div class="callout danger">
-            <span class="ci">🔍</span>
-            <div>هنگام احضار شاکی، مدرک را <b>کامل و با صدا و ویدیو</b> بررسی کنید؛ ۱۰ تا ۱۵ ثانیه عقب و جلو ببرید. اگر رکورد بی‌صدا باشد یا قضاوتتان اشتباه باشد، <b>درجا تنزل رنک یا فایر</b> می‌شوید.</div>
-          </div>
-
-          <ul class="rules">
-            <li>اگر تعداد سایدهای شاکی زیاد بود، افراد را به ویس <b>Full mute</b> ببرید تا تسلط کامل روی جاج داشته باشید.</li>
-          </ul>
-
-          <div class="callout info">
-            <span class="ci">ℹ️</span>
-            <div><b>چنل Full Mute:</b> چنلی در استف که پلیرها در حالت عادی اجازهٔ صحبت در آن را ندارند و باید توسط ادمین جاجر <b>Grant talk power</b> بگیرند تا بتوانند حرف بزنند.</div>
-          </div>
-
-          <p style="margin-top:14px">برای دیدن رکورد از فرد شاکی، حتماً از <b>Google Meet</b> استفاده کنید و رکورد را کامل و با صدا مشاهده کنید:</p>
-          <p><a class="cmd" href="https://meet.google.com/home" target="_blank" rel="noopener">https://meet.google.com/home</a></p>
         </div>
       </section>
 
-      <!-- 03 -->
-      <section class="section" id="ts-meeting">
+      <section class="section" id="transactions">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۰۳</span>
             <div>
-              <h3>جلسه و رنک‌آپ‌ها</h3>
-              <div class="sub">Meeting &amp; Rank Up</div>
+              <h3>خرید، فروش و تراکنش‌های غیرمجاز</h3>
+              <div class="sub">Illegal Transactions</div>
             </div>
           </div>
-
           <ul class="rules">
-            <li>هر هفته <b>ساعت ۸ شب</b> در چنل <b>Meeting</b> جلسهٔ نکات آموزشی و رنک‌آپ برگزار می‌شود و همهٔ ادمین‌ها موظف به حضور هستند.</li>
-            <li>در صورت عدم حضور و اطلاع ندادن به های رنک مربوطه، <b>تنزل رنک یا فایر</b> می‌شوید.</li>
-            <li>حتماً در چنل روبیکا اعلام کنید که نیستید یا کاری برایتان پیش آمده تا تأخیرتان در جلسه موجه باشد.</li>
-            <li>اگر در جلسه حاضر نبودید و اطلاع ندادید، و بعد از پایان جلسه در هر زمانی درخواست رنک‌آپ کنید، <b>درجا تنزل رنک</b> می‌شوید.</li>
-            <li>رنک‌آپ‌ها توسط های رنک‌ها و بر اساس تعداد ریپورت و میزان اکنیو بودن شما در طول هفته انجام می‌شود؛ سؤال بی‌مورد دربارهٔ تعداد ریپورت و اکنیوتی نپرسید.</li>
+            <li>خرید آیتم، ماشین یا وسایل داخل بازی هیچ ارتباطی با نقض قوانین ندارد؛ در صورت بن شدن به دلیل تخلف، خریدهای شما قابل استناد نخواهند بود و باید تا پایان زمان بن صبر کنید.</li>
+            <li>بازگشت وجه خریداری‌شده از وب‌سایت سالواتورس، تنها تا ۲۴ ساعت پس از خرید امکان‌پذیر است.</li>
+            <li>تعویض و فروش اکانت یا دارایی‌ها (پول، خودرو، خانه، حیوان شخصی و…) به پول واقعی یا هرگونه مراوده مالی خارج از بازی ممنوع است.</li>
+            <li>هرگونه خرید، فروش یا مبادله ماشین‌های VIP که با پول خارج از بازی خریداری شده باشند غیرقانونی است و در صورت گزارش یا مشاهده، هر دو طرف معامله جریمه سنگین خواهند شد.</li>
+            <li>در صورت بروز مشکل (مسدود شدن حساب، از بین رفتن آیتم‌ها یا خسارات مرتبط با معاملات غیرمجاز)، مسئولیت کامل بر عهده کاربر است و تیم مدیریت هیچ تعهدی ندارد.</li>
+            <li>در صورت مشاهده یا دریافت گزارش مبنی بر مراودات مالی غیرمجاز، تیم مدیریت بدون اخطار قبلی حساب کاربری متخلفان را مسدود خواهد کرد.</li>
           </ul>
         </div>
       </section>
 
-      <!-- 04 -->
-      <section class="section" id="ts-loa">
+      <section class="section" id="cheats">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۰۴</span>
             <div>
-              <h3>فرم درخواست مرخصی (LOA)</h3>
-              <div class="sub">Leave of Absence</div>
+              <h3>قوانین چیت، ماد و برنامه‌های مخرب</h3>
+              <div class="sub">Cheats & Mods</div>
             </div>
           </div>
-
-          <p>ادمین‌های استف می‌توانند در ماه چند روز مرخصی داشته باشند. برای درخواست مرخصی، اطلاعات زیر را طبق فرم وارد کرده و در <b>چنل استف چت روبیکا</b> به های رنک‌های سرور اطلاع دهید.</p>
-
-          <div class="code-block"><span class="k">#</span> نمونه فرم مرخصی
-IC Name     :
-OOC Name    :
-Rank Staff  :
-LOA Start   :
-LOA Finish  :
-LOA Reason  :
-Steam Hex   :</div>
+          <ul class="rules">
+            <li>استفاده از هرگونه چیت، هک، ماد یا برنامه مخرب ممنوع است.</li>
+            <li>در صورت تخلف، بین ۳۰٪ تا ۱۰۰٪ دارایی اکانت بنا به تصمیم مدیریت حذف خواهد شد و ممکن است اکانت بن دائم شود.</li>
+            <li>پلیرها حتی حق نگهداری فایل‌های چیت یا ترینر روی سیستم خود را ندارند؛ همه فایل‌ها باید قبل از ورود به سرور حذف شوند.</li>
+            <li>استفاده از هرگونه ماد گرافیکی یا برنامه‌ای که باعث برتری نسبت به پلیرهای دیگر شود، ممنوع است و شامل پانیشمنت بن خواهد شد.</li>
+            <li>در صورتی که ادمین از شما ویدئو برای اثبات نداشتن چیت بخواهد: رکورد باید از Display باشد، نه فقط از محیط بازی. در صورت عدم ارائه مدرک، پانیشمنت اعمال خواهد شد. همچنین شما باید تمامی رکوردهای خود را به مدت ۱ هفته در سیستم خود ذخیره داشته باشید.</li>
+            <li>اگر آنتی‌چیت شما را بن یا فایت‌بن کند، هیچ حقی برای اعتراض ندارید.</li>
+          </ul>
         </div>
       </section>
-    </div>
 
-    <!-- ========== PART 2 ========== -->
-    <div class="part">
-      <div class="part-head">
-        <span class="part-num">بخش ۰۲</span>
-        <h2>قوانین استف در سرور</h2>
-        <p>از چت استف و سلسله‌مراتب تا پانیشمنت زدن و منوهای ادمینی داخل بازی.</p>
-      </div>
-
-      <!-- 05 -->
-      <section class="section" id="st-chat">
+      <section class="section" id="bugs">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۰۵</span>
             <div>
-              <h3>چت استف</h3>
-              <div class="sub">Staff Chat</div>
+              <h3>قوانین مربوط به باگ و گلیچ</h3>
+              <div class="sub">Bugs & Glitches</div>
             </div>
           </div>
-
           <ul class="rules">
-            <li>در چت استف باید همیشه نظم و ادب برقرار باشد. اسپم بی‌مورد یا هرگونه بی‌احترامی و صحبت بی‌ربط در چت <span class="cmd">/a</span> باعث <b>فایر یا تنزل رنک</b> می‌شود.</li>
-            <li>در چت استف حق صدا کردن <b>گیم‌مستر</b>، <b>منیجرها</b> و <b>های رنک‌های سرور</b> را ندارید؛ در صورت مشاهده، تنزل رنک می‌شوید.</li>
+            <li>در صورت مشاهده هرگونه باگ یا گلیچ موظفید آن را به ادمین گزارش دهید.</li>
+            <li>هرگونه استفاده از باگ یا گلیچ که منجر به کسب درآمد، XP یا مزیت غیرمنطقی شود، ممنوع است.</li>
+            <li><b>استفاده از باگ یا گلیچ = ریست کامل اکانت + بن دائم</b>.</li>
           </ul>
         </div>
       </section>
 
-      <!-- 06 -->
-      <section class="section" id="st-hierarchy">
+      <section class="section" id="ads">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۰۶</span>
             <div>
-              <h3>سلسله‌مراتب</h3>
-              <div class="sub">Chain of Command</div>
+              <h3>زبان رسمی و تبلیغات</h3>
+              <div class="sub">Language & Ads</div>
             </div>
           </div>
-
           <ul class="rules">
-            <li>رعایت سلسله‌مراتب یکی از مهم‌ترین موارد استف است؛ زیر پا گذاشتن این قانون موجب برخورد با ادمین خاطی و <b>تنزل رنک</b> می‌شود.</li>
-            <li>اگر با ادمین رنک بالاتر کار دارید، مستقیم سراغ رنک‌های بالا نروید؛ اول کارتان را به رنک بالاتر از خودتان گزارش دهید و او در صورت صلاح‌دید به های رنک‌ها ارجاع می‌دهد.</li>
-            <li>در بیشتر موارد، کارهایی که ادمین‌های استف با های رنک‌های سرور دارند را رنک‌های پایین‌تر هم می‌توانند انجام دهند؛ به این نکته توجه کنید.</li>
+            <li>تنها زبان رسمی سرور فارسی است.</li>
+            <li>استفاده از زبان‌های دیگر در ویس یا چت IC ممنوع است.</li>
+            <li>تبلیغ هرگونه سرور دیگر ممنوع است و منجر به بن دائم خواهد شد.</li>
+            <li>حضور پلیرهای SALVATORES در کنار هم در هر سروری غیر از Salvatores (به‌خصوص سرورهای نوپا) باعث بن و ریست اکانت همه افراد مذکور خواهد شد.</li>
+            <li>تمامی پلیرها موظف به گزارش این موارد از طریق تیکت هستند. عدم گزارش = برخورد همانند متخلف اصلی.</li>
+            <li>تشخیص نهایی این موارد فقط با منیجر سرور خواهد بود.</li>
           </ul>
         </div>
       </section>
 
-      <!-- 07 -->
-      <section class="section" id="st-duties">
+      <section class="section" id="reports">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۰۷</span>
             <div>
-              <h3>وظایف ادمین استف</h3>
-              <div class="sub">۷ قانون کلیدی</div>
+              <h3>ارتباط با ادمین و ریپورت</h3>
+              <div class="sub">Contact Admin</div>
             </div>
           </div>
-
-          <ol class="steps">
-            <li>برای <b>اف‌دیوتی</b> کردن در هر زمانی نیاز به تأیید های رنک تایم دارید.</li>
-            <li>ادب مناسب و رفتار درست با تمامی پلیرها وظیفهٔ همهٔ ادمین‌های تیم استف سالواتورس است.</li>
-            <li>هرگونه صحبت بی‌مورد در چت ادمینی ممنوع است.</li>
-            <li>هرگونه <b>اسپکت رندوم</b> پلیر از منو، وارن دارد و در صورت تکرار، فایر و پانیشمنت بن چندروزه به همراه دارد.</li>
-            <li>اسپکت کردن ادمین‌های لو رنک، های رنک یا گیم‌مستر سرور نیاز به اجازه دارد؛ در صورت اسپکت بدون اجازه، <b>فایر + بن چندروزه</b>.</li>
-            <li>همهٔ ادمین‌ها موظف‌اند در <b>گنگ استف</b> باشند و در زمان ادمینی حق ست خوردن در گنگ دیگری را ندارند؛ در صورت جاج طرف‌گیری از دوست، رفیق یا هم‌گنگی، <b>درجا فایر + بن چندروزه</b>.</li>
-            <li>صحبت با های رنک‌های سرور دربارهٔ رنک‌آپ شدن وارن دارد و در صورت تکرار مکرر، <b>فایر + بن چندروزه</b>.</li>
-          </ol>
-
-          <div class="callout danger">
-            <span class="ci">⛔</span>
-            <div>در صورت بلد نبودن و رعایت نکردن قوانین ذکرشده، <b>درجا فایر</b> و بن چندروزهٔ ادمین لحاظ می‌شود.</div>
-          </div>
+          <ul class="rules">
+            <li>برای ریپورت باگ یا Non-RP از <span class="cmd">/report</span> استفاده کنید و گزینه مرتبط با موضوع را انتخاب کنید و بنویسید. ریپورت نامربوط مانند درخواست وسیله نقلیه یا ریوایو کردن (زنده کردن)، باعث عدم رسیدگی و اعمال پانیشمنت می‌شود.</li>
+            <li>داشتن مدارک معتبر (فیلم/عکس) الزامی است. در آرپی‌های جمعی (بیش از ۶ نفر) حداقل یک نفر باید از روند آرپی رکورد داشته باشد. عدم داشتن مدارک ناقص یا نادرست باعث برخورد با شما خواهد شد.</li>
+            <li>اگر ریپورت دهید ولی نتوانید ادعای خود را ثابت کنید، یا باعث وقفه در روند آرپی شوید، با شما برخورد خواهد شد.</li>
+            <li>در حین آرپی، ریپورت شما تا پایان صحنه رول‌پلی بررسی نمی‌شود. پس صبر کنید تا آرپی تمام شود.</li>
+            <li>اسپم ریپورت (مخصوصاً گروهی) ممنوع است. در صورت نیاز فقط یک نفر از جمع باید ریپورت بدهد.</li>
+            <li>مهلت ثبت ریپورت ۳۰ دقیقه بعد از وقوع است. پس از آن یا در صورت بسته شدن ریپورت بدون پاسخ، فقط از طریق تیکت سایت می‌توانید پیگیری کنید. ورود به ویس استف بدون درخواست ادمین ممنوع است. همچنین تمامی موارد آن آرپی‌های سرور تنها از طریق تیکت پابلیک، بخش نان‌آرپی رسیدگی می‌شود. ریپورت‌های قدیمی (بیش از یک روز) قابل پیگیری نمی‌باشد.</li>
+            <li>هرگونه فحاشی و بی‌احترامی یا نقض قوانین چه در ویس تیم استف و چه در مدارک ارسالی شما موجب برخورد با اکانت‌های بازی شما و دیسکورد شما نیز خواهد شد و حق اعتراض ندارید.</li>
+            <li>ادمین‌ها بی‌طرف و طبق قوانین قضاوت می‌کنند. در صورت نارضایتی می‌توانید دلیل قضاوت را بخواهید و در صورت اشتباه بودن، تیکت ادمین فیدبک باز کنید. درخواست‌های بی‌مورد مثل هیل، ماشین، پول یا ریوایو در ریپورت ممنوع است.</li>
+            <li>در صورتی که ریپورت شما توسط یک ادمین مورد بررسی قرار گیرد، اجازه ریپورت مجدد درباره آن موضوع را ندارید؛ در غیر این صورت پانیشمنت Trash Report برای شما در نظر گرفته می‌شود.</li>
+          </ul>
         </div>
       </section>
+    </div>
 
-      <!-- 08 -->
-      <section class="section" id="st-supervisor">
+    <!-- ========== PART 2: RP TERMS ========== -->
+    <div class="part">
+      <div class="part-head">
+        <span class="part-num">بخش ۰۲</span>
+        <h2>اصطلاحات و قوانین رول‌پلی</h2>
+        <p>IC/OOC، PG، Meta Gaming، Fear RP، KOS و تمامی قوانین مرتبط با نقش‌آفرینی.</p>
+      </div>
+
+      <section class="section" id="rp-terms">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۰۸</span>
             <div>
-              <h3>های رنک ناظر</h3>
-              <div class="sub">Supervisor Ranks</div>
+              <h3>IC و OOC و قوانین پایه</h3>
+              <div class="sub">IC / OOC & Basic RP</div>
             </div>
           </div>
-
           <ul class="rules">
-            <li>از رنک <b>۱ (Helper)</b> تا رنک <b>۲ (Senior Helper)</b> حق هیچ‌گونه <b>جاج سنگین</b> و <b>پانیشمنت زدن</b> برای هیچ پلیری را ندارند.</li>
-            <li>در صورتی که های رنک ناظر در حال نظارت بر شما باشند، می‌توانید با صلاح‌دید های رنک جاج کنید و پانیشمنت شما را های رنک مورد نظر لحاظ می‌کند.</li>
-            <li>های رنک ناظر استف از رنک <b>۶ (Head Supporter)</b> می‌توانند به‌صورت کامل بر تمامی رنک‌های ۱ تا ۵ نظارت کنند و حواسشان به نظم، قوانین استف و جاج‌های سرور باشد.</li>
+            <li><b>IC (In Character):</b> تمام صحبت‌ها و اعمالی که کاراکتر شما در روند رول‌پلی انجام می‌دهد.</li>
+            <li><b>OOC (Out Of Character):</b> هر صحبت یا اقدام خارج از روند رول‌پلی.</li>
+            <li>در جریان سناریوهای رول‌پلی، تحت هیچ شرایطی مجاز به استفاده از کلمات یا جملات خارج از ماهیت نقش‌آفرینی نیستید.</li>
+            <li>استفاده از OOC در IC نقض قانون Mix IC & OOC است و پانیشمنت دارد.</li>
+          </ul>
+          <div class="rules-sub">Non-RP و Block RP</div>
+          <ul class="rules">
+            <li><b>Non-RP:</b> هر کاری که قوانین رول‌پلی را زیر سوال ببرد و سناریو را خراب کند، Non-RP است. همه پانیشمنت‌های سرور ماهیت Non-RP دارند.</li>
+            <li><b>Block RP:</b> موظفید آرپی منطقی و عقلانی داشته باشید. دستور دادن به ارگان‌های دولتی برای انجام سریع‌تر کارشان ممنوع است.</li>
+            <li>بی‌اعتنایی به ارگان‌های دولتی در زمان آن دیوتی ممنوع است.</li>
+            <li>اگر از روند آرپی ناراضی هستید، باید در /ooc به بازیکن اطلاع دهید؛ دنبال کردن و خراب کردن آرپی دیگران ممنوع است.</li>
           </ul>
         </div>
       </section>
 
-      <!-- 09 -->
-      <section class="section" id="st-punish">
+      <section class="section" id="pg">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۰۹</span>
             <div>
-              <h3>آموزش پانیشمنت زدن</h3>
-              <div class="sub">Punishment Panel</div>
+              <h3>Power Gaming — PG</h3>
+              <div class="sub">قوانین انجام کارهای غیرممکن</div>
             </div>
           </div>
-
-          <p>برای پانیشمنت زدن باید از کامند زیر استفاده کنید:</p>
-          <p><span class="cmd" data-copy="/cs id player / steam hex">/cs id player / steam hex</span></p>
-
           <ul class="rules">
-            <li>بعد از زدن کامند، منویی برای شما باز می‌شود. بخش اول، انتخاب پانیشمنت‌های سرور است؛ پانیش مورد نظر را در بخش سرچ انتخاب کنید.</li>
-            <li>زیر پنل یک تیک غیرفعال وجود دارد که در صورت فعال کردن، پانیشمنت برای <b>تمامی پلیرها</b> نمایش داده می‌شود.</li>
-            <li>پس از طی مراحل، بخش نوشتاری و توضیحات را طبق فرم زیر پر کنید.</li>
+            <li>انجام کارهای غیرممکن یا غیرطبیعی در رول‌پلی و ندادن زمان کافی به طرف مقابل، PG است.</li>
+            <li>داخل ماشین بودن و سرچ کردن دیگران ممنوع است.</li>
+            <li>سرچ کردن بازیکنی که ایستاده و اسلحه در دست دارد ممنوع است.</li>
+            <li>تا ۳۰ دقیقه پس از ریوایو شدن، دویدن، پریدن و فایت کردن ممنوع است.</li>
+            <li>اگر شیشه ماشین‌ها بالاست، صحبت‌های داخل ماشین را نمی‌شنوید و نمی‌توانید از آن‌ها استفاده کنید.</li>
+            <li>گوشی گرفتن در زمان مجروح بودن ممنوع است.</li>
+            <li>گشتن یک نفر بدون انجام آرپی /me و /do ممنوع است.</li>
+            <li>آفرود کردن با خودرو یا موتوری که آفرود نیست (شیب بیش از ۳۰ درجه) ممنوع است.</li>
+            <li>پریدن از ارتفاع بسیار بلند با خودرو یا موتور ممنوع است.</li>
+            <li>بردن موتور، خودرو یا دوچرخه به داخل مغازه، لباس‌فروشی، بانک و جواهری ممنوع است.</li>
+            <li>وقتی با /me دهان شما بسته شده، حق صحبت ندارید؛ وقتی گوشی شما گرفته شده، حق استفاده از گوشی ندارید.</li>
+            <li>شنا کردن طولانی در جریان تعقیب و گریز (بیش از ۵ دقیقه) ممنوع است.</li>
+            <li>پس از مداوای سرپایی توسط مدیک، تا ۳۰ دقیقه حق دویدن، پریدن و فایت ندارید.</li>
+            <li>پس از اصابت شوکر، حق حرکت ندارید و باید تابع دستورات نیروی انتظامی باشید.</li>
+            <li>هنگام اسکورت یا حمل فرد دستبند‌زده، دویدن ممنوع است.</li>
+            <li>بیش از یک نفر را نمی‌توانید حمل کنید؛ برای گذاشتن فرد در ماشین ابتدا پیاده شوید و در را باز کنید.</li>
+            <li>هنگام حمل فرد، رانندگی پشت فرمان ممنوع است مگر با آرپی /me او را روی صندلی بگذارید.</li>
+            <li>حمل طولانی‌مدت فرد (بیش از ۵ دقیقه) ممنوع است.</li>
+            <li>اگر ۱ یا ۲ چرخ خودرو پنچر باشد، حداکثر ۵ دقیقه و با سرعت ۳۰ کیلومتر بر ساعت حرکت کنید.</li>
+            <li>اگر ۳ یا ۴ چرخ پنچر باشد، رانندگی با آن خودرو ممنوع است.</li>
           </ul>
-
-          <div class="mock">
-            <div class="mock-title">Sabt Comserv – steam:11000015e05416c</div>
-            <div class="mock-body">
-              <div class="mock-label">Offense-ha <span class="req">*</span></div>
-              <div class="mock-select"><span>Powergaming – Stage 1 (80)</span><span class="x">✕</span></div>
-              <div class="mock-check"><span class="box"></span> Notify Baraye Hame Bazikonan</div>
-              <div class="mock-label">Note <span class="req">*</span></div>
-              <div class="mock-text">Admin : Amo Rad<br>Shaki : steam:11000016ebf0e54<br>Tozihat : search ba gun active</div>
-              <div class="mock-actions">
-                <button class="mock-btn" type="button">CANCEL</button>
-                <button class="mock-btn primary" type="button">CONFIRM</button>
-              </div>
-            </div>
-          </div>
-
-          <ul class="rules" style="margin-top:18px">
-            <li><b>اسم ادمین جاجر:</b> admin nazer</li>
-            <li><b>استیم هگز شکایت‌کننده:</b> shaki</li>
-            <li><b>توضیحات دقیق و خلاصه از نقض قوانین فرد خاطی:</b> Tozihat</li>
-          </ul>
-
-          <div class="callout info">
-            <span class="ci">✅</span>
-            <div>فقط در زمانی حق دارید تیک پانیشمنت را فعال کنید که <b>فرد در سرور نباشد</b>.</div>
-          </div>
-
-          <div class="callout warn">
-            <span class="ci">⚠️</span>
-            <div>اگر برای پلیری که در سرور حضور دارد پانیشمنت می‌زنید، باید به تعداد پانیشمنت‌هایش برایش <b>جزای نقدی</b> بزنید. پانیش‌های فرد خاطی را طبق پسوند طور بودن لحاظ کنید.</div>
-          </div>
-
-          <p style="margin-top:16px">کامند جریمهٔ نقدی:</p>
-          <p><span class="cmd orange" data-copy="/fine id price reason">/fine id price reason</span></p>
-
-          <div class="code-block"><span class="k">#</span> مثال
-/fine 1234 90000 non rp</div>
         </div>
       </section>
 
-      <!-- 10 -->
-      <section class="section" id="st-f4">
+      <section class="section" id="meta">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۱۰</span>
             <div>
-              <h3>منوی ادمینی F4</h3>
-              <div class="sub">Salvatores Admin Menu</div>
+              <h3>Meta Gaming</h3>
+              <div class="sub">انتقال اطلاعات OOC به IC</div>
             </div>
           </div>
-
-          <div class="mock f4">
-            <div class="f4-title">Salvatores Admin</div>
-            <div class="f4-sub">SL Admin</div>
-            <div class="f4-item active">Spectate Menu</div>
-            <div class="f4-item">Spectate Menu Search</div>
-            <div class="f4-item">Teleport To Player</div>
-            <div class="f4-item">Admin Menu</div>
-          </div>
-
-          <ul class="rules" style="margin-top:18px">
-            <li><b>Spectate Menu:</b> اسپکت کردن تمامی پلیرها</li>
-            <li><b>Spectate Menu Search:</b> سرچ کردن پلیر با آیدی پلیر و آی‌سی‌نیم</li>
-            <li><b>Teleport To Player:</b> تلپورت کردن به پلیر در زمان اسپکت</li>
+          <ul class="rules">
+            <li>به کار بردن اطلاعات OOC در سناریوی IC، متا گیمینگ است و خلاف قوانین.</li>
+            <li>حضور در تیم‌اسپیک با فردی که در بازی با او رابری هستید، بدون حضور در رادیوی مشترک، متا گیمینگ است.</li>
+            <li>درخواست کمک از پلیس یا دوستان از طریق تیم‌اسپیک یا دیسکورد در حین دستبند بودن، متا گیمینگ است؛ باید از وسایل ارتباطی داخل بازی استفاده کنید.</li>
+            <li>صدا زدن افراد باید با جملاتی مثل «جناب»، «آقا»، «خانم» یا اشاره ظاهری باشد، نه با استفاده از ID.</li>
+            <li>شناسایی افرادی که نامشان را در روند رول‌پلی ندیده‌اید یا کاملاً پوشیده‌اند و صحبتی نکرده‌اند، ممنوع است.</li>
+            <li>دیدن اتفاقی ID فردی که در بوته پنهان شده، مجوز شناسایی او نیست.</li>
+            <li>استریم اسنایپ — سوءاستفاده از استریم شخصی برای ورود به روند آرپی — ممنوع است.</li>
+            <li>پرسیدن لوکیشن بازیکنان از ادمین و نگاه کردن به ID اطرافیان در رابری و درگیری ممنوع است.</li>
+            <li>در فایت، اگر با هم‌گنگی‌های خود در رادیو مشترک نیستید، احضار آن‌ها متا گیمینگ است.</li>
+            <li>در زمان مجروح بودن حق دادن هیچ اطلاعاتی ندارید؛ پس از مجروح شدن باید در چت گنگ یا فکشن اعلام کنید.</li>
+            <li>در زمان دستبند بودن، حق دادن اطلاعات در چت یا رادیو ندارید؛ فقط اگر رادیو در جیب شما باشد و طرف مقابل آن را نگرفته باشد، هم‌گنگی‌ها می‌توانند با /gs موقعیت شما را پیدا کنند.</li>
+            <li>اگر شاهد KOS دادن به دوستتان باشید، حق کمک دارید؛ در غیر این صورت ورود به فایت ممنوع است.</li>
+            <li><b>Mix IC/OOC:</b> به کار بردن اطلاعات IC و OOC — از خارج به داخل یا از داخل به خارج — ممنوع است. گفتن «برو زیر مایک»، «آیدیت چنده»، «بیا تیم‌اسپیک» در سناریوی IC نمونه‌های Mix هستند. میکس کردن فقط در مکان‌های خلوت و با رضایت همه افراد حاضر در صحنه مجاز است.</li>
           </ul>
         </div>
       </section>
 
-      <!-- 11 -->
-      <section class="section" id="st-adminmenu">
+      <section class="section" id="fear-rp">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۱۱</span>
             <div>
-              <h3>لیست ادمین منو</h3>
-              <div class="sub">Admin Menu</div>
+              <h3>Fear RP</h3>
+              <div class="sub">قانون ترس از مرگ</div>
             </div>
           </div>
-
-          <div class="mock f4">
-            <div class="f4-title">ADMIN MENU</div>
-            <div class="f4-row"><span>Player Blip</span><span class="off">Off</span></div>
-            <div class="f4-row"><span>Fast Run</span><span class="off">Off</span></div>
-            <div class="f4-row"><span>Super Jump</span><span class="off">Off</span></div>
-            <div class="f4-row"><span>Invisibility</span><span class="off">Off</span></div>
-            <div class="f4-row"><span>Noclip</span><span class="off">Off</span></div>
-          </div>
-
-          <ul class="rules" style="margin-top:18px">
-            <li><b>Player Blip:</b> نشان دادن پلیرهای نزدیک شما روی نقشهٔ بازی</li>
-            <li><b>Fast Run:</b> دویدن سریع</li>
-            <li><b>Super Jump:</b> پرش فوق‌العاده</li>
-            <li><b>Invisibility:</b> نامرئی شدن برای تمامی پلیرها</li>
-            <li><b>Noclip:</b> نوکلیپ کردن</li>
+          <ul class="rules">
+            <li>جان شما ارزشمند است و نباید کاری کنید که جان خود را به خطر بیندازید.</li>
+            <li>اگر پیاده یا سوار موتور بدون حرکت هستید و اسلحه از نزدیک به سمت شما گرفته شده، حق فرار، درآوردن اسلحه، گوشی یا بی‌سیم برای کمک ندارید.</li>
+            <li>اگر دو نفر یا بیشتر به سمت خودروی خاموش شما اسلحه بگیرند، باید تابع دستورات آن‌ها باشید و نمی‌توانید فرار کنید.</li>
+            <li>اگر سوار خودروی روشن و سالم هستید، این قانون شامل شما نمی‌شود.</li>
+            <li>اگر شوکر به سمت شما نشانه گرفته شود، باید تابع دستورات باشید؛ شوکر با اسلحه تفاوتی ندارد.</li>
+            <li>اگر اسلحه شما پیش از حمله طرف مقابل در دستتان باشد، مشمول این قانون نمی‌شوید و می‌توانید دفاع کنید.</li>
+            <li>پس از کشتن یا زخمی کردن فرد، بیش از ۵ دقیقه در آن محل نمانید؛ در فایت خیابانی حداکثر ۱۰ دقیقه.</li>
+            <li>در زمان خفت شدن اگر تنها هستید باید تابع دستورات باشید؛ شلیک از داخل ماشین در حین پیاده شدن نقض Fear RP است.</li>
           </ul>
         </div>
       </section>
-    </div>
 
-    <!-- ========== PART 3 ========== -->
-    <div class="part">
-      <div class="part-head">
-        <span class="part-num">بخش ۰۳</span>
-        <h2>آموزش نیو پلیر</h2>
-        <p>نکاتی که هر ادمین باید هنگام ورود یک پلیر جدید به سرور به او آموزش دهد.</p>
-      </div>
-
-      <!-- 12 -->
-      <section class="section" id="newplayer">
+      <section class="section" id="kos">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۱۲</span>
             <div>
-              <h3>New Player Train</h3>
-              <div class="sub">آموزش پلیر جدید</div>
+              <h3>KOS و DeathMatch</h3>
+              <div class="sub">Kill on Sight / DM</div>
             </div>
           </div>
-
-          <ol class="steps">
-            <li>به‌عنوان یک ادمین باید تمامی نکات را به پلیر توضیح دهید و از او بپرسید که <b>سابقهٔ رول‌پلی</b> داشته و به قوانین شهری مسلط است یا خیر.</li>
-            <li>لینک <b>سایت سرور</b>، <b>قوانین سرور</b> و <b>کانال روبیکای Salvatores Rules</b> را در چت OOC برای پلیر ارسال کنید تا از تمامی آپدیت‌ها و قوانین مطلع باشد: <span class="cmd" data-copy="@Salvatores_ruls">@Salvatores_ruls</span></li>
-            <li>تمامی شهر، جاب‌های دولتی و نظامی و جاب‌های آزاد را توضیح دهید و بگویید چطور می‌تواند شروع به کار و درآمد کند.</li>
-            <li>اگر نیو پلیر قوانین را بلد نبود، موظف هستید قوانین سرور را به‌صورت کلیدی و خلاصه برایش توضیح دهید.</li>
-          </ol>
-
-          <div class="callout info">
-            <span class="ci">💡</span>
-            <div>برای نیو پلیر، بهترین انتخاب <b>جاب‌های دولتی</b> است؛ حتماً این نکته را گوشزد کنید.</div>
-          </div>
-
-          <p style="margin-top:20px;font-weight:700;color:#dbeafe">چک‌لیست کامل آموزش:</p>
-
-          <ol class="steps" style="margin-top:12px">
-            <li>توضیح قوانین سرور از جمله رعایت ادب و احترام به تمامی پلیرها، داشتن رکورد از صفحهٔ خود و مواردی که یک پلیر باید به‌صورت استاندارد رعایت کند.</li>
-            <li>دادن سایت سالواتورس، کانال استف رولز و آی‌پی تیم‌اسپیک سرور؛ نشاندن پلیر در چنل <b>Request role</b> و دادن رول و ریفای به نیو پلیر.</li>
-            <li>توضیح تمامی جاب‌های آزاد، دولتی و نظامی و درآمدشان — و اینکه برای ورود به این ارگان‌ها نیاز به قوانین و شرایطی دارند.</li>
-            <li>توضیح بخش‌های سرور مثل کافه‌ها، اسموک‌شاپ و آیتم‌های ویژه برای رفع استرس (وید، سیگارهای خاص و قرص ضداسترس از بیمارستان).</li>
-            <li>توضیح بخش HUD یا کامند <span class="cmd" data-copy="/settings">/settings</span> برای شخصی‌سازی و منظم‌سازی دلخواه پلیر.</li>
-            <li>توضیح فارم و کاشت مواد و میوه‌ها در زمین‌های فارمری، محل و روش کرفت کردن، و تفاوت زمین‌های کارتل و قوانین آن با زمین‌های معمولی.</li>
-            <li>آگاه کردن پلیر از <b>استارتر پک</b> که شامل تلفن، آب و غذا و یک ماشین در گاراژ پارکینگ مرکزی است.</li>
-          </ol>
+          <ul class="rules">
+            <li><b>DeathMatch:</b> کشتن، آسیب زدن به فرد یا اموال او بدون دلیل کافی و قانع‌کننده IC، DeathMatch است.</li>
+            <li>طبق قوانین KOS باید از دلیل خود ویدیو یا تصویر داشته باشید تا در صورت ریپورت، قضاوت درست انجام شود.</li>
+            <li><b>KOS (Kill on Sight):</b> یعنی اجازه کشتن فرد بدون انجام آرپی، اما فقط با دلیل محکم. اگر برای KOS خود مدرک ندارید، از آن صرف‌نظر کنید.</li>
+            <li>KOS در مناطق NCZ قابل اجرا نیست؛ اگر فرد به NCZ پناه ببرد و به سه اخطار شما توجه نکند، پانیشمنت Run to NCZ برای او لحاظ می‌شود.</li>
+            <li><b>چه زمانی KOS دارید:</b> جان شما تهدید شده باشد؛ جان دوستانتان در خطر باشد و شاهد آن باشید؛ اموال شما یا دوستانتان در خطر مستقیم باشد؛ شخصی جرایم سنگین شما را گزارش دهد و خود شاهد گزارش باشید.</li>
+            <li>KOS گرفته‌شده تا ۲۴ ساعت اعتبار دارد و فقط یک بار قابل استفاده است؛ پس از اجرا تا یک ساعت با همان فرد حق آرپی ندارید.</li>
+            <li>برای گرفتن KOS نباید کسی را تحریک کنید یا موقعیتی بسازید که ناخواسته به دارایی شما آسیب برسد.</li>
+            <li>اگر کسی تصادف کرد، اجازه کشتن او را ندارید؛ اگر تکرار کرد، ابتدا در /s هشدار دهید و سپس می‌توانید صدمه بزنید یا با پلیس تماس بگیرید (حداقل سه بار باید به خودروی شما ضربه بزند).</li>
+            <li>اگر کسی یک بار مشت زد و در /ooc عذرخواهی کرد، KOS ندارید و باید این آرپی را نادیده بگیرید.</li>
+            <li>درگیری لفظی و رجزخوانی دلیل کشتن نیست، مگر فحاشی ناموسی که در آن صورت می‌توانید KOS بزنید.</li>
+            <li>از رابرها در محل رابری حق KOS گرفتن ندارید و باید آن محل را ترک کنید.</li>
+            <li>ماموران امنیتی و شغل‌های دولتی در حال انجام وظیفه نمی‌توانند از KOS استفاده کنند و از آن‌ها KOS گرفته نمی‌شود.</li>
+            <li>اگر به صحنه خفت‌گیری نزدیک شدید و برای دور کردن شما Aim گرفته شد، حق KOS ندارید.</li>
+            <li>اگر دو گروه درگیر باشند، حتی با داشتن KOS حق ورود به درگیری را ندارید؛ فقط اگر حضوری شاهد KOS به هم‌گنگی یا دوستتان باشید یا در رادیو مشترک گزارش شود.</li>
+            <li>در محل‌های رابری KOS اجرا نمی‌کنید؛ حتی پس از اتمام رابری باید اجازه دهید روند کامل شود.</li>
+            <li>به کسی که از دستورات شما پیروی کرده، آسیب نمی‌زنید؛ برای دستورات باید زمان کافی بدهید.</li>
+            <li>برای Stop Traffic نمی‌توانید پلیس را بکشید؛ باید تا شلیک پلیس صبر کنید.</li>
+            <li>نشانه گرفتن با شوکر KOS نمی‌دهد.</li>
+            <li>نشانه گرفتن پلیس روی شما فقط در همان لحظه KOS می‌دهد و حق تیر خلاص به پلیس و شهروند را ندارید.</li>
+            <li>اگر اخطار خفت‌گیری (تهدید به مرگ) دریافت کردید، در همان لحظه حق دفاع و فایت دارید.</li>
+            <li>از روند خفت‌گیری KOS نمی‌گیرید و نمی‌توانید در مکانی دیگر فرد را خلاص بزنید.</li>
+            <li>اگر از ماشین فردی در حال دزدی باشید و صاحب ماشین شما را ببیند، او اجازه آسیب رساندن به شما را دارد.</li>
+            <li>به بهانه جرایم راهنمایی و رانندگی یا حمل اسلحه غیرمجاز به نیروهای انتظامی شلیک نکنید.</li>
+            <li>فقط زمانی می‌توانید به پلیس شلیک کنید که در رابری باشید یا در تعقیب و گریز، پلیس شما یا دوستتان را زخمی کرده باشد.</li>
+            <li>اگر کسی را بکشید و پلیس صحنه را ببیند، برای فرار می‌توانید او را زخمی کنید ولی حق تیر خلاص ندارید.</li>
+            <li>اگر پلیس دوست شما را دستگیر کند، می‌توانید برای نجات او اقدام کنید؛ این قانون برای بعد از رابری‌ها صدق نمی‌کند.</li>
+            <li>تعداد پلیس‌های زنده در محل نباید بیشتر از ۴ نفر باشد.</li>
+            <li>برای جلوگیری از متا گیمینگ باید شاهد لحظه دستگیری باشید یا دوستتان از طریق بی‌سیم یا تلفن داخل بازی اطلاع داده باشد.</li>
+          </ul>
         </div>
       </section>
-    </div>
 
-    <!-- ========== PART 4 ========== -->
-    <div class="part">
-      <div class="part-head">
-        <span class="part-num">بخش ۰۴</span>
-        <h2>کامندهای استف</h2>
-        <p>آموزش کامندهای ادمینی — روی هر کامند بزنید تا کپی شود.</p>
-      </div>
-
-      <!-- 13 -->
-      <section class="section" id="commands">
+      <section class="section" id="search">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۱۳</span>
             <div>
-              <h3>Command Staff</h3>
-              <div class="sub">لیست کامندها</div>
+              <h3>Search و VDM</h3>
+              <div class="sub">قوانین سرچ و وسیله نقلیه</div>
             </div>
           </div>
-
           <ul class="rules">
-            <li>برای روشن و خاموش کردن پرم ادمینی از کامند زیر استفاده کنید: <span class="cmd" data-copy="/aduty">/aduty</span></li>
-            <li>برای <b>revive</b> دادن و <b>slay</b> دادن از کامندهای زیر استفاده کنید — <b>تحت هیچ شرایطی بدون اجازهٔ های رنک</b>:<br>
-              <span class="cmd orange" data-copy="/revive [ID]">/revive [ID]</span>
-              <span class="cmd orange" data-copy="/slay [ID]">/slay [ID]</span>
-            </li>
-            <li>برای اسپکت کردن پلیر (اسپکت بی‌مورد و رندوم ممنوع): <span class="cmd" data-copy="/spect [ID]">/spect [ID]</span></li>
-            <li>برای رفتن روی پلیر — <b>فقط با اجازهٔ های رنک</b>: <span class="cmd orange" data-copy="/goto [ID]">/goto [ID]</span></li>
-            <li>برای تلپورت به مکانی که روی نقشه مارک کرده‌اید: <span class="cmd" data-copy="Shift + E">Shift + E</span></li>
-            <li>برای تلپورت کردن پلیر، حتماً در چت استف اجازه بگیرید.</li>
+            <li>گشتن فرد یا گروه بدون دلیل قانع‌کننده ممنوع است.</li>
+            <li>اگر به روند درگیری ربطی ندارید، حق سرچ ندارید.</li>
+            <li>اگر KOS دارید، حق سرچ فرد را دارید.</li>
+            <li>اگر کاراکتر فرد در سرور لود نشده و AFK است، حق سرچ او را ندارید؛ پس از لود کامل و با آرپی او را سرچ کنید.</li>
+            <li>ارگان‌های نظامی فقط در این موارد حق سرچ شهروندان را دارند: مشاهده اسلحه ممنوعه در دست، ارتکاب جرم و تحت تعقیب بودن، یا بی‌توجهی به اخطار دوم.</li>
+            <li>سقف آیتم‌های سرچ: ۶ عدد تیر پیستول و ۴ عدد تیر سنگین؛ اگر بیشتر بود، یک یا دو عدد را نادیده بگیرید و رابری را خراب نکنید.</li>
+            <li><b>VDM (Vehicles Death Match):</b> کشتن یا زیر گرفتن افراد با وسیله نقلیه بدون دلیل ممنوع است.</li>
+            <li>اگر غیرعمد تصادف کردید، موظفید برای بررسی وضعیت مصدوم به محل بازگردید؛ در غیر این صورت VDM است.</li>
+            <li>حتی یک بار زیر گرفتن عمدی، VDM محسوب می‌شود؛ حتی اگر فرد را به بیمارستان برسانید.</li>
+            <li>یک تصادف ماشین به ماشین به شما KOS نمی‌دهد؛ می‌توانید از طریق پلیس پیگیری و درخواست خسارت کنید.</li>
+            <li>حتی با داشتن KOS حق کشتن فرد با ماشین را ندارید.</li>
+            <li><b>Mercy Killing:</b> کشتن فرد برای Respawn سریع‌تر، بی‌ارزش کردن جان در آرپی است. کشتن دوستان و هم‌گنگی‌های زخمی برای Respawn یا پر کردن HP ممنوع است.</li>
           </ul>
-
-          <div class="callout warn">
-            <span class="ci">⚠️</span>
-            <div>استفادهٔ نادرست از <b>revive</b>، <b>slay</b> و <b>goto</b> بدون اجازهٔ های رنک، پانیشمنت سنگین (فایر + بن چندروزه) به همراه دارد.</div>
-          </div>
-
-          <p style="margin-top:16px;font-size:.8rem;color:#64748b">💡 برای کپی کردن هر کامند، روی آن کلیک کنید.</p>
         </div>
       </section>
-    </div>
 
-    <!-- ========== PART 5 ========== -->
-    <div class="part">
-      <div class="part-head">
-        <span class="part-num">بخش ۰۵</span>
-        <h2>قوانین شهر و رابری</h2>
-        <p>قوانین کلی شهر و تمامی قوانین رابری — کامل، بدون خلاصه‌سازی، خط به خط از سند اصلی.</p>
-      </div>
-
-      <!-- 14 -->
-      <section class="section" id="city">
+      <section class="section" id="combat-log">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۱۴</span>
             <div>
-              <h3>Salvatores City Rules</h3>
-              <div class="sub">قوانین کلی سرور</div>
+              <h3>Combat Logging و قوانین چت</h3>
+              <div class="sub">Combat Log & Chat Rules</div>
             </div>
           </div>
-
           <ul class="rules">
-            <li>همهٔ کسانی که در سرور سالواتورس وارد می‌شوند موظف‌اند <b>آخرین نسخهٔ قوانین</b> را بخوانند و به آن عمل کنند.</li>
-            <li>عدم آگاهی شما از قوانین، دلیلی بر عدم وجود قانون و تبرئهٔ شما نیست؛ <b>«جهل به قانون رافع مسئولیت نیست»</b>.</li>
-            <li>با کسانی که قوانین را نمی‌خوانند یا به آن عمل نمی‌کنند، به‌شدت برخورد می‌شود.</li>
-            <li>قوانین هر سرور با سرور دیگر متفاوت است؛ اگر وارد سالواتورس می‌شوید، باید طبق قوانین سالواتورس عمل کنید.</li>
-            <li>در تمام موارد و در هر RP، اولویت با نظر ادمین است؛ زیرا ادمین به تمام قوانین مسلط است، از روی عدالت تصمیم می‌گیرد و سناریوهای مشابه را بارها تجربه و در آن‌ها تصمیم‌گیری کرده است.</li>
+            <li><b>Combat Logging:</b> خروج عمدی از سرور برای فرار از صحنه رول‌پلی ممنوع است.</li>
+            <li>در صورت کرش یا دیسکانکت، به طرفین رول‌پلی از طریق چنل تیم‌اسپیک اطلاع دهید و حداکثر تا ۱۰ دقیقه پس از بازگشت باید به لوکیشن و روند قبلی برگردید.</li>
+            <li>اگر در حین درگیری یا تیراندازی تا ۳ دقیقه عمداً خارج شوید، پانیشمنت اعمال می‌شود.</li>
+            <li>در تعقیب و گریز، اگر قصد خروج دارید باید حداقل ۲۰ دقیقه در سرور بمانید.</li>
+            <li>اگر رابرها در رابری شکست بخورند و به عمد دیسکانکت کنند، تمام سلاح‌هایشان حذف می‌شود.</li>
+            <li>هر کامند باید در بخش خودش استفاده شود: <span class="cmd">/ooc</span>، <span class="cmd">/s</span>، <span class="cmd">/me</span>، <span class="cmd">/do</span>.</li>
+            <li>در /me نباید ایموجی، xD، lol یا «:)» استفاده شود. عمل نوشته‌شده باید منطقی باشد.</li>
+            <li>/do برای پرسیدن سوال یا تایید/تکذیب وقایع است. سوال در /do باید جواب بله/خیر داشته باشد. دروغ گفتن در /do در صورت وجود مدرک موثق IC ممنوع است.</li>
           </ul>
-
-          <div class="callout info">
-            <span class="ci">ℹ️</span>
-            <div>ادامهٔ این بخش، <b>قوانین کامل رابری‌های شهری</b> را پوشش می‌دهد — شامل قوانین مشترک، سرچ، اختصاصی ۱۶ رابری، تکمیلی و جوینر. از منوی کناری یا نوار جستجو استفاده کنید.</div>
-          </div>
         </div>
       </section>
 
-      <!-- 15: Robbery Intro -->
-      <section class="section" id="rob-intro">
+      <section class="section" id="ncz">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۱۵</span>
             <div>
-              <h3>مقدمهٔ قوانین رابری شهر سالواتورس</h3>
-              <div class="sub">Robbery Rules — Introduction</div>
+              <h3>مناطق امن، NCZ و NLR</h3>
+              <div class="sub">Safe Zone / NCZ / NLR</div>
             </div>
           </div>
-
-          <p>همهٔ کسانی که در شهر سالواتورس زندگی می‌کنند موظف‌اند <b>آخرین نسخهٔ قوانین</b> را مطالعه کرده و به آن مسلط باشند.</p>
-
-          <div class="callout danger">
-            <span class="ci">⛔</span>
-            <div><b>عدم آگاهی شما نسبت به قوانین دلیل بر بی‌گناهی شما نیست.</b> با کسانی که به قوانین عمل نمی‌کنند شدیداً برخورد می‌شود.</div>
-          </div>
+          <ul class="rules">
+            <li><b>Safe Zone:</b> مناطق امن هستند و درگیری بدون دلیل و مدرک در آن‌ها ممنوع است (مناطق بارگیری، بسته‌بندی و فروش مواد و زمین‌های کاشت؛ اطراف خانه یا کنار ایستگاه پلیس؛ محل‌های کرفت؛ مناطق خرید؛ پارکینگ‌های اطراف شهر به‌جز مرکزی؛ بیس فمیلی‌ها؛ تمام رابری‌ها).</li>
+            <li><b>NCZ (No Crime Zone):</b> مناطقی با شدیدترین تدابیر امنیتی هستند که هیچ جرمی در آن‌ها نباید رخ دهد (تمام ارگان‌های دولتی و نظامی؛ پارکینگ مرکزی و ۳؛ مناطق دایره سبز؛ تمام خانه‌ها؛ پینت‌بال؛ زندان مرکزی). در این مناطق نه KOS می‌گیرید و نه اجرا می‌کنید.</li>
+            <li>پناه گرفتن در NCZ در حین تعقیب و فایت، پانیشمنت Run to NCZ دارد.</li>
+            <li><b>NLR (New Life Rule):</b> پس از مرگ، حافظه کاراکتر پاک می‌شود. فرد فوت‌شده حافظه خود را از دست می‌دهد و تا ۳۰ دقیقه حق بازگشت به آن آرپی را ندارد.</li>
+            <li>پس از New Life تا ۳۰ دقیقه حق آرپی با افرادی که کشته‌اید را ندارید. اگر خودتان New Life شوید، تمام KOSهایی که دارید از بین می‌رود.</li>
+          </ul>
         </div>
       </section>
 
-      <!-- 16: Common Robbery Rules -->
-      <section class="section" id="rob-common">
+      <section class="section" id="hostage">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۱۶</span>
             <div>
-              <h3>قوانین مشترک در تمامی رابری‌ها</h3>
-              <div class="sub">Common Robbery Rules — کامل</div>
+              <h3>خفت‌گیری و گروگان‌گیری</h3>
+              <div class="sub">Kidnapping & Hostage</div>
             </div>
           </div>
-
-          <p>این قوانین برای <b>تمامی رابری‌ها</b> بدون استثنا اعمال می‌شود. هر ادمین استف باید به تمامی این ۲۴ قانون مسلط باشد.</p>
-
-          <div class="rules-sub">🟦 استارت و شروع رابری</div>
           <ul class="rules">
-            <li>اولویت استارت رابری با گروهی است که <b>زودتر و با تعداد کامل</b> در محل رابری حاضر شده باشند.</li>
-            <li><b>تحت هیچ شرایطی</b> وقتی دو گروه با هم در یک محل رابری باشند، رابری نباید استارت شود.</li>
-            <li>در صورتی که یک رابری استارت شده باشد، <b>هیچ گروهی</b> حق ورود به محل رابری را ندارد.</li>
-            <li>در صورتی که رابری استارت شود و پلیس به محل برسد و حضور خود را اعلام کند، دیگر کسی از افراد رابر اجازهٔ ورود به محل رابری را ندارد.</li>
-            <li>در زمان‌هایی که یک رابری استارت شده باشد یا گروهی تصمیم به اجرای رابری دارند، شما <b>حتی با K.O.S هم اجازهٔ درگیری ندارید</b>.</li>
-            <li>شما حق ندارید در اطراف محل رابری به منظور گرفتن یا اجرای K.O.S کمپ کنید.</li>
+            <li>برای خفت کردن افراد غیرنظامی، تعداد خفت‌گیرها باید دو برابر افراد مورد نظر باشد. برای ارگان‌های نظامی، چهار برابر.</li>
+            <li>زمان مجاز خفت‌گیری: ۸ شب تا ۶ صبح در مناطق بیرون شهر و غیر از مناطق سبز. خفت‌گیری در طول روز فقط برای گروگان‌گیری مجاز است.</li>
+            <li>برای خفت‌گیری حداقل ۲ نفر Sheriff و ۱ مدیک باید آنلاین باشند.</li>
+            <li>FBI، Government و دادگستری را نمی‌توانید خفت کنید، مگر اینکه به‌عنوان غیرنظامی خارج از شهر باشند.</li>
+            <li>فردی که در حال کانکت شدن یا ریوایو شدن است، تا ۱۰ دقیقه نباید خفت شود. ۲۰ دقیقه پس از ریست سرور خفت‌گیری ممنوع است.</li>
+            <li>اگر درب ماشین قفل است، با /me و /do فرد را مجبور به باز کردن کنید؛ او حق تیراندازی از داخل ماشین را ندارد.</li>
+            <li>در خفت‌گیری می‌توانید کل پول، سوییچ ماشین و تمام آیتم‌ها به‌جز موبایل را بگیرید.</li>
+            <li>ابتدا در /s اخطار بدهید؛ شلیک بدون اخطار پانیشمنت دارد. برای متوقف کردن ماشین، قبل از تیراندازی سه اخطار با فاصله بیش از ۱۰ ثانیه بدهید.</li>
+            <li><b>گروگان‌گیری:</b> هر گروه یا گنگ فقط یک بار در هر ۲۴ ساعت می‌تواند گروگان‌گیری کند. حداقل گروگان‌گیران ۱۲ نفر است و به ازای هر ۴ نفر یک گروگان.</li>
+            <li>مبلغ هر گروگان ۲۵۰ هزار دلار است. درخواست ماشین دولتی و نظامی ممنوع است.</li>
+            <li>گروگان باید در اولین فرصت پس از مذاکره تایم Free Passage آزاد شود. تایم Free Passage بین ۲ تا ۵ دقیقه است.</li>
           </ul>
-
-          <div class="rules-sub orange">🟧 قوانین حین درگیری</div>
-          <ul class="rules">
-            <li>در صورتی که پلیس به محل رابری برسد و حضور خود را اعلام کند، در صورت خروج افراد رابر پلیس اجازه دارد فرد مورد نظر را بازداشت کند و افراد رابر حق شروع فایت را ندارند.</li>
-            <li>در صورت ورود افراد ارگان مثبت به داخل محوطهٔ رابری، افراد رابر حق تیراندازی و کشتن مأمور وارد شده به محل رابری را دارند و افراد ارگان حق شروع فایت را ندارند و باید رابری ادامه پیدا کند.</li>
-            <li>در تمامی رابری‌ها، استفاده از انواع دارو و قرص و <b>جلیقه ضدگلوله</b> قبل از استارت رابری برای طرفین آزاد است.</li>
-            <li>در صورت شروع درگیری، استفاده از تمام داروها و <b>جلیقه ضدگلوله ممنوع</b> می‌باشد (استفاده از <b>LSD مجاز</b> می‌باشد).</li>
-            <li>پنجره کردن وسایل نقلیهٔ نیروهای نظامی ممنوع می‌باشد.</li>
-            <li>استفاده از هرگونه ماشین یا آبجکت به منظور مسدودسازی راه ورود و خروج ممنوع می‌باشد.</li>
-            <li>استفاده از هرگونه سلاح سرد و سلاح‌های غیرمتعارف مانند چاقو در رابری ممنوع می‌باشد.</li>
-            <li>تیراندازی تا قبل از حکم تیر از جانب پلیس برای هر دو سمت درگیری ممنوع می‌باشد؛ در صورت تیراندازی، رابرها و پلیس‌ها آزاد هستند در هر زمان حکم تیر بدهند.</li>
-            <li>تیراندازی به سمت هلیکوپتر پلیس به جز در رابری‌های <b>کارگو</b> و <b>میثیک</b> ممنوع می‌باشد.</li>
-            <li>افراد پلیس تا قبل از Successful شدن رابری — به استثنای رابری‌های <b>شاپ</b>، <b>دیجیتال دن</b> و <b>بیمه</b> — حق صدور حکم تیر ندارند.</li>
-            <li>حداقل فاصلهٔ زمانی بین اخطارهای پلیس باید <b>۲۰ ثانیه</b> باشد.</li>
-          </ul>
-
-          <div class="rules-sub purple">🟪 پایان و پس از رابری</div>
-          <ul class="rules">
-            <li>رابرها تا قبل از Successful شدن رابری حق خروج از محوطهٔ رابری را ندارند.</li>
-            <li>در صورت خروج افراد رابر از محوطهٔ رابری و رسیدن پلیس و اعلام حضور پلیس، فرد اجازهٔ ورود مجدد ندارد.</li>
-            <li>در صورت ریسپانس پلیس به منطقهٔ رابری و اعلام حضور، بعد از اتمام رابری در تمامی رابری‌ها پلیس باید <b>ظرف مدت ۱۵ دقیقه</b> فایت را شروع کند؛ در غیر این صورت خروج افراد رابر از محوطه بلامانع است.</li>
-            <li>در صورت خروج هر یک از افراد رابر یا پلیس از شهر، اگر فرد مذکور تا قبل از حکم تیر پلیس به شهر برگردد اجازهٔ فایت دارد؛ و در صورتی که حکم تیر از جانب پلیس داده شود و فرد برگردد، در تمامی مراحل <b>خارج از روند RP</b> محسوب می‌شود و اجازهٔ فایت ندارد (این قانون برای افرادی که در حین فایت هم خارج می‌شوند نیز صادق است).</li>
-            <li>افراد رابر موظف هستند در صورت ریویو شدن، در سریع‌ترین زمان محل را ترک کنند.</li>
-            <li>افراد رابر در صورت شکست در رابری موظف هستند تمام مراحل از جمله بازجویی و جیل و… را تا پایان همراهی کنند.</li>
-            <li>در صورت شکست رابری، تا زمان اعمال زندان برای افراد، هیچ فردی اجازهٔ فراری دادن رابرها را ندارد.</li>
-            <li>تمامی رابری‌ها به جز رابری <b>شرکت بیمه</b> فاقد جوینر می‌باشند.</li>
-          </ul>
-
-          <div class="callout info">
-            <span class="ci">ℹ️</span>
-            <div><b>Successful شدن رابری</b> به معنی اتمام تایم رابری است؛ و برای ارگان‌ها دیگر اطراف محل رابری بر روی مینی‌مپ دایره خارج نشود.</div>
-          </div>
         </div>
       </section>
+    </div>
 
-      <!-- 17: Search Rules -->
-      <section class="section" id="rob-search">
+    <!-- ========== PART 3: ROBBERY RULES ========== -->
+    <div class="part">
+      <div class="part-head">
+        <span class="part-num">بخش ۰۳</span>
+        <h2>قوانین کامل رابری‌ها</h2>
+        <p>قوانین مشترک، سرچ، جدول ۱۶ رابری، روند پرسوت و جوینر بیمه.</p>
+      </div>
+
+      <section class="section" id="rob-common">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۱۷</span>
             <div>
-              <h3>قوانین سرچ در رابری</h3>
-              <div class="sub">Search Rules — کامل</div>
+              <h3>قوانین مشترک در تمامی رابری‌ها</h3>
+              <div class="sub">Common Robbery Rules</div>
             </div>
           </div>
-
-          <div class="rules-sub">🟦 اقلام مجاز رابر</div>
           <ul class="rules">
-            <li><b>رابر در رابری‌های سبک</b> (شاپ، دیجیتال دن و بانک‌های کوچک): تمام گان‌های سبک + اقلام خلاف + پول تمیز</li>
-            <li><b>رابر در رابری‌های سنگین</b> (بانک مرکزی و تمامی جواهری‌ها و…): تمام گان‌های سنگین + اقلام خلاف + پول تمیز</li>
+            <li>اولویت استارت رابری با گروهی است که زودتر و با تعداد کامل در محل رابری حاضر شده باشند.</li>
+            <li>تحت هیچ شرایطی وقتی دو گروه با هم در یک محل رابری باشند، رابری نباید استارت شود.</li>
+            <li>در صورتی که یک رابری استارت شده باشد، هیچ گروهی حق ورود به محل رابری را ندارد.</li>
+            <li>در زمان‌هایی که یک رابری استارت شده باشد یا گروهی تصمیم به اجرای رابری دارند، شما حتی با K.O.S هم اجازه درگیری ندارید.</li>
+            <li>شما حق ندارید در اطراف محل رابری به منظور گرفتن یا اجرای K.O.S کمپ کنید.</li>
+            <li>در تمامی رابری‌ها استفاده از انواع دارو و قرص و جلیقه ضدگلوله قبل از استارت رابری برای طرفین آزاد است.</li>
+            <li>در صورت شروع درگیری استفاده از تمام داروها و جلیقه ضدگلوله ممنوع می‌باشد (استفاده از LSD مجاز است).</li>
+            <li>پنجره کردن وسایل نقلیه نیروهای نظامی ممنوع می‌باشد.</li>
+            <li>استفاده از هرگونه ماشین یا آبجکت به منظور مسدودسازی راه ورود و خروج ممنوع می‌باشد.</li>
+            <li>استفاده از هرگونه سلاح سرد و سلاح‌های غیرمتعارف مانند چاقو در رابری ممنوع می‌باشد.</li>
+            <li>تیراندازی تا قبل از حکم تیر از جانب پلیس برای هر دو سمت درگیری ممنوع می‌باشد و در صورت تیراندازی رابرها، پلیس‌ها آزاد هستند در هر زمان حکم تیر بدهند.</li>
+            <li>تیراندازی به سمت هلیکوپتر پلیس به جز در رابری‌های کارگو و میثیک ممنوع می‌باشد.</li>
+            <li>رابرها تا قبل از Successful شدن رابری حق خروج از محوطه رابری را ندارند.</li>
+            <li>افراد پلیس تا قبل از Successful شدن رابری به استثنای در شاپ و دیجیتال دن و بیمه، حق صدور حکم تیر ندارند.</li>
+            <li>در صورت ریسپانس پلیس به منطقه رابری و اعلام حضور، بعد از اتمام رابری در تمامی رابری‌ها پلیس باید ظرف مدت ۱۵ دقیقه فایت را شروع کند، در غیر این صورت خروج افراد رابر بلا مانع است.</li>
+            <li>در صورت خروج هر یک از افراد رابر یا پلیس از شهر، اگر فرد تا قبل از حکم تیر پلیس به شهر برگردد اجازه فایت دارد و در صورتی که حکم تیر داده شود و فرد برگردد، خارج از روند RP محسوب می‌شود.</li>
+            <li>افراد رابر موظف هستند در صورت ریوایو شدن در سریع‌ترین زمان محل را ترک کنند.</li>
+            <li>افراد رابر در صورت شکست در رابری موظف هستند تمام مراحل از جمله بازجویی و جیل را تا پایان همراهی کنند.</li>
+            <li>در صورت شکست رابر تا زمان اعمال زندان برای افراد، هیچ فردی اجازه فراری دادن رابرها را ندارد.</li>
+            <li>تمامی رابری‌ها به جز رابری شرکت بیمه فاقد جوینر می‌باشد.</li>
           </ul>
-
-          <div class="rules-sub orange">🟧 اقلام مجاز پلیس</div>
-          <ul class="rules">
-            <li><b>پلیس در تمامی رابری‌ها</b> (سبک و سنگین): تمامی گان‌ها + تمامی اقلام خلاف + مجوز حمل اسلحه</li>
-          </ul>
-
-          <div class="callout info">
-            <span class="ci">🎒</span>
-            <div><b>اقلام خلاف شامل:</b> بلو تورج، لاک‌پیک، پول کثیف، انواع دراگ، تیر پیستول (۶ عدد)، تیر سنگین (۴ عدد)</div>
-          </div>
         </div>
       </section>
 
-      <!-- 18: Specific Robberies -->
-      <section class="section" id="rob-specific">
+      <section class="section" id="rob-search">
         <div class="card">
           <div class="card-head">
             <span class="num-badge">۱۸</span>
             <div>
-              <h3>قوانین اختصاصی هر رابری</h3>
-              <div class="sub">Specific Robbery Rules — ۱۶ رابری کامل</div>
+              <h3>قوانین سرچ در رابری</h3>
+              <div class="sub">Search Rules in Robbery</div>
             </div>
           </div>
-          <p>در هر رابری، تعداد نفرات مجاز رابر و پلیس، نوع گان مجاز و شرایط ویژه‌اش متفاوت است. تمام ۱۶ رابری با جزئیات کامل در ادامه آمده است.</p>
+          <ul class="rules">
+            <li><b>رابر در رابری‌های سبک</b> (شاپ، دیجیتال دن، بانک‌های کوچک): تمام گان‌های سبک، اقلام خلاف، پول تمیز.</li>
+            <li><b>رابر در رابری‌های سنگین</b> (بانک مرکزی، تمامی جواهری‌ها و…): تمام گان‌های سنگین، اقلام خلاف، پول تمیز.</li>
+            <li><b>پلیس در تمامی رابری‌ها</b> (سبک و سنگین): تمامی گان‌ها، تمامی اقلام خلاف، مجوز حمل اسلحه.</li>
+            <li><b>اقلام خلاف:</b> بلو تورج، لاک‌پیک، پول کثیف، انواع دراگ، تیر پیستول (۶ عدد)، تیر سنگین (۴ عدد).</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="rob-specific">
+        <div class="card">
+          <div class="card-head">
+            <span class="num-badge">۱۹</span>
+            <div>
+              <h3>جدول اختصاصی ۱۶ رابری</h3>
+              <div class="sub">Specific Robbery Rules</div>
+            </div>
+          </div>
         </div>
 
         <div class="rob-grid">
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۰۱</span>
-              <div>
-                <h4>سرقت از فروشگاه</h4>
-                <span class="en">Shop Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag light">رابری سبک</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag light">گان سبک</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۲ (بدون سوات)</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۱ // حداکثر ۲</span></div>
+            <div class="rob-top"><span class="rob-num">۰۱</span><div><h4>سرقت از فروشگاه</h4><span class="en">Shop Robbery</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag light">سبک</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۲ (بدون سوات)</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۱ تا ۲</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۰۲</span>
-              <div>
-                <h4>سرقت از فروشگاه لوازم الکترونیک</h4>
-                <span class="en">Digital Den Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag light">رابری سبک</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag light">گان سبک</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۳ (بدون سوات)</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۲ // حداکثر ۳</span></div>
+            <div class="rob-top"><span class="rob-num">۰۲</span><div><h4>لوازم الکترونیک</h4><span class="en">Digital Den</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag light">سبک</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۳ (بدون سوات)</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۲ تا ۳</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۰۳</span>
-              <div>
-                <h4>سرقت از مینی‌بانک</h4>
-                <span class="en">Fleeca Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag light">رابری سبک</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag light">گان سبک</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۴ (سوات)</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۳ // حداکثر ۴</span></div>
+            <div class="rob-top"><span class="rob-num">۰۳</span><div><h4>مینی‌بانک</h4><span class="en">Fleeca</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag light">سبک</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۴ (سوات)</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۳ تا ۴</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۰۴</span>
-              <div>
-                <h4>سرقت از پلتو بانک شریف</h4>
-                <span class="en">Blaine County Bank Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag heavy">گان سنگین</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۶ (سوات) + ۱ واحد هوایی</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۴ // حداکثر ۶</span></div>
+            <div class="rob-top"><span class="rob-num">۰۴</span><div><h4>بانک پلتو (شریف)</h4><span class="en">Blaine County</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag heavy">سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۶ + هلی</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۴ تا ۶</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۰۵</span>
-              <div>
-                <h4>سرقت از بانک مرکزی</h4>
-                <span class="en">Central Bank Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag heavy">گان سنگین</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۸ (سوات) + ۱ واحد هوایی</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۶ // حداکثر ۸</span></div>
+            <div class="rob-top"><span class="rob-num">۰۵</span><div><h4>بانک مرکزی</h4><span class="en">Central Bank</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag heavy">سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۸ + هلی</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۶ تا ۸</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۰۶</span>
-              <div>
-                <h4>سرقت از میز بانک</h4>
-                <span class="en">Maze Bank Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag heavy">گان سنگین</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۸ (سوات)</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۵ // حداکثر ۷</span></div>
+            <div class="rob-top"><span class="rob-num">۰۶</span><div><h4>میز بانک</h4><span class="en">Maze Bank</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag heavy">سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۸ (سوات)</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۵ تا ۷</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۰۷</span>
-              <div>
-                <h4>سرقت از جواهری شهر</h4>
-                <span class="en">Jewelry City Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag both">گان سبک + گان سنگین</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۴ (۱ سوات)</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۳ // حداکثر ۴</span></div>
+            <div class="rob-top"><span class="rob-num">۰۷</span><div><h4>جواهری شهر</h4><span class="en">Jewelry City</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag both">سبک / سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۴ (۱ سوات)</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۳ تا ۴</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۰۸</span>
-              <div>
-                <h4>سرقت از جواهری شمس</h4>
-                <span class="en">Jewelry Shams Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag both">گان سنگین + گان سبک</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۶ (۲ سوات)</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۳ // حداکثر ۵</span></div>
+            <div class="rob-top"><span class="rob-num">۰۸</span><div><h4>جواهری شمس</h4><span class="en">Jewelry Shams</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag both">سبک / سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۶ (۲ سوات)</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۳ تا ۵</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۰۹</span>
-              <div>
-                <h4>سرقت از جواهری فلت</h4>
-                <span class="en">Jewelry Flat Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag heavy">گان سنگین</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۸ (۲ سوات) + ۱ واحد هوایی</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۵ // حداکثر ۷</span></div>
+            <div class="rob-top"><span class="rob-num">۰۹</span><div><h4>جواهری فلت</h4><span class="en">Jewelry Flat</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag heavy">سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۸ (۲ سوات) + هلی</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۵ تا ۷</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۱۰</span>
-              <div>
-                <h4>سرقت شرکت بیمه</h4>
-                <span class="en">Bime Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag heavy">گان سنگین</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۸ (۳ سوات) + ۱ واحد هوایی</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۵ // حداکثر ۷ (از ۷ نفر یکی می‌تواند خارج از محوطه به عنوان جوینر بایستد)</span></div>
-            <div class="rob-row"><span class="k">ویژگی</span><span class="tag join">تنها رابری دارای جوینر</span></div>
+            <div class="rob-top"><span class="rob-num">۱۰</span><div><h4>شرکت بیمه</h4><span class="en">Bime Robbery</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag heavy">سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۸ (۳ سوات) + هلی</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۵ تا ۷ (۱ جوینر)</span></div>
+            <div class="rob-row"><span class="k">ویژگی</span><span class="tag join">دارای جوینر</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۱۱</span>
-              <div>
-                <h4>سرقت از میثیک</h4>
-                <span class="en">Mythic Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag heavy">گان سنگین</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۱۰ (۳ سوات) + ۱ واحد هوایی</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۹ // حداکثر ۹</span></div>
-            <div class="rob-row"><span class="k">ویژگی</span><span class="v">حداکثر ۲ نفر داخل زیرزمین</span></div>
+            <div class="rob-top"><span class="rob-num">۱۱</span><div><h4>میثیک</h4><span class="en">Mythic</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag heavy">سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۱۰ + هلی</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۹ (دقیقا ۹)</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۱۲</span>
-              <div>
-                <h4>سرقت محمولهٔ دریایی</h4>
-                <span class="en">Shipment Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag heavy">گان سنگین</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۱۱ (۴ سوات) + ۱ واحد هوایی</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۸ // حداکثر ۱۰</span></div>
+            <div class="rob-top"><span class="rob-num">۱۲</span><div><h4>محموله دریایی</h4><span class="en">Shipment</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag heavy">سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۱۱ + هلی</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۸ تا ۱۰</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۱۳</span>
-              <div>
-                <h4>سرقت از فرودگاه</h4>
-                <span class="en">Airport Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag heavy">گان سنگین</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۸ (۳ سوات) + ۱ واحد هوایی</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۶ // حداکثر ۸</span></div>
+            <div class="rob-top"><span class="rob-num">۱۳</span><div><h4>فرودگاه</h4><span class="en">Airport</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag heavy">سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۸ + هلی</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۶ تا ۸</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۱۴</span>
-              <div>
-                <h4>سرقت از روستا</h4>
-                <span class="en">Cargo Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag heavy">گان سنگین</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۱۱ (۵ سوات) + ۱ واحد هوایی</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۷ // حداکثر ۹</span></div>
-            <div class="rob-row"><span class="k">ویژگی</span><span class="v">تیراندازی از کوه‌های اطراف برای پلیس ممنوع</span></div>
+            <div class="rob-top"><span class="rob-num">۱۴</span><div><h4>روستا (کارگو)</h4><span class="en">Cargo</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag heavy">سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۱۱ (۵ سوات) + هلی</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۷ تا ۹</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۱۵</span>
-              <div>
-                <h4>سرقت از بابکت</h4>
-                <span class="en">Bobcat Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag heavy">رابری سنگین</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="tag heavy">گان سنگین</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۸ (۳ سوات) + ۱ واحد هوایی</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۵ // حداکثر ۷</span></div>
+            <div class="rob-top"><span class="rob-num">۱۵</span><div><h4>بابکت</h4><span class="en">Bobcat</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag heavy">سنگین</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۸ (۳ سوات) + هلی</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۵ تا ۷</span></div>
           </div>
-
           <div class="card rob-card">
-            <div class="rob-top">
-              <span class="rob-num">۱۶</span>
-              <div>
-                <h4>سرقت از کامبون حمل پول</h4>
-                <span class="en">Pursuit Robbery</span>
-              </div>
-            </div>
-            <div class="rob-row"><span class="k">نوع</span><span class="tag special">رابری ویژه</span></div>
-            <div class="rob-row"><span class="k">گان مجاز</span><span class="v">خارج شهر: سنگین // داخل شهر: سبک</span></div>
-            <div class="rob-row"><span class="k">تعداد پلیس</span><span class="v">حداکثر ۴ (۱ سوات در صورت خروج از منطقه شهری) (حداقل ۱ و حداکثر ۲ ماشین) + ۱ واحد هوایی</span></div>
-            <div class="rob-row"><span class="k">تعداد رابر</span><span class="v">حداقل ۱ // حداکثر ۲</span></div>
+            <div class="rob-top"><span class="rob-num">۱۶</span><div><h4>کامبون حمل پول</h4><span class="en">Pursuit</span></div></div>
+            <div class="rob-row"><span class="k">گان</span><span class="tag both">خارج: سنگین / داخل: سبک</span></div>
+            <div class="rob-row"><span class="k">پلیس</span><span class="v">حداکثر ۴ (۱ سوات) + هلی</span></div>
+            <div class="rob-row"><span class="k">رابر</span><span class="v">۱ تا ۲</span></div>
           </div>
         </div>
+      </section>
 
-        <div class="card" style="margin-top:18px">
+      <section class="section" id="rob-pursuit">
+        <div class="card">
           <div class="card-head">
-            <span class="num-badge">🛡️</span>
+            <span class="num-badge">۲۰</span>
             <div>
-              <h3>توضیحات کامل روند رابری پرسوت (10-66)</h3>
-              <div class="sub">Pursuit Robbery Process — کامل</div>
+              <h3>روند رابری پرسوت (10-66)</h3>
+              <div class="sub">Pursuit Robbery</div>
             </div>
           </div>
-
-          <p>بعد از تحویل گرفتن کامبون حمل پول در منطقهٔ خارج شهر، یک یا حداکثر دو ماشین از ارگان‌های مثبت برای اسکورت حاضر می‌شوند (شریف یا پلیس).</p>
-          <p>بعد از رساندن کامبون به مقصد، فرد رابر می‌تواند تسلیم شود یا پرسوت را شروع کند (فرد رابر خود یا فرد کمکی‌اش باید ماشین داشته باشند).</p>
-          <p>بعد از شروع پرسوت، افراد پلیس با فاصله‌های زمانی اخطار داده و بعد از آن قوانین پرسوت (10-66) در آن صادق است. <b>در این رابری به جز افراد حاضر کسی حق جوین ندارد.</b></p>
-
-          <div class="rules-sub orange">🟧 قوانین پرسوت</div>
           <ul class="rules">
-            <li>در صورت تحویل کامبون، افراد PD تا <b>۳۰ ثانیه</b> حق ندارند نه PIT دهند نه Shot Fire بزنند.</li>
-            <li>بعد از گذشت ۳۰ ثانیه، موظف هستید قبل از Shot Fire <b>۳ بار PIT</b> دهید (با فاصلهٔ ۲۰ ثانیه)؛ سپس مجاز به تیراندازی به چرخ هستید.</li>
-            <li>هلی تحت هیچ شرایطی اجازهٔ تیراندازی ندارد.</li>
-            <li>PD حق ورود به منطقهٔ تحویل کامبون را ندارد.</li>
-            <li>رابر موظف است حداکثر تا <b>۱ دقیقه</b> منطقهٔ تحویل را ترک کند.</li>
+            <li>بعد از تحویل گرفتن کامبون حمل پول در منطقه خارج شهر یک یا حداکثر دو ماشین از ارگان‌های مثبت برای اسکورت حاضر می‌شوند (شریف یا پلیس).</li>
+            <li>بعد از رساندن کامبون به مقصد، فرد رابر می‌تواند تسلیم شود یا پرسوت را شروع کند (فرد رابر خود یا فرد کمکی‌اش باید ماشین داشته باشند).</li>
+            <li>بعد از شروع پرسوت افراد پلیس با فاصله‌های زمانی اخطار داده و بعد از آن قوانین پرسوت (10-66) در آن صدق می‌کند.</li>
+            <li>در این رابری به جز افراد حاضر کسی حق جوین ندارد.</li>
+            <li>در صورت تحویل کامبون، افراد PD تا ۳۰ ثانیه حق ندارند نه PIT دهند نه Shot Fire بزنند.</li>
+            <li>بعد از گذشت ۳۰ ثانیه موظف هستید قبل از Shot Fire ۳ تا PIT دهند (با فاصله ۲۰ ثانیه) سپس مجاز به تیراندازی به چرخ هستید.</li>
+            <li>هلی تحت هیچ شرایطی اجازه تیراندازی ندارد.</li>
+            <li>PD حق ورود به منطقه تحویل کامبون را ندارد.</li>
+            <li>رابر موظف است حداکثر تا ۱ دقیقه منطقه تحویل را ترک کند.</li>
             <li>سپس تمام قوانین بر اساس قوانین ذکرشده در City Rules می‌باشد (به جز در تعداد و نداشتن جوینر).</li>
           </ul>
         </div>
       </section>
 
-      <!-- 19: Supplementary Rules -->
       <section class="section" id="rob-extra">
         <div class="card">
           <div class="card-head">
-            <span class="num-badge">۱۹</span>
+            <span class="num-badge">۲۱</span>
             <div>
-              <h3>قوانین تکمیلی رابری</h3>
-              <div class="sub">Supplementary Robbery Rules — کامل</div>
+              <h3>قوانین تکمیلی و جوینر بیمه</h3>
+              <div class="sub">Extra Robbery Rules</div>
             </div>
           </div>
-
           <ul class="rules">
-            <li>در رابری روستا (کارگو) تیراندازی از کوه‌های اطراف برای افراد پلیس <b>مجاز نمی‌باشد</b>.</li>
-            <li>در رابری بیمه، فرد جوینر تا قبل از Successful شدن رابری حق درگیری ندارد و در صورت شکست افراد رابر و نشدن رابری حق دخالت ندارد و باید منطقه را ترک کند.</li>
-            <li>اگر در هر مرحله دچار شک شدید و نتوانستید به نتیجه برسید، به <b>ادمین گزارش دهید</b>.</li>
-            <li>اگر در شرایطی رابری لغو شود، در صورتی که پلیس در منطقه حاضر باشد باید روند رابری ادامه پیدا کند.</li>
+            <li>در رابری روستا (کارگو) تیراندازی از کوه‌های اطراف برای افراد پلیس مجاز نمی‌باشد.</li>
+            <li>اگر در هر مرحله دچار شک شدید و نتوانستید به نتیجه برسید، به ادمین گزارش بدید.</li>
+            <li>اگر در شرایطی رابری لغو شود در صورتی که پلیس در منطقه حاضر باشد باید روند رابری ادامه پیدا کند.</li>
             <li>در روند رابری و بعد از اتمام رابری از هرگونه شوخی، ترول و رجزخوانی دوری کنید تا موجب مجازات شما نشود.</li>
-            <li><b>Successful شدن رابری</b> به معنی اتمام تایم رابری است؛ و برای ارگان‌ها دیگر اطراف محل رابری بر روی مینی‌مپ دایره خارج نشود.</li>
-            <li>حداقل فاصلهٔ زمانی بین اخطارهای پلیس باید <b>۲۰ ثانیه</b> باشد.</li>
-            <li>دقت داشته باشید در تمامی مراحل <b>نظر ادمین در اولویت</b> قرار دارد.</li>
-            <li>در رابری میثیک حداکثر تعداد افراد داخل زیرزمین می‌تواند <b>۲ نفر</b> باشد.</li>
+            <li>Successful شدن رابری به معنی اتمام تایم رابری و برای ارگان‌ها دیگر اطراف محل رابری بر روی مینی‌مپ دایره خارج نشود.</li>
+            <li>حداقل فاصله زمانی بین اخطارهای پلیس باید ۲۰ ثانیه باشد.</li>
+            <li>دقت داشته باشید در تمامی مراحل نظر ادمین در اولویت قرار دارد.</li>
+            <li>در رابری میثیک حداکثر تعداد افراد داخل زیر زمین می‌تواند ۲ نفر باشد.</li>
             <li>افراد PD مجاز نمی‌باشند که از یونیت هوایی به عنوان یونیت فایتر استفاده کنند.</li>
-            <li>در صورت تردید شدن (هم پلیس‌ها و هم رابرها بمیرند) <b>وین با PD است</b>.</li>
+            <li>در صورت تردید شدن (هم پلیس‌ها هم رابرها بمیرند) وین با PD است.</li>
           </ul>
-
-          <div class="rules-sub red">🗺️ نقشهٔ منطقهٔ کارگو</div>
-          <div class="map-card">
-            <div class="map-zone red"><span class="dot"></span> منطقهٔ غیرمجاز برای استفادهٔ ارکان</div>
-            <div class="map-zone yellow"><span class="dot"></span> منطقهٔ مجاز برای رابرها</div>
-            <div class="map-zone green"><span class="dot"></span> منطقهٔ مجاز برای پلیس‌ها</div>
-          </div>
+          <div class="rules-sub warn">جوینر در رابری بیمه</div>
+          <ul class="rules">
+            <li>در رابری شرکت بیمه حداکثر تعداد داخل شرکت ۶ نفر می‌باشد و فرد جوینر حتما باید خارج از شرکت باشد و حق بودن در داخل رابری را ندارد.</li>
+            <li>فرد جوینر اجازه ندارد از بیرون به داخل فایت دهد و حتما باید به داخل شرکت بیمه برای فایت وارد شود.</li>
+            <li>فرد جوینر در رابری بیمه باید از دید افراد پلیس مخفی بماند و در صورتی که افراد پلیس فرد جوینر رو مشاهده و به آن مشکوک شوند اجازه دستگیر کردن (under detain) فرد را دارند.</li>
+            <li>فرد جوینر باید بعد از حکم تیر صادره از سوی پلیس بعد از اینکه تمامی پلیس‌ها به داخل رفتن بعد از آن جوینر حق جوین دادن را دارد.</li>
+            <li><b>توجه:</b> تنها فقط رابری بیمه جوینر دارد!</li>
+          </ul>
         </div>
       </section>
+    </div>
 
-      <!-- 20: Joiner in Bime -->
-      <section class="section" id="rob-joiner">
+    <!-- ========== PART 4: STAFF RULES ========== -->
+    <div class="part">
+      <div class="part-head">
+        <span class="part-num">بخش ۰۴</span>
+        <h2>قوانین و آموزش تیم استف</h2>
+        <p>قوانین TeamSpeak، رسیدگی به شکایت، آموزش پانیشمنت و کامندهای ادمینی.</p>
+      </div>
+
+      <section class="section" id="ts-duty">
         <div class="card">
           <div class="card-head">
-            <span class="num-badge">۲۰</span>
+            <span class="num-badge">۲۲</span>
             <div>
-              <h3>جوینر در رابری بیمه</h3>
-              <div class="sub">Joiner in Bime Robbery — کامل</div>
+              <h3>قوانین تیم‌اسپیک (Staff TS)</h3>
+              <div class="sub">TeamSpeak Duty</div>
             </div>
           </div>
-
           <ul class="rules">
-            <li>در رابری شرکت بیمه، حداکثر تعداد داخل شرکت <b>۶ نفر</b> می‌باشد و فرد جوینر حتماً باید <b>خارج از شرکت</b> باشد و حق بودن در داخل رابری را ندارد.</li>
-            <li>فرد جوینر اجازه ندارد از بیرون به داخل فایت دهد و حتماً باید به داخل شرکت بیمه برای فایت وارد شود.</li>
-            <li>فرد جوینر در رابری بیمه باید از دید افراد پلیس مخفی بماند؛ در صورتی که افراد پلیس فرد جوینر را مشاهده و به آن مشکوک شوند، اجازهٔ دستگیری (under detain) فرد را دارند.</li>
-            <li>فرد جوینر باید بعد از حکم تیر صادره از سوی پلیس و بعد از اینکه تمامی پلیس‌ها به داخل رفتند، حق جوین دادن را دارد.</li>
+            <li>قبل از آن دیوتی کردن، حتماً در سرور تیم‌اسپیک سالواتورس حضور داشته باشید. آی‌پی: <span class="cmd" data-copy="Slvts.ir">Slvts.ir</span></li>
+            <li>در ویس <b>on duty</b> حاضر باشید و <b>Deafon نباشید</b>؛ میکروفون را بسته نگه دارید تا همیشه در دسترس باشید.</li>
+            <li>از رنک Helper تا Director، همه ادمین‌ها موظف به حضور در ویس on duty هستند.</li>
+            <li>در ویس on duty پنیک نکنید، سکوت را رعایت کنید. اگر با فردی کار دارید، به یکی از ویس‌های خالی <b>Complaint</b> بروید.</li>
+            <li>در چنل‌های Office نباشید، مخصوصاً رنک ادمین به بالا. رعایت سلسله مراتب الزامی است.</li>
+            <li>در صورت رعایت نکردن این قوانین، تنزل رنک و حتی فایر شدن در انتظار شماست.</li>
           </ul>
+        </div>
+      </section>
 
-          <div class="callout warn">
-            <span class="ci">⚠️</span>
-            <div><b>توجه:</b> تنها رابری بیمه جوینر دارد! در هیچ رابری دیگری جوینر مجاز نیست.</div>
+      <section class="section" id="st-chat">
+        <div class="card">
+          <div class="card-head">
+            <span class="num-badge">۲۳</span>
+            <div>
+              <h3>ارتباط با پلیر و رسیدگی به شکایت</h3>
+              <div class="sub">Support & Complaints</div>
+            </div>
+          </div>
+          <ul class="rules">
+            <li>ادب و احترام مهم‌ترین اصلی است که ادمین استف باید رعایت کند. حتی اگر پلیری بی‌احترامی کرد، حق توهین ندارید و باید به های‌رنک گزارش دهید.</li>
+            <li>رسیدگی به <b>Connect to staff</b> در تیم‌اسپیک از وظایف ادمین است؛ پلیر را Move کنید و پیگیری کنید.</li>
+            <li>اگر ریپورتی قبول کردید که نقض قانون از دو ساید رخ داده، از هر ساید یک نفر که رکورد کامل دارد کافی است.</li>
+            <li>هنگام احضار شاکی، مدرک را کامل با صدا و ویدیو ۱۰ تا ۱۵ ثانیه عقب و جلو ببینید. اگر رکورد بی‌صدا باشد یا قضاوت اشتباه باشد، درجا تنزل رنک یا فایر می‌شوید.</li>
+            <li>برای دیدن رکورد از Google Meet استفاده کنید.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="st-punish">
+        <div class="card">
+          <div class="card-head">
+            <span class="num-badge">۲۴</span>
+            <div>
+              <h3>آموزش پانیشمنت زدن</h3>
+              <div class="sub">Punishment Panel</div>
+            </div>
+          </div>
+          <p>برای پانیشمنت زدن باید از کامند زیر استفاده کنید:</p>
+          <p><span class="cmd" data-copy="/cs id player / steam hex">/cs id player / steam hex</span></p>
+          <ul class="rules">
+            <li>بعد از زدن کامند، منویی باز می‌شود. بخش اول، انتخاب پانیشمنت‌های سرور است.</li>
+            <li>زیر پنل یک تیک غیرفعال وجود دارد که در صورت فعال کردن، پانیشمنت برای <b>تمامی پلیرها</b> نمایش داده می‌شود. (فقط زمانی فعال کنید که فرد در سرور نباشد).</li>
+            <li>اسم ادمین جاجر: <b>admin nazer</b> | استیم هگز شکایت‌کننده: <b>shaki</b> | توضیحات دقیق: <b>Tozihat</b>.</li>
+            <li>اگر برای پلیری که در سرور حضور دارد پانیشمنت می‌زنید، باید به تعداد پانیشمنت‌هایش برایش جزای نقدی بزنید: <span class="cmd orange" data-copy="/fine id price reason">/fine id price reason</span></li>
+          </ul>
+          <div class="code-block">/fine 1234 90000 non rp</div>
+        </div>
+      </section>
+
+      <section class="section" id="commands">
+        <div class="card">
+          <div class="card-head">
+            <span class="num-badge">۲۵</span>
+            <div>
+              <h3>کامندهای ادمینی</h3>
+              <div class="sub">Staff Commands</div>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>کامند</th><th>کارکرد و محدودیت</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><span class="cmd">/aduty</span></td><td>روشن / خاموش کردن پرم</td></tr>
+                <tr><td><span class="cmd">/revive [ID]</span></td><td>ریوایو — فقط با اجازه‌ های‌رنک</td></tr>
+                <tr><td><span class="cmd">/slay [ID]</span></td><td>اسلی — فقط با اجازه‌ های‌رنک</td></tr>
+                <tr><td><span class="cmd">/spect [ID]</span></td><td>اسپکت — رندوم ممنوع</td></tr>
+                <tr><td><span class="cmd">/goto [ID]</span></td><td>رفتن به پلیر — فقط با اجازه‌ های‌رنک</td></tr>
+                <tr><td><span class="cmd">Shift + E</span></td><td>تلپورت به مارک نقشه</td></tr>
+                <tr><td><span class="cmd">/bring [ID]</span></td><td>آوردن پلیر — فقط با اجازه‌ های‌رنک</td></tr>
+                <tr><td><span class="cmd">/invisible</span></td><td>نامرئی شدن</td></tr>
+                <tr><td><span class="cmd">/pm [ID] [message]</span></td><td>پیام خصوصی به پلیر</td></tr>
+                <tr><td><span class="cmd">/rpp 3 and 50</span></td><td>انداختن RP Pause</td></tr>
+                <tr><td><span class="cmd">/car name car [ID]</span></td><td>دادن ماشین — با اجازه چت استف</td></tr>
+                <tr><td><span class="cmd">/dv [ID]</span></td><td>پاک کردن ماشین</td></tr>
+                <tr><td><span class="cmd">/fix [ID]</span></td><td>تعمیر ماشین</td></tr>
+                <tr><td><span class="cmd">/freeze [ID]</span></td><td>فریز کردن پلیر</td></tr>
+                <tr><td><span class="cmd">/alskin [ID]</span></td><td>ویرایش کاراکتر</td></tr>
+                <tr><td><span class="cmd">/reloadphone</span></td><td>فیکس باگ گوشی</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
+      <section class="section" id="ranks">
+        <div class="card">
+          <div class="card-head">
+            <span class="num-badge">۲۶</span>
+            <div>
+              <h3>جدول رنک‌ها و تسک‌ها</h3>
+              <div class="sub">Staff Ranks</div>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>رنک</th><th>کول‌داون</th><th>ریپورت</th><th>تسک‌ها</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Helper</td><td>۱ هفته</td><td>۳۰۰</td><td>۳ نیو پلیر</td></tr>
+                <tr><td>Senior Helper</td><td>۱ هفته</td><td>۴۰۰</td><td>۵ نیو پلیر</td></tr>
+                <tr><td>Head Helper</td><td>۱ هفته</td><td>۵۰۰</td><td>۷ نیو پلیر + جوین پانیشمنت زیر Supporter</td></tr>
+                <tr><td>Supporter</td><td>۲ هفته</td><td>۷۰۰</td><td>۱۰ نیو پلیر + مدیریت جوین Head Helper</td></tr>
+                <tr><td>Senior Supporter</td><td>۲ هفته</td><td>۱۰۰۰</td><td>۱۵ نیو پلیر + بررسی شکایت‌های سطح پایین</td></tr>
+                <tr><td>Head Supporter</td><td>۲ هفته</td><td>۱۵۰۰</td><td>نظارت بر رنک‌های ۱ تا ۵</td></tr>
+                <tr><td>Admin</td><td>۱ ماه</td><td>—</td><td>مدیریت جوین‌ها و پانیشمنت‌های سنگین</td></tr>
+                <tr><td>Director</td><td>—</td><td>—</td><td>مدیریت کل تیم استف</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- NO RESULT -->
     <div class="no-result" id="noResult">
       <div class="em">🔍</div>
       <h4>نتیجه‌ای پیدا نشد</h4>
-      <p>عبارت دیگری را جست‌وجو کنید (مثلاً: پانیشمنت، on duty، رنک‌آپ، بابکت، بیمه، جوینر، /goto).</p>
+      <p>عبارت دیگری را جستجو کنید (مثلاً: پانیشمنت، رابری، KOS، /goto).</p>
     </div>
 
   </main>
@@ -1557,13 +1422,12 @@ Steam Hex   :</div>
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="footer-inner">
-    <p>© Salvatores Roleplay — مرجع آموزش تیم استف و قوانین کامل رابری | آی‌پی تیم‌اسپیک: <b style="color:#7dd3fc">Slvts.ir</b></p>
+    <p>© Salvatores Roleplay — مرجع کامل قوانین و آموزش تیم استف | آی‌پی تیم‌اسپیک: <b style="color:#7dd3fc">Slvts.ir</b></p>
     <div class="f-links">
-      <a href="#ts-duty">قوانین تیم‌اسپیک</a>
-      <a href="#st-chat">قوانین استف</a>
-      <a href="#newplayer">آموزش نیو پلیر</a>
-      <a href="#commands">کامندها</a>
-      <a href="#rob-common">قوانین رابری</a>
+      <a href="#general">قوانین عمومی</a>
+      <a href="#rp-terms">رول‌پلی</a>
+      <a href="#rob-common">رابری</a>
+      <a href="#ts-duty">تیم استف</a>
     </div>
   </div>
 </footer>
@@ -1581,42 +1445,26 @@ Steam Hex   :</div>
 (function(){
   'use strict';
 
-  /* ---------- helpers ---------- */
-  const norm = s => (s || '')
-    .toLowerCase()
-    .replace(/[\u064A\u0649]/g, 'ی')
-    .replace(/\u0643/g, 'ک')
-    .replace(/[\u200c\u200f\u200e]/g, ' ');
-
+  const norm = s => (s || '').toLowerCase().replace(/[\u064A\u0649]/g, 'ی').replace(/\u0643/g, 'ک').replace(/[\u200c\u200f\u200e]/g, ' ');
   const $ = sel => document.querySelector(sel);
   const $$ = sel => Array.from(document.querySelectorAll(sel));
 
-  /* ---------- mobile drawer ---------- */
+  /* Mobile Drawer */
   const sidebar  = $('#sidebar');
   const overlay  = $('#overlay');
   const burger   = $('#burger');
   const sideClose= $('#sideClose');
 
-  function openDrawer(){
-    sidebar.classList.add('open');
-    overlay.classList.add('show');
-    document.body.classList.add('no-scroll');
-  }
-  function closeDrawer(){
-    sidebar.classList.remove('open');
-    overlay.classList.remove('show');
-    document.body.classList.remove('no-scroll');
-  }
+  function openDrawer(){ sidebar.classList.add('open'); overlay.classList.add('show'); document.body.classList.add('no-scroll'); }
+  function closeDrawer(){ sidebar.classList.remove('open'); overlay.classList.remove('show'); document.body.classList.remove('no-scroll'); }
+
   burger.addEventListener('click', openDrawer);
   sideClose.addEventListener('click', closeDrawer);
   overlay.addEventListener('click', closeDrawer);
   document.addEventListener('keydown', e => { if(e.key === 'Escape') closeDrawer(); });
+  $$('.nav-link').forEach(a => a.addEventListener('click', () => { if (window.innerWidth <= 1040) closeDrawer(); }));
 
-  $$('.nav-link').forEach(a => a.addEventListener('click', () => {
-    if (window.innerWidth <= 1040) closeDrawer();
-  }));
-
-  /* ---------- search ---------- */
+  /* Search */
   const searchInput = $('#search');
   const searchWrap  = $('#searchWrap');
   const clearBtn    = $('#clearSearch');
@@ -1628,7 +1476,6 @@ Steam Hex   :</div>
   function runSearch(){
     const q = norm(searchInput.value.trim());
     searchWrap.classList.toggle('has-val', searchInput.value.length > 0);
-
     let any = false;
 
     cards.forEach(card => {
@@ -1649,18 +1496,13 @@ Steam Hex   :</div>
     });
 
     noResult.style.display = (q && !any) ? 'block' : 'none';
-
     if (q) closeDrawer();
   }
 
   searchInput.addEventListener('input', runSearch);
-  clearBtn.addEventListener('click', () => {
-    searchInput.value = '';
-    runSearch();
-    searchInput.focus();
-  });
+  clearBtn.addEventListener('click', () => { searchInput.value = ''; runSearch(); searchInput.focus(); });
 
-  /* ---------- copy commands ---------- */
+  /* Copy commands */
   const toast = $('#toast');
   let toastTimer;
 
@@ -1668,61 +1510,50 @@ Steam Hex   :</div>
     toast.textContent = msg;
     toast.classList.add('show');
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 1900);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
   }
 
   document.addEventListener('click', e => {
-    const el = e.target.closest('[data-copy]');
-    if (!el) return;
-    const txt = el.getAttribute('data-copy');
-    const done = () => showToast('کپی شد: ' + txt);
-    const fail = () => showToast('کپی نشد، دستی انتخاب کنید');
-
-    if (navigator.clipboard && window.isSecureContext){
-      navigator.clipboard.writeText(txt).then(done).catch(fail);
-    } else {
-      const ta = document.createElement('textarea');
-      ta.value = txt;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand('copy') ? done() : fail(); }
-      catch(err){ fail(); }
-      document.body.removeChild(ta);
-    }
+    const cmd = e.target.closest('.cmd');
+    if (!cmd) return;
+    const text = cmd.dataset.copy || cmd.textContent.trim();
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('کپی شد: ' + text);
+    }).catch(() => {
+      showToast('کپی نشد! دستی کپی کنید.');
+    });
   });
 
-  /* ---------- scroll spy ---------- */
-  const navLinks = new Map();
-  $$('.nav-link').forEach(a => navLinks.set(a.getAttribute('href').slice(1), a));
-
-  const spy = new IntersectionObserver(entries => {
-    entries.forEach(en => {
-      if (!en.isIntersecting) return;
-      $$('.nav-link.active').forEach(l => l.classList.remove('active'));
-      const link = navLinks.get(en.target.id);
-      if (link) link.classList.add('active');
-    });
-  }, { rootMargin: '-100px 0px -68% 0px', threshold: 0 });
-
-  sections.forEach(s => spy.observe(s));
-
-  /* ---------- progress + back to top ---------- */
+  /* Progress & Back to top */
   const progress = $('#progress');
   const backTop  = $('#backTop');
 
-  function onScroll(){
-    const h = document.documentElement;
-    const max = h.scrollHeight - h.clientHeight;
-    const p = max > 0 ? (h.scrollTop / max) : 0;
-    progress.style.width = (p * 100) + '%';
-    backTop.classList.toggle('show', h.scrollTop > 600);
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  window.addEventListener('scroll', () => {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (scrollTop / scrollHeight) * 100;
+    if(progress) progress.style.width = scrolled + '%';
+    if(backTop) backTop.classList.toggle('show', scrollTop > 300);
+  });
 
-  backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  backTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* Sidebar Active State */
+  const navLinks = $$('.nav-link');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-100px 0px -60% 0px' });
+
+  sections.forEach(sec => observer.observe(sec));
 
 })();
 </script>
